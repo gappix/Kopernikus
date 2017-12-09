@@ -1,0 +1,59 @@
+\documentclass[letterpaper]{article}
+\usepackage{etoolbox}
+\usepackage[bookmarks]{hyperref}
+\usepackage[lyric]{songs}
+% \includeonlysongs{2}
+
+\makeatletter
+\renewcommand\beginsong[1]{%
+  \ifSB@insong\SB@errboo\SB@closeall\fi%
+  \ifSB@intersong\SB@errbor\SB@closeall\fi%
+  \SB@insongtrue%
+  \def\SB@closeall{\endsong}%
+  \SB@parsetitles{#1}%
+  \global\setbox\SB@songwrites\box\voidb@x%
+  \SB@clearbskeys%
+  \@ifnextchar[\SB@bskvfmt\SB@@beginsong%
+  \hypersetup{bookmarksdepth=0}%
+  \phantomsection%
+  \addcontentsline{toc}{subsection}{\numberline{\thesongnum}#1}%
+  \hypersetup{bookmarksdepth=2}%
+}
+\makeatother
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\topskip}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{9.1in}
+\settowidth{\versenumwidth}{1.\ }
+\pagestyle{empty}
+
+\newindex{titleidx}{lbtitle}
+\newauthorindex{authidx}{lbauth}
+\newscripindex{scripidx}{lbscrip}
+
+\begin{document}
+
+\tableofcontents
+\clearpage
+
+\songsection{Worship Songs}
+\begin{songs}{titleidx,authidx,scripidx}
+
+
+
+
+
+\input{./songs/prova1}
+
+
+\end{songs}
+
+\showindex{Index of Authors and Composers}{authidx}
+\showindex{Index of Scripture}{scripidx}
+
+\end{document}

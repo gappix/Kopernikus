@@ -1,0 +1,7 @@
+This is makeindex, version 2.15 [TeX Live 2016/W32TeX] (kpathsea + Thai support).
+Scanning style file ./tematicstyle.ist......done (6 attributes redefined, 0 ignored).
+Scanning input file tematico.idx....done (10 entries accepted, 0 rejected).
+Sorting entries....done (36 comparisons).
+Generating output file tematico.ind....done (21 lines written, 0 warnings).
+Output written in tematico.ind.
+Transcript written in tematico.ilg.

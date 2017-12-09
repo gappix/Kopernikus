@@ -1,0 +1,105 @@
+
+%██╗  ██╗ ██████╗ ██████╗ ███████╗██████╗ ███╗   ██╗██╗██╗  ██╗██╗   ██╗███████╗
+%██║ ██╔╝██╔═══██╗██╔══██╗██╔════╝██╔══██╗████╗  ██║██║██║ ██╔╝██║   ██║██╔════╝
+%█████╔╝ ██║   ██║██████╔╝█████╗  ██████╔╝██╔██╗ ██║██║█████╔╝ ██║   ██║███████╗
+%██╔═██╗ ██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗██║╚██╗██║██║██╔═██╗ ██║   ██║╚════██║
+%██║  ██╗╚██████╔╝██║     ███████╗██║  ██║██║ ╚████║██║██║  ██╗╚██████╔╝███████║
+%╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+
+
+
+
+
+
+
+
+
+
+% SETTINGS
+%-------------------------------------------------------------------------------
+\input{SETTINGS}
+
+
+
+
+
+
+% FRONTESPIZIO
+%-------------------------------------------------------------------------------
+\input{FRONTESPIZIO}
+
+
+
+
+
+
+
+
+%Starting Document
+\begin{document}
+
+
+
+
+
+
+
+% COLOPHON
+%-------------------------------------------------------------------------------
+\ifcover
+	\firstpage
+	\colophon
+\else
+	\relax
+\fi
+
+
+
+
+
+
+% CAPITOLI DEL CANZONIERE
+%-------------------------------------------------------------------------------
+
+%Ciascun capitolo contiene già tutta la logica di gestione della 
+%numerazione progressiva, del DB locale da cui attingere le canzoni
+%e la creazione/chiusura dell'ambiente in cui vengono importate 
+%tutte le canzoni relative
+\addtocounter{GlobalSongCounter}{1} %set starting song counter to 1 (0 otherwise)
+
+
+
+
+\songchapter{Gloria}
+\input{Songs/Gloria/_chapter_GLORIA}
+
+
+\songchapter{Alleluia}
+\input{Songs/Alleluia/_chapter_ALLELUIA}
+
+
+\songchapter{Santo}
+\input{Songs/Santo/_chapter_SANTO}
+
+
+\songchapter{Liturgia}
+\input{Songs/Liturgia/_chapter_LITURGIA}
+
+
+\songchapter{Taizè}
+\input{Songs/Taize/_chapter_TAIZE}
+
+
+
+
+
+% INDICI
+%-------------------------------------------------------------------------------
+\input{INDEXES}
+
+
+
+
+
+%Fine documento
+\end{document}

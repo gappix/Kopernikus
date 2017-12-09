@@ -1,0 +1,31 @@
+
+
+
+%Serie di comandi per scrivere gli indici corretti a seconda
+%delle indicazioni iniziali del documento.
+
+\ifcanzsingole
+	\relax
+\else
+	\iftitleindex
+		\ifxetex
+		\printindex[alfabetico]
+		\else
+		\printindex
+		\fi
+	\else
+	\fi
+	\ifauthorsindex
+	\printindex[autori]
+	\else
+	\fi
+	\iftematicindex
+	\printindex[tematico]
+	\else
+	\fi
+	\ifcover
+		\relax
+	\else
+		\colophon
+	\fi
+\fi

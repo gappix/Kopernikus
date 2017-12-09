@@ -1,0 +1,21 @@
+\begin{theindex}
+
+ \item\bfseries Alleluia
+ \subitem \normalfont Alleluia Chi ascolta\dotfill
+		\hyperindexformat{\indexanchor{3}}{3}, 
+		\hyperindexformat{\indexanchor{8}}{5}
+ \item\bfseries Offertorio
+ \subitem \normalfont Adoro te\dotfill
+		\hyperindexformat{\indexanchor{2}}{3}, 
+		\hyperindexformat{\indexanchor{7}}{5}
+    \subitem Alleluia Chi ascolta\dotfill
+		\hyperindexformat{\indexanchor{3}}{3}, 
+		\hyperindexformat{\indexanchor{8}}{5}
+ \item\bfseries Natale
+ \subitem \normalfont A Betlemme di Giudea\dotfill
+		\hyperindexformat{\indexanchor{1}}{3}, 
+		\hyperindexformat{\indexanchor{6}}{5}
+    \subitem Adoro te\dotfill\hyperindexformat{\indexanchor{2}}{3}, 
+		\hyperindexformat{\indexanchor{7}}{5}
+
+\end{theindex}

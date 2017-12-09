@@ -1,0 +1,322 @@
+% !TEX encoding = UTF-8 Unicode
+
+
+%? STILE DOCUMENTO
+%?????????????????????????????????????????????????????????
+\documentclass[12pt, a4paper, twoside, openright]{book}
+ %tipologia doc, dim. testo, apertura pagine, fronte/retro
+ \usepackage{type1ec} 
+ \usepackage[T1]{fontenc}		 %
+ \usepackage[utf8]{inputenc}
+ \usepackage[english,italian]{babel} %dizionario sillabazione
+ \usepackage{afterpage} %per inserire pagine bianche
+ \usepackage[pass]{geometry} %per la geometria di pagina
+ 
+ 
+ %\usepackage{mathpazo} % FONT UTILIZZATA
+ 
+ 
+\usepackage{ifxetex}
+
+
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{pict2e}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{calc}
+\usepackage{emptypage}
+\usepackage{ifthen}
+\definecolor{mygray}{gray}{0.0} 
+\usepackage{titletoc}
+\titlecontents{chapter}
+[0em]
+{\vspace{\baselineskip}}
+{\bfseries}
+{\bfseries}
+{}
+%************************************
+%Creazione delle "unghie" dei capitoli*
+%************************************
+\setlength{\unitlength}{1pt} %unità di misura per picture
+\newcommand{\fgletterstyle}{\large} % scelgo come voglio appaiano le lettere 
+\newlength{\outmargine} 
+\setlength{\outmargine}{\paperwidth-1in-\oddsidemargin-\textwidth} %misura del margine esterno
+\newlength{\fgwidth}
+\setlength{\fgwidth}{0.8\outmargine} %larghezza della cella colorata
+\newlength{\fgheight}
+\settoheight{\fgheight}{\fgletterstyle H} %misuro l'altezza delle lettere maiuscole
+\newcommand{\fgarg}{}
+\newfont{\letterfont}{pplr9d scaled 6000} %font delle lettere nei capitoli
+\newcounter{contatori}
+\newcounter{letter} 
+\makeatletter
+\def\lettera{\@ifstar{\sblettera}{\nextcol\sblettera}}% la versione con asterisco non inizia una nuova colonna, serve all'inizio del documento.
+\makeatother
+\newcommand{\sblettera}{%
+\begin{intersong}
+\refstepcounter{letter}
+\refstepcounter{contatori}
+\addcontentsline{toc}{chapter}{\Alph{letter}}
+\setlength{\parindent}{0pt}
+\makebox[\hsize]{\letterfont\Alph{letter}}
+\vspace*{2\baselineskip}
+\end{intersong}%
+\renewcommand{\fgarg}{\Alph{letter}}%
+}
+\makeatletter
+\def\capitoletto{\@ifstar{\sbcapitoletto}{\nextcol\sbcapitoletto}}
+\makeatother
+\newcommand{\sbcapitoletto}[2]{%Versione estesa e contrazione per unghie
+\begin{intersong}
+\refstepcounter{contatori}
+\addcontentsline{toc}{chapter}{#1}
+\makebox[\hsize]{\bfseries\LARGE#1}
+\vspace*{2\baselineskip}
+\end{intersong}
+\renewcommand{\fgarg}{#2}}
+
+\newcommand{\blob}{\setlength{\fboxsep}{0pt}%
+\colorbox{mygray}{%
+\makebox[\fgwidth]{\textcolor{white}{\rule[-0.4\fgheight]{0pt}{1.8\fgheight}\fgletterstyle\fgarg}}}} %cella colorata, imposto fboxsep a zero per avere le misure che voglio io
+
+\newcommand\rblob{%
+\begin{picture}(0,0)(0,6)
+\put(0,-\numexpr15*\value{contatori}\relax){\makebox[\dimexpr\outmargine-\fgwidth\relax]{}\blob}
+\end{picture}}
+
+%*********************
+%Testatine
+\pagestyle{fancy}%
+\setlength{\headheight}{13pt}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[RO]{\rblob}
+\fancyfoot[RO]{\itshape\thepage}
+\fancyfoot[LE]{\itshape\thepage}  
+\fancypagestyle{plain}{%
+\fancyhead{} % leva l'intestazione
+%\fancyfoot[RO]{\itshape\thepage} %mette il numero di pagina in basso al centro
+\renewcommand{\headrulewidth}{0pt} % e leva la linea dalle pagine di inizio capitolo
+}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SONGS impostazioni del pacchetto songs
+\usepackage[noindexes]{songs}
+\MultiwordChords								% accordi sopra più sillabe
+\notenamesin{A}{B}{C}{D}{E}{F}{G}  			% scriverò gli accordi secondo la notazione anglosassone
+\notenamesout{La}{Si}{Do}{Re}{Mi}{Fa}{Sol} 	% e lui me li restituirà secondo la notazione italiana
+
+\renewcommand{\printchord}[1]{\footnotesize\bf\sffamily#1}	% Accordi in neretto
+\renewcommand{\sharpsymbol}{\ensuremath{\sharp}}  % diesis
+\renewcommand{\flatsymbol}{$\flat$}				% bemolle
+\setlength{\cbarwidth}{0pt}						% linea laterale ritornelli
+%\setlength{\sbarheight}{0pt}						%linee sopra e sotto
+\renewcommand{\chorusfont}{\bf}					%font ritornelli
+\setlength{\columnsep}{10mm}
+\setlength{\parindent}{0pt}
+
+\ifchorded
+\afterpreludeskip=-2pt plus 3pt minus 6pt
+\setlength{\versesep}{0.3\baselineskip plus 4pt minus 2pt}
+\else
+\afterpreludeskip=6pt
+\setlength{\versesep}{0.6\baselineskip plus 4pt minus 2pt}
+\fi
+\versenumwidth=5.2mm
+\renewcommand{\everychorus}{\setlength{\leftskip}{\versenumwidth}}
+\makeatletter
+\renewcommand\textnote[1]{% note in senza grazie e senza sfondo
+  \ifhmode\par\fi%
+  \ifnum\lastpenalty=12345\else%
+    \ifSB@inverse%
+      \vskip2\p@\relax%
+    \else\ifSB@inchorus%
+      \vskip2\p@\relax%
+    \else\ifSB@stanza%
+      \nobreak\vskip\versesep%
+    \fi\fi\fi%
+  \fi%
+  \begingroup%
+    \everypar{}%
+    \ifchorded\chordedfalse\SB@setbaselineskip\chordedtrue\fi%
+    \placenote{\normalfont\sffamily{\SB@boxup{#1}}}%
+  \endgroup%
+  \nobreak%
+  \ifSB@inverse%
+    \vskip2\p@\relax%
+  \else\ifSB@inchorus%
+    \vskip2\p@\relax%
+  \else\ifSB@stanza\else%
+    \nobreak\vskip\versesep%
+  \fi\fi\fi%
+}
+\renewcommand{\rep}[1]{($\times$#1)}		% cambia la x nelle ripetizioni
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% titoli come canzoniere AC Padova
+\newlength{\titlength}
+\newlength{\numerwidth}
+\newlength{\larcolonna}
+\renewcommand\makeprelude{%
+\resettitles%
+\ifthenelse{\equal{\songauthors}{}}{%
+\phantomsection
+\addcontentsline{toc}{section}{\thesongnum.\ \songtitle}}%
+{\phantomsection
+\addcontentsline{toc}{section}{\thesongnum.\ \songtitle\ \footnotesize\itshape(\songauthors)}}
+\settowidth{\numerwidth}{\bf\Huge \sffamily \thesongnum}
+  \newcommand{\titolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily \songtitle}
+ \settowidth{\titlength}{\titolo}
+ \setlength{\larcolonna}{\hsize-\numerwidth-30pt}
+\begin{tabularx}{\hsize}{r|X}
+\renewcommand{\arraystretch}{0} 
+& \ifdim\titlength<\larcolonna \titolo \else \resizebox{\larcolonna}{!}{\titolo} \fi\\
+\cline{2-2}  
+\multirow{-2}{*}{{\bf\Huge \sffamily \thesongnum}} & \ifthenelse{\equal{\songauthors}{}}{}{\raggedleft\footnotesize\itshape(\songauthors)}
+\end{tabularx}
+\vspace*{-0.4\baselineskip}
+       \nexttitle%
+       \foreachtitle{(\songtitle)\par}%
+      }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modificare l'interlinea
+\iflyric
+\renewcommand{\colbotglue}{0pt plus .5\textheight minus 0pt}
+\baselineadj=2pt plus 0pt minus 0pt  % nel canzoniere senza accordi regolo l'interline di TUTTE le strofe
+\fi
+\ifchorded  % nel canzoniere con accordi regolo l'interline delle:
+\baselineadj=3pt plus 0pt minus 0pt  %strofe con accordi (interlinea generale)
+\newcommand{\mychordsoff}{}
+\let\mychordsoff\chordsoff
+\renewcommand{\chordsoff}{\baselineadj=1.4pt\mychordsoff} %strofe senza accordi
+\fi
+\renewcommand{\clineparams}{ 
+\baselineskip=8pt 
+\lineskiplimit=0pt 
+\lineskip=0pt
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Per modificare il font delle seconde voci-risposte
+\makeatletter
+\renewcommand\SB@echo[1]{%
+	\endgroup% 
+	\begingroup%
+		\ifdim\fontdimen\@ne\font>\z@\upshape\else\itshape\fi% 
+		\endlinechar\m@ne% 
+		\scantokens{(#1)}%
+	\endgroup% 
+}
+
+\newcommand{\ps@intro}{
+   \renewcommand{\@oddhead}{}%     header blank
+   \renewcommand{\@evenhead}{}%    header blank
+   \renewcommand{\@oddfoot}{\hfill\itshape\thepage}%     
+   \renewcommand{\@evenfoot}{\itshape\thepage\hfill}%     
+}
+\makeatother
+\renewcommand{\makepostlude}{\vskip10pt plus 10pt minus 3pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%eliminare i bookmark di songs, utile per creare la tableofcontents
+\makeatletter
+\renewcommand\SB@endsong{%
+  \ifSB@insong%
+      \ifSB@inverse\SB@erreov\endverse\fi%
+      \ifSB@inchorus\SB@erreoc\endchorus\fi%
+      \global\SB@skip\versesep%
+      \unskip%
+      \ifrepchorus\ifvoid\SB@chorusbox\else%
+        \ifSB@prevverse\ifvnumbered%
+          \marks\SB@cmarkclass{\SB@lastcmark}%
+        \fi\fi%
+      \fi\fi%
+    \endgroup\egroup%
+    \setbox\SB@songbox\vbox{%
+      \songmark%
+      \unvbox\SB@songwrites%
+      \ifnum\SB@numcols>\z@\hsize\SB@colwidth\fi%
+      \leftskip\z@skip\rightskip\z@skip%
+      \parfillskip\@flushglue\parskip\z@skip\parindent\z@%
+      \ifdim\sbarheight>\z@%
+        \hrule\@height\sbarheight\@width\hsize%
+        \nobreak\vskip5\p@%
+      \fi%
+
+      %\ifpdfindex\begingroup%
+        %\ifx\pdfbookmark\undefined\else%
+        %\ifx\pdfbookmark\relax\else%
+          %\resettitles%
+          %\pdfbookmark[\ifnum\c@section=\z@1\else2\fi]%
+           % {\thesongnum. \songtitle}%
+           % {song\theSB@songsnum-\thesongnum}%
+        %\fi\fi%
+      %\endgroup\fi%
+      \vbox{\makeprelude}%
+      \nobreak\vskip\SB@skip%
+      \vskip\afterpreludeskip\relax%
+      \unvbox\SB@songbox%
+      \nobreak\vskip\SB@skip%
+      \vskip\beforepostludeskip\relax%
+      \nointerlineskip%
+      \vbox{\makepostlude}%
+      \ifdim\sbarheight>\z@%
+        \nobreak\vskip2\p@\@plus\p@%
+        \nointerlineskip%
+        \hbox{\vrule\@height\sbarheight\@width\hsize}%
+      \fi%
+    }%
+    \SB@insongfalse%
+    \edef\SB@sgroup{\thesongnum}%
+    \global\SB@groupcnt\z@%
+    \SB@submitsong%
+    \ifnum\SB@grouplvl=\z@\let\SB@sgroup\@empty\fi%
+    \stepcounter{songnum}%
+  \else%
+    \ifSB@intersong\SB@erreor\SB@closeall%
+    \else\SB@erreot\fi%
+  \fi%
+}
+
+
+\makeatother	
+
+
+\songpos{0} % agire siu questo parametro per modificare il criterio di impaginazione di Songs
+\makeatletter
+\renewcommand{\tableofcontents}
+{\chapter*{\contentsname}
+\csname @twocolumntrue\endcsname
+\csname @starttoc\endcsname{toc}}
+\makeatother
+\usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Inizio
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\twocolumn
+\renewcommand{\fgarg}{Ind}
+\tableofcontents
+\onecolumn
+%INIZIO%canzoni
+\cleardoublepage
+\begin{songs}{}
+\songcolumns{2}
+
+
+
+\capitoletto{Agnello di Dio}{Agn}
+\input{agnelli.tex}
+
+
+
+
+\end{songs}
+\end{document}

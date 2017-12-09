@@ -1,0 +1,6 @@
+headings_flag 0
+heading_prefix "\\par\\penalty-50\\textbf{"
+heading_suffix  "}\\nopagebreak\n"
+delim_1 "\\dotfill"
+item_0 "\n \\item\\bfseries "
+item_x1 "\n \\subitem \\normalfont "

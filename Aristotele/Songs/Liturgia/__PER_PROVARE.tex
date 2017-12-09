@@ -1,0 +1,112 @@
+% SETTINGS
+%——————————————————————————————————————————————————————
+% STILE DOCUMENTO
+%-------------------------------------------------------------------------------                                                                             
+\documentclass[a4vert, palatino, titleindex, tematicindex, chorded, cover]{canzoniereonline}
+
+%opzioni formato: singoli, standard (A4), a5vert, a5oriz, a6vert;
+%opzioni accordi: lyric, chorded {quelli d Songs}
+%opzioni font: palatino, libertine
+%opzioni segno minore: "minorsign=quel che vuoi"
+%opzioni indici: authorsindex, titleindex, tematicindex
+
+%opzioi copertina: cover e nocover
+
+\def\canzsongcolumsnumber{2} %# coolonne lungo cui disporre le canzoni
+
+
+
+
+% PACCHETTI DA IMPORTARE
+%-------------------------------------------------------------------------------                                                                             
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+
+
+
+
+
+
+% NUOVI COMANDI E VARIABILI GLOBALI
+%--------------------------------------------------------------------------------
+%Coomando per la suddivisione in capitoli
+\renewcommand{\songchapter}{\chapter*}
+
+
+%Counter globale per tenere traccia di una numerazione progressiva
+%Si affianca a un altro counter già utilizzato nella classe CanzoniereOnLine "songnum" 
+%che, tuttavia, si riazzera ognivolta viene definito un nuovo ambiente \beginsongs{}
+\newcounter{GlobalSongCounter} 
+
+%Ciascun capitolo contiene già tutta la logica di gestione della 
+%numerazione progressiva, del DB locale da cui attingere le canzoni
+%e la creazione/chiusura dell'ambiente in cui vengono importate 
+%tutte le canzoni relative
+\addtocounter{GlobalSongCounter}{1} %set starting song counter to 1 (0 otherwise)
+
+
+%------------
+\makeatletter
+\newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}\m@th$}
+\makeatother
+%-----------
+
+%Starting Document
+\begin{document}
+
+
+\begin{songs}{}
+\songcolumns{\canzsongcolumsnumber}
+\setcounter{songnum}{\theGlobalSongCounter} %set songnum counter, otherwise would be reset
+
+
+
+%  *  *  *  *  *  TEST SONG HERE  *  *  *  *  *  *  * 
+
+
+\input{acqua_siamo_noi}
+
+
+
+
+% *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+
+
+
+
+
+
+\end{songs}
+
+
+
+
+%\ifcanzsingole
+%	\relax
+%\else
+%	\iftitleindex
+%		\ifxetex
+%		\printindex[alfabetico]
+%		\else
+%		\printindex
+%		\fi
+%	\else
+%	\fi
+%	\ifauthorsindex
+%	\printindex[autori]
+%	\else
+%	\fi
+%	\iftematicindex
+%	\printindex[tematico]
+%	\else
+%	\fi
+%	\ifcover
+%		\relax
+%	\else
+%		\colophon
+%	\fi
+%\fi
+\end{document}

@@ -1,0 +1,33 @@
+
+
+\makeatletter
+\def\input@path{{Songs/TagWaiting/}} %<<<<<<< SET HERE SONGS INPUT PATH
+\makeatother
+
+\begin{songs}{}
+\songcolumns{\canzsongcolumsnumber}
+\setcounter{songnum}{\theGlobalSongCounter} %set songnum counter, otherwise would be reset
+
+
+
+
+
+%Elenco di canzoni da importare in questo capitolo in ordine
+
+\input{alleluia_lodate_il_signore}
+\input{ave_maria_casucci}
+\input{bless_the_lord}
+\input{dall_aurora_al_tramonto}
+\input{il_signore_e_la_mia_forza}
+\input{le_tue_meraviglie}
+\input{questa_notte}
+\input{verbum_panis}
+
+
+
+
+
+
+
+\addtocounter{GlobalSongCounter}{\thesongnum}	%save global numbering
+\end{songs}
