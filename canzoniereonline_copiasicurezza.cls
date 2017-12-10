@@ -183,15 +183,15 @@
 \notenamesout{La}{Si}{Do}{Re}{Mi}{Fa}{Sol} 	% e lui me li restituirà secondo la notazione italiana
 \renewcommand{\sharpsymbol}{\ensuremath{\raisebox{0.5mm}{\footnotesize$\sharp$}}}  % diesis
 \renewcommand{\flatsymbol}{\raisebox{0.1ex}{$\flat$}}				% bemolle
-\setlength{\cbarwidth}{0.5pt}						% linea laterale ritornelli
+\setlength{\cbarwidth}{0pt}						% linea laterale ritornelli
 \setlength{\sbarheight}{0pt}						%linee sopra e sotto
-\renewcommand{\chorusfont}{\itshape}					%font ritornelli
+%\renewcommand{\chorusfont}{\itshape}					%font ritornelli
 \renewcommand{\rep}[1]{{\normalfont($\times$#1)}}		% cambia la x nelle ripetizioni
 \setlength{\parindent}{0pt}
 \setlength\columnsep{5mm}
 
 
-\renewcommand{\chorusfont}{\slshape\mdseries\bfseries} %chorus BOLD settings
+\renewcommand{\chorusfont}{\bfseries} %chorus BOLD settings
 % Un altro esempio:
 %\renewcommand{\chorusfont}{\slshape\scshape\mdseries\normalsize\large} 
 %
@@ -471,30 +471,29 @@
 %creo l'ordine dei ``momenti''. I momenti della messa sono in un primo gruppo, i tempi liturgici in un secondo (che inizia con il 21), le attribuzioni particolari iniziano col 31  e le canzoni scout col 51. Questo solo per comodità, nel caso in cui si dovesse inserire qualche nuovo momento non servirebbe cambiare i numeri di tutti i momenti successivi, ma solo di alcuni.
 \setposition{Ingresso}{01}
 \setposition{Atto penitenziale}{02}
-\setposition{Gloria}{03}
-\setposition{Salmi}{04}
 \setposition{Acclamazione al Vangelo}{05}
-\setposition{Alleluia}{06}
+\setposition{Dopo il Vangelo}{06}
 \setposition{Offertorio}{07}
-\setposition{Santo}{08}
-\setposition{Mistero della fede}{09}
-\setposition{Padre nostro}{10}
-\setposition{Rito della pace}{11}
-\setposition{Agnello di Dio}{12}
-\setposition{Canto di comunione}{13}
-\setposition{Canto di congedo}{14}
+\setposition{Comunione}{12}
+\setposition{Ringraziamento}{13}
+\setposition{Fine}{14}
 
 \setposition{Avvento}{20}
 \setposition{Natale}{21}
 \setposition{Quaresima}{22}
 \setposition{Pasqua}{23}
+\setposition{Santi}{24}
 
-\setposition{Canti di Taizé}{30}
+
 \setposition{Canti francescani}{31}
-\setposition{Canti mariani}{32}
+\setposition{Canti Mariani}{32}
 
-\setposition{Riconciliazione}{33}
-\setposition{Conversione}{34}
+\setposition{Battesimo}{33}
+\setposition{Prima Comunione}{34}
+\setposition{Cresima}{35}
+\setposition{Matrimonio}{36}
+
+\setposition{Meditazione}{40}
 
 \setposition{L/C}{51}
 \setposition{E/G}{52}

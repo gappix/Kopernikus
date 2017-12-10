@@ -13,6 +13,8 @@
 \beginsong{TITOLO}[by={AUTORE}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{}							% <<< INSERISCI MOMENTI	
+% momenti vanno separati da ; e vanno scelti tra:
+% Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione;
 \ifchorded
 	%\textnote{Tonalità originale }	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
@@ -22,6 +24,7 @@
 \ifchorded
 \vspace*{\versesep}
 \textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % << MODIFICA IL TEMPO
+% Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
 \vspace*{-\versesep}
 \beginverse*
 
@@ -29,7 +32,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[G] \[C]  \[D]	 \rep{2}
+\[G] \[C]  \[D]	 \rep{2} % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 %\vspace*{-\versesep}
@@ -57,6 +60,7 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 
 
 %%%%% RITORNELLO
+\textnote{\textbf{Rit.}}
 \beginchorus
 
 INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
@@ -73,7 +77,51 @@ INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
 INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 
 \endverse
-\textbf{Rit.}
+
+
+
+
+%%%%%% EV. INTERMEZZO
+\beginverse*
+\vspace*{1.3\versesep}
+{
+	\nolyrics
+	\textnote{Intermezzo strumentale}
+	
+	\ifchorded
+
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[G] \[C]  \[D]	 \rep{2}
+
+	%---- Ogni riga successiva -------------------
+	\vspace*{-\versesep}
+	\[G] \[C]  \[D]	
+
+
+	\fi
+	%---- Ev Indicazioni -------------------------			
+	%\textnote{\textit{(ripetizione della strofa)}} 
+	 
+}
+\vspace*{\versesep}
+\endverse
+
+
+
+
+
+
+%%%%%% EV. FINALE
+
+\beginchorus %oppure \beginverse*
+\vspace*{1.3\versesep}
+\textnote{Finale \textit{(rallentando)}} %<<< EV. INDICAZIONI
+
+INSERIRE TESTO E ACCORDI FINALE
+
+\endchorus  %oppure \endverse
+
 
 
 
@@ -91,10 +139,10 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 \ifchorded
 %decremento contatore per avere stesso numero
 \addtocounter{songnum}{-1} 
-\beginsong{TITOLO [NUOVA TONALITA]}[by={AUTORE}] 	% <<< COPIA TITOLO E AUTORE
+\beginsong{TITOLO}[by={AUTORE}] 	% <<< COPIA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
 \ifchorded
-	%\textnote{Tonalità originale }	% <<< EV COMMENTI (tonalità originale/migliore)
+	%\textnote{Tonalità migliore per le bambine}	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 

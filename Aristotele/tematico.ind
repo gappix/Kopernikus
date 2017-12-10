@@ -3,5 +3,22 @@
  \item\bfseries Ingresso
  \subitem \normalfont Acqua siamo noi\dotfill
 		\hyperindexformat{\indexanchor{1}}{9}
+ \item\bfseries Alleluia
+ \subitem \normalfont Acqua siamo noi\dotfill
+		\hyperindexformat{\indexanchor{1}}{9}
+ \item\bfseries Natale
+ \subitem \normalfont Gioia al mondo\dotfill
+		\hyperindexformat{\indexanchor{2}}{10}
+    \subitem Holy is the Lord\dotfill
+		\hyperindexformat{\indexanchor{3}}{10}
+    \subitem In questa notte splendida\dotfill
+		\hyperindexformat{\indexanchor{4}}{11}
+    \subitem Quando nacque Ges\IeC {\`u}\dotfill
+		\hyperindexformat{\indexanchor{5}}{11}
+    \subitem Senti l'Angelo\dotfill
+		\hyperindexformat{\indexanchor{6}}{12}
+ \item\bfseries Meditazione
+ \subitem \normalfont Bless the lord my soul\dotfill
+		\hyperindexformat{\indexanchor{1}}{13}
 
 \end{theindex}
