@@ -2,38 +2,67 @@
 \par\penalty-50\textbf{A}\nopagebreak
 
   \item Acqua siamo noi\dotfill\hyperindexformat{\indexanchor{1}}{9}
+  \item Alleluia, Signore sei venuto\dotfill
+		\hyperindexformat{\indexanchor{1}}{5}
+  \item Antica eterna danza\dotfill
+		\hyperindexformat{\indexanchor{2}}{10}
+  \item Ave Maria\dotfill\hyperindexformat{\indexanchor{3}}{11}
 
   \indexspace
 \par\penalty-50\textbf{B}\nopagebreak
 
   \item Bless the lord my soul\dotfill
-		\hyperindexformat{\indexanchor{1}}{13}
+		\hyperindexformat{\indexanchor{1}}{19}
+
+  \indexspace
+\par\penalty-50\textbf{D}\nopagebreak
+
+  \item Danza la vita\dotfill\hyperindexformat{\indexanchor{4}}{12}
 
   \indexspace
 \par\penalty-50\textbf{G}\nopagebreak
 
-  \item Gioia al mondo\dotfill\hyperindexformat{\indexanchor{2}}{10}
+  \item Gioia al mondo\dotfill\hyperindexformat{\indexanchor{5}}{13}
+  \item Gloria nell'alto dei cieli\dotfill
+		\hyperindexformat{\indexanchor{1}}{3, 4}
 
   \indexspace
 \par\penalty-50\textbf{H}\nopagebreak
 
-  \item Holy is the Lord\dotfill\hyperindexformat{\indexanchor{3}}{10}
+  \item Holy is the Lord\dotfill
+		\hyperindexformat{\indexanchor{6}}{13, 14}
 
   \indexspace
 \par\penalty-50\textbf{I}\nopagebreak
 
   \item In questa notte splendida\dotfill
-		\hyperindexformat{\indexanchor{4}}{11}
+		\hyperindexformat{\indexanchor{7}}{14, 15}
+
+  \indexspace
+\par\penalty-50\textbf{M}\nopagebreak
+
+  \item Maranathà\dotfill\hyperindexformat{\indexanchor{8}}{15}
 
   \indexspace
 \par\penalty-50\textbf{Q}\nopagebreak
 
   \item Quando nacque Gesù\dotfill
-		\hyperindexformat{\indexanchor{5}}{11}
+		\hyperindexformat{\indexanchor{9}}{16}
 
   \indexspace
 \par\penalty-50\textbf{S}\nopagebreak
 
-  \item Senti l'Angelo\dotfill\hyperindexformat{\indexanchor{6}}{12}
+  \item Senti l'Angelo\dotfill\hyperindexformat{\indexanchor{10}}{17}
+
+  \indexspace
+\par\penalty-50\textbf{T}\nopagebreak
+
+  \item Tu scendi dalle stelle\dotfill
+		\hyperindexformat{\indexanchor{11}}{17}
+
+  \indexspace
+\par\penalty-50\textbf{V}\nopagebreak
+
+  \item Venite fedeli\dotfill\hyperindexformat{\indexanchor{12}}{18}
 
 \end{theindex}
