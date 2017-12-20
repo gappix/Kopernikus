@@ -9,10 +9,10 @@
 
 %%%%%% TITOLO E IMPOSTAZONI
 \beginsong{In questa notte splendida}[by={Chieffo}] 	% <<< MODIFICA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
+\transpose{5} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Natale}							% <<< INSERISCI MOMENTI
 \ifchorded
-	\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{Tonalità migliore per le bambine}	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 
@@ -21,6 +21,7 @@
 \vspace*{\versesep}
 \textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % << MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\musicnote{\textit{Dolcissimo, partendo molto piano}}
 \vspace*{-\versesep}
 \beginverse*
 
@@ -28,11 +29,13 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
+\[E] \[A]  \[E]  \[B] 
+
+%---- Ogni riga successiva -------------------
+\vspace*{-\versesep}
 \[E] \[A]  \[E]  \[B] \[E]
 
 
-%---- Ev Indicazioni -------------------------			
-\textnote{\textit{(Ultime due righe oppure l'intera strofa)} }	
 
 \endverse
 \fi
@@ -58,7 +61,29 @@ nel\[E]la sua \[B]veri\[E]tà.
 
 \endverse
 
+%%%%%% EV. INTERMEZZO
+\beginverse*
+\vspace*{1.3\versesep}
+{
+	\nolyrics
+	\textnote{Intermezzo strumentale}
+	\musicnote{\textit{(Crescendo di intensità)}} 
+	 
+	\ifchorded
 
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[E] \[A]  \[E]  \[B] 
+
+	%---- Ogni riga successiva -------------------
+	\vspace*{-\versesep}
+	\[E] \[A]  \[E]  \[B] \[E]
+
+	\fi
+
+}
+\vspace*{\versesep}
+\endverse
 
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
@@ -76,20 +101,30 @@ Ge^sù nostro ca^rissimo
 
 \endverse
 
+\transpose{3}
+
+
 
 %%%%%% EV. INTERMEZZO
-
 \beginverse*
 \vspace*{1.3\versesep}
 {
 	\nolyrics
-	\textnote{Intermezzo strumentale:}
-	
-
-	%---- Ev Indicazioni -------------------------			
-	\textnote{\textit{(ripetizione della strofa, \hfill \break
-	 cambia la tonalità)}} 
+	\textnote{Intermezzo strumentale}
+	\musicnote{\textit{(Più forte, cambia la tonalità)}} 
 	 
+	\ifchorded
+
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[E] \[A]  \[E]  \[B] 
+
+	%---- Ogni riga successiva -------------------
+	\vspace*{-\versesep}
+	\[E] \[A]  \[E]  \[B] \[E]
+
+	\fi
+
 }
 \vspace*{\versesep}
 \endverse
@@ -99,15 +134,17 @@ Ge^sù nostro ca^rissimo
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-\transpose{3}
+
 In ^questa notte ^limpida
 di ^gloria e di splen^dor,
 il ^nostro cuore ^trepida
 è ^nato il ^Salva^tor.
 Ge^sù nostro ca^rissimo
 le ^porte ci apri^rà,
+
+\musicnote{\textit{Rallentando}}
 il ^figlio dell'Al^tissimo
-con ^noi sem^pre sa^rà.
+con ^no\[E]i sem^pr\[B]e sa^r\[E]à.
 
 \endverse
 
@@ -127,10 +164,11 @@ con ^noi sem^pre sa^rà.
 %decremento contatore per avere stesso numero
 \addtocounter{songnum}{-1} 
 \beginsong{In questa notte splendida}[by={Chieffo}] 	% <<< MODIFICA TITOLO E AUTORE
-\transpose{5} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
+\transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
 \ifchorded
-	\textnote{Tonalità migliore per le bambine}	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
+
 
 
 %%%%%% INTRODUZIONE
@@ -138,6 +176,7 @@ con ^noi sem^pre sa^rà.
 \vspace*{\versesep}
 \textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % << MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\musicnote{\textit{Dolcissimo, partendo molto piano}}
 \vspace*{-\versesep}
 \beginverse*
 
@@ -145,11 +184,13 @@ con ^noi sem^pre sa^rà.
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
+\[E] \[A]  \[E]  \[B] 
+
+%---- Ogni riga successiva -------------------
+\vspace*{-\versesep}
 \[E] \[A]  \[E]  \[B] \[E]
 
 
-%---- Ev Indicazioni -------------------------			
-\textnote{\textit{(Ultime due righe oppure l'intera strofa)} }	
 
 \endverse
 \fi
@@ -175,7 +216,29 @@ nel\[E]la sua \[B]veri\[E]tà.
 
 \endverse
 
+%%%%%% EV. INTERMEZZO
+\beginverse*
+\vspace*{1.3\versesep}
+{
+	\nolyrics
+	\textnote{Intermezzo strumentale}
+	\musicnote{\textit{(Crescendo di intensità)}} 
+	 
+	\ifchorded
 
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[E] \[A]  \[E]  \[B] 
+
+	%---- Ogni riga successiva -------------------
+	\vspace*{-\versesep}
+	\[E] \[A]  \[E]  \[B] \[E]
+
+	\fi
+
+}
+\vspace*{\versesep}
+\endverse
 
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
@@ -193,19 +256,30 @@ Ge^sù nostro ca^rissimo
 
 \endverse
 
+\transpose{3}
+
+
 
 %%%%%% EV. INTERMEZZO
-
 \beginverse*
 \vspace*{1.3\versesep}
 {
 	\nolyrics
-	\textnote{Intermezzo strumentale:}
-	
-
-	%---- Ev Indicazioni -------------------------			
-	\textnote{\textit{(ripetizione della strofa, \brk cambia la tonalità)}} 
+	\textnote{Intermezzo strumentale}
+	\musicnote{\textit{(Più forte, cambia la tonalità)}} 
 	 
+	\ifchorded
+
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[E] \[A]  \[E]  \[B] 
+
+	%---- Ogni riga successiva -------------------
+	\vspace*{-\versesep}
+	\[E] \[A]  \[E]  \[B] \[E]
+
+	\fi
+
 }
 \vspace*{\versesep}
 \endverse
@@ -215,15 +289,17 @@ Ge^sù nostro ca^rissimo
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-\transpose{3}
+
 In ^questa notte ^limpida
 di ^gloria e di splen^dor,
 il ^nostro cuore ^trepida
 è ^nato il ^Salva^tor.
 Ge^sù nostro ca^rissimo
 le ^porte ci apri^rà,
+
+\musicnote{\textit{Rallentando}}
 il ^figlio dell'Al^tissimo
-con ^noi sem^pre sa^rà.
+con ^no\[E]i sem^pr\[B]e sa^r\[E]à.
 
 \endverse
 
@@ -232,7 +308,6 @@ con ^noi sem^pre sa^rà.
 
 
 \endsong
-
 \fi
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %			FINE CANZONE TRASPOSTA

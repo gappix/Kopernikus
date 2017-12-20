@@ -11,10 +11,10 @@
 
 %%%%%% TITOLO E IMPOSTAZONI
 \beginsong{Holy is the Lord}[by={C. Tomlin, L. Giglio}] 	% <<< MODIFICA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
+\transpose{-3} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Natale}							% <<< INSERISCI MOMENTI
 \ifchorded
-	\textnote{Tonalità originale }
+	\textnote{Tonalità migliore per le bambine }
 \fi
 
 
@@ -63,13 +63,35 @@ how \[E-]great how \[C]awesome is \[D]He.
 Holy is the \[G]Lord
 \[C]God al\[D]mighty.
 The \[E-]Earth is \[C]filled
-with His \[D]glory. \rep{2} \ifchorded \quad \qquad \nolyrics \[G] \[C]  \[D]	\rep{2} \fi
+with His \[D]glory. \rep{2} 
 
 \endchorus
 
 
 
+%%%%%% EV. INTERMEZZO
+\beginverse*
+\vspace*{1.3\versesep}
+{
+	\nolyrics
+	\textnote{Intermezzo strumentale}
+	
+	\ifchorded
 
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[G] \[C]  \[D]	 \rep{2}
+
+
+
+
+	\fi
+	%---- Ev Indicazioni -------------------------			
+	\musicnote{e si riprende dalla strofa} 
+	 
+}
+\vspace*{\versesep}
+\endverse
 
 
 
@@ -99,9 +121,9 @@ with His \[D]glo-o-ory.
 %decremento contatore per avere stesso numero
 \addtocounter{songnum}{-1} 
 \beginsong{Holy is the Lord}[by={C. Tomlin, L. Giglio}] 	% <<< MODIFICA TITOLO E AUTORE
-\transpose{-3} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
+\transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
 \ifchorded
-	\textnote{Tonalità migliore per le bambine}	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 
@@ -151,13 +173,35 @@ how \[E-]great how \[C]awesome is \[D]He.
 Holy is the \[G]Lord
 \[C]God al\[D]mighty.
 The \[E-]Earth is \[C]filled
-with His \[D]glory. \rep{2} \ifchorded \quad \qquad \nolyrics \[G] \[C]  \[D]	\rep{2} \fi
+with His \[D]glory. \rep{2} 
 
 \endchorus
 
 
 
+%%%%%% EV. INTERMEZZO
+\beginverse*
+\vspace*{1.3\versesep}
+{
+	\nolyrics
+	\textnote{Intermezzo strumentale}
+	
+	\ifchorded
 
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[G] \[C]  \[D]	 \rep{2}
+
+
+
+
+	\fi
+	%---- Ev Indicazioni -------------------------			
+	\musicnote{e si riprende dalla strofa} 
+	 
+}
+\vspace*{\versesep}
+\endverse
 
 
 
@@ -172,10 +216,7 @@ The \[E-]Earth is \[C]filled
 with His \[D]glo-o-ory.
 \endchorus
 
-
-
 \endsong
-
 \fi
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %			FINE CANZONE TRASPOSTA
