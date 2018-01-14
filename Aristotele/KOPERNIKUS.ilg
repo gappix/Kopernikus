@@ -1,7 +1,7 @@
 This is makeindex, version 2.15 [TeX Live 2010] (kpathsea + Thai support).
 Scanning style file ./canzstyle.ist......done (6 attributes redefined, 0 ignored).
-Scanning input file KOPERNIKUS.idx....done (40 entries accepted, 0 rejected).
-Sorting entries....done (203 comparisons).
-Generating output file KOPERNIKUS.ind....done (112 lines written, 0 warnings).
+Scanning input file KOPERNIKUS.idx....done (45 entries accepted, 0 rejected).
+Sorting entries....done (271 comparisons).
+Generating output file KOPERNIKUS.ind....done (127 lines written, 0 warnings).
 Output written in KOPERNIKUS.ind.
 Transcript written in KOPERNIKUS.ilg.
