@@ -1,0 +1,95 @@
+%titolo: 	Eccomi qui
+%autore: 	Diliberto Monti
+%tonalita: 	Do 
+
+
+
+%%%%%% TITOLO E IMPOSTAZONI
+\beginsong{Eccomi qui}[by={Diliberto Monti}] 	% <<< MODIFICA TITOLO E AUTORE
+\transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
+\momenti{Ingresso; Dopo il Vangelo}							% <<< INSERISCI MOMENTI	
+% momenti vanno separati da ; e vanno scelti tra:
+% Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione;
+\ifchorded
+	%\textnote{Tonalità originale }	% <<< EV COMMENTI (tonalità originale/migliore)
+\fi
+
+
+%%%%%% INTRODUZIONE
+\ifchorded
+\vspace*{\versesep}
+\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % << MODIFICA IL TEMPO
+% Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\vspace*{-\versesep}
+\beginverse*
+
+\nolyrics
+
+%---- Prima riga -----------------------------
+\vspace*{-\versesep}
+\[*C] \[*E7] \[A-] \[F] \[G]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+
+%---- Ogni riga successiva -------------------
+%\vspace*{-\versesep}
+%\[G] \[C]  \[D]	
+
+%---- Ev Indicazioni -------------------------			
+%\textnote{\textit{(Oppure tutta la strofa)} }	
+
+\endverse
+\fi
+
+
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
+
+\[*C] E\[*E7]ccomi \[A-]qui, \[F] di nuovo a \[G]te Signore, 
+\[*C] e\[*E7]ccomi \[A-]qui: \[F] accetta \[G]la mia vita;
+\[C] non dire \[G]no a \[F]chi si affi da a \[C]te,
+\[A-] mi accoglie\[D-]rai \[F] per sempre \[G]nel tuo amore.\[F]\[C]
+
+\endchorus
+
+
+
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		& <<< DECOMMENTA se vuoi una strofa senza accordi
+
+Q\[C]uando hai scelto di \[G]vivere quag\[A-]giù, \[A-7]
+q\[F]uando hai voluto che \[G]fossimo figli t\[C]uoi, \[C7]
+\[F] ti sei do\[C]nato ad \[D-]una come \[A-]noi 
+\[A-7] e hai cammi\[D-]nato sulle st\[F]rade dell'\[G]uomo.
+
+\endverse
+
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+
+P^rima che il Padre ti ^richiamasse a ^sé ^
+p^rima del buio che il tuo g^rido spezze^rà ^
+^ tu hai pro^messo di ^non lasciarci p^iù
+^ di accompag^narci sulle st^rade del ^mondo.
+
+\endverse
+
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+
+^Ora ti prego con^ducimi con ^te ^
+^nella fatica di ser^vir la veri^tà ^
+^ sarò vi^cino a ^chi ti invoche^rà
+^ e mi guide^rai sulle st^rade dell'^uomo.
+
+\endverse
+
+\endsong
+%------------------------------------------------------------
+%			FINE CANZONE
+%------------------------------------------------------------
