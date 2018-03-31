@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.10.2)  24 FEB 2018 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.10.2)  31 MAR 2018 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1161,20 +1161,19 @@ LaTeX Info: Redefining \nameref on input line 59.
 \@outlinefile=\write6
 \openout6 = `__PER_PROVARE.out'.
 
- (./niente_vale_di_più.tex
+ (./cantico_di_liberazione_VENDA.tex
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 11.
-LaTeX Font Info:    Try loading font information for U+wasy on input line 11.
-
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 13.
 (c:/texlive/2017/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 11.
+(Font)              scaled to size 5.21004pt on input line 13.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 11.
+(Font)              scaled to size 5.21004pt on input line 13.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 108.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 123.
 ) [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -1183,28 +1182,34 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./__PER_PROVARE.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
-Package rerunfilecheck Info: File `__PER_PROVARE.out' has not changed.
-(rerunfilecheck)             Checksum: A218DF2DAB14F14121635729C81B9B35;59.
+
+
+Package rerunfilecheck Warning: File `__PER_PROVARE.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `__PER_PROVARE.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  A9A00BACFF37D31CE395D2C8BC289518;60.
  ) 
 Here is how much of TeX's memory you used:
- 18317 strings out of 492995
- 301541 string characters out of 6136402
- 406315 words of memory out of 5000000
- 21604 multiletter control sequences out of 15000+600000
- 36456 words of font info for 90 fonts, out of 8000000 for 9000
+ 18310 strings out of 492995
+ 301527 string characters out of 6136402
+ 405315 words of memory out of 5000000
+ 21602 multiletter control sequences out of 15000+600000
+ 33887 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,13n,45p,10400b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2017/texm
-f-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2017/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/
-public/cm-super/sfss1095.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-
-super/sfsx1095.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfsx
-1440.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/te
-xlive/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on __PER_PROVARE.pdf (1 page, 75649 bytes).
+{c:/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
+ive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texmf-dist/fon
+ts/type1/public/cm-super/sfss1095.pfb><c:/texlive/2017/texmf-dist/fonts/type1/p
+ublic/cm-super/sfsx1095.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-s
+uper/sfsx1440.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.p
+fb>
+Output written on __PER_PROVARE.pdf (1 page, 55098 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 33 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 500000)
- 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
