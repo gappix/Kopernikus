@@ -31,7 +31,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[C] \[F] \[C]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[C] \[F] \[G7] \[C]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 %\vspace*{-\versesep}
@@ -49,11 +49,11 @@
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
 Mi hai chia\[C]mato dal nulla Si\[F]gnore
-e mi hai \[G7]dato il dono della\[C]vita
+e mi hai \[G7]dato il dono della \[C]vita
 tu mi hai preso e mi hai messo per \[F]strada
-e mi hai \[G7]detto di cammi\[F]nar.
+e mi hai \[G7]detto di cammi\[C]nar.
 Verso un mondo che non ha con\[F]fini no
-verso \[C]mete da raggiunge\[F]re oramai
+verso \[C]mete da raggiunge\[G7]re oramai
 verso il \[C]regno dell'A\[G7]more
 che è \[F]sempre un pò più in \[C]là!
 
@@ -65,10 +65,10 @@ che è \[F]sempre un pò più in \[C]là!
 
 Cammine\[F]rò senza stan\[C]carmi
 e vole\[F]rò sui monti più \[C]alti
-e trove\[Frò la forza di an\[C]dare, sempre più a\[F]vanti, \[*G7]sì!
-io cammine\[C]rò, cammine\[F]rò
-con te vi\[C]cino, io non cad\[F]rò
-e cammine\[C]rò cammine\[G]rò.
+e trove\[F]rò la forza di an\[C]dare, sempre più a\[F]vanti, \[*G7]sì!
+io \[C]camminerò, \[F]camminerò
+\[C]con te vicino, \[F]io non cadrò
+e \[C]camminerò, \[G]camminerò. \[C]
 
 \endchorus
 
@@ -79,9 +79,9 @@ e cammine\[C]rò cammine\[G]rò.
 
 In ogni is^tante ti sento vi^cino,
 Tu dai il ^senso alle cose che io ^faccio.
-La tua ^luce mi indica la ^strada
+La tua luce mi indica la ^strada
 e mi in^vita a cammi^nar.
-Verso un ^mondo che non ha con^fini no
+Verso un mondo che non ha con^fini no
 verso ^mete da raggiunge^re oramai
 verso il ^regno dell'A^more
 che è ^sempre un pò più in ^là!
@@ -94,10 +94,11 @@ che è ^sempre un pò più in ^là!
 
 Cammine\[F]rò senza stan\[C]carmi
 e vole\[F]rò sui monti più \[C]alti
-e trove\[Frò la forza di an\[C]dare, sempre più a\[F]vanti, \[*G7]sì!
-io cammine\[C]rò, cammine\[F]rò
-con te vi\[C]cino, io non cad\[F]rò
-e cammine\[C]rò cammine\[G]rò.
+e trove\[F]rò la forza di an\[C]dare, sempre più a\[F]vanti, \[*G7]sì!
+io \[C]camminerò, \[F]camminerò
+\[C]con te vicino, \[F]io non cadrò
+e \[C]camminerò, \[G]camminerò.\[C]
+
 
 \endchorus
 
@@ -105,3 +106,114 @@ e cammine\[C]rò cammine\[G]rò.
 %------------------------------------------------------------
 %			FINE CANZONE
 %------------------------------------------------------------
+
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%			CANZONE TRASPOSTA
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\ifchorded
+%decremento contatore per avere stesso numero
+\addtocounter{songnum}{-1} 
+\beginsong{Camminerò}[by={}] 	% <<< COPIA TITOLO E AUTORE
+\transpose{-3} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
+%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
+%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
+\ifchorded
+	%\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
+\fi
+
+
+%%%%%% INTRODUZIONE
+\ifchorded
+\vspace*{\versesep}
+\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+% Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\vspace*{-\versesep}
+\beginverse*
+
+\nolyrics
+
+%---- Prima riga -----------------------------
+\vspace*{-\versesep}
+\[C] \[F] \[G7] \[C]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+
+%---- Ogni riga successiva -------------------
+%\vspace*{-\versesep}
+%\[G] \[C]  \[D]	
+
+%---- Ev Indicazioni -------------------------			
+%\textnote{\textit{(Oppure tutta la strofa)} }	
+
+\endverse
+\fi
+
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+
+Mi hai chia\[C]mato dal nulla Si\[F]gnore
+e mi hai \[G7]dato il dono della \[C]vita
+tu mi hai preso e mi hai messo per \[F]strada
+e mi hai \[G7]detto di cammi\[C]nar.
+Verso un mondo che non ha con\[F]fini no
+verso \[C]mete da raggiunge\[G7]re oramai
+verso il \[C]regno dell'A\[G7]more
+che è \[F]sempre un pò più in \[C]là!
+
+\endverse
+
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
+
+Cammine\[F]rò senza stan\[C]carmi
+e vole\[F]rò sui monti più \[C]alti
+e trove\[F]rò la forza di an\[C]dare, sempre più a\[F]vanti, \[*G7]sì!
+io \[C]camminerò, \[F]camminerò
+\[C]con te vicino, \[F]io non cadrò
+e \[C]camminerò, \[G]camminerò. \[C]
+
+\endchorus
+
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+
+In ogni is^tante ti sento vi^cino,
+Tu dai il ^senso alle cose che io ^faccio.
+La tua luce mi indica la ^strada
+e mi in^vita a cammi^nar.
+Verso un mondo che non ha con^fini no
+verso ^mete da raggiunge^re oramai
+verso il ^regno dell'A^more
+che è ^sempre un pò più in ^là!
+
+\endverse
+
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
+
+Cammine\[F]rò senza stan\[C]carmi
+e vole\[F]rò sui monti più \[C]alti
+e trove\[F]rò la forza di an\[C]dare, sempre più a\[F]vanti, \[*G7]sì!
+io \[C]camminerò, \[F]camminerò
+\[C]con te vicino, \[F]io non cadrò
+e \[C]camminerò, \[G]camminerò.\[C]
+
+
+\endchorus
+
+\endsong
+%------------------------------------------------------------
+%			FINE CANZONE
+%------------------------------------------------------------
+
+
+
+\fi
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%			FINE CANZONE TRASPOSTA
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
