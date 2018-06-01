@@ -3,16 +3,16 @@
 %-------------------------------------------------------------
 
 
-%titolo: 	Santo Ricci
-%autore: 	Daniele Ricci
-%tonalita: 	Sol 
+%titolo: 	È più bello insieme
+%autore: 	Gen Verde
+%tonalita: 	Re 
 
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{È più bello insieme}[by={Gen Verde}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
-\momenti{}							% <<< INSERISCI MOMENTI	
+\momenti{Fine}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
@@ -32,18 +32,17 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[G] \[C] \[D]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[D] \[A] \[G] \[D]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
-%\vspace*{-\versesep}
-%\[G] \[C]  \[D]	
+\vspace*{-\versesep}
+\[G] \[D]\[E-]\[A7]
 
 %---- Ev Indicazioni -------------------------			
-%\textnote{\textit{(Oppure tutta la strofa)} }	
+%\textnote{\textit{(%Oppure tutta la strofa)} }	
 
 \endverse
 \fi
-
 
 
 
@@ -51,33 +50,46 @@
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
-
+\[D] Dietro i volti \[A]sconosciuti 
+\[G] della gente \[D4]che mi \[D]sfiora, 
+\[G] quanta vita, \[D]quante attese 
+\[E-]di felici\[A4]tà, \[A]
+\[D] quanti atti\[A]mi vissuti, 
+\[G] mondi da sco\[D4]prire an\[D]cora, 
+\[G] splendidi uni\[D]versi accanto a \[A4]me. \[A7]
 \endverse
-
-
 
 
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
-
-INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
-
+\[G]È più \[A]bello insieme
+è un \[B-]dono grande l'\[7]altra gente,
+\[G]è più \[A]bello insieme. \[B-7] \rep{2}
 \endchorus
-
 
 
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
-
+^ E raccolgo ^nel mio cuore 
+^ la speranza ed ^il do^lore 
+^ il silenzio, il ^pianto 
+della ^gente attorno a ^me. ^
+^ In quel pianto, in ^quel sorriso 
+^ è il mio pianto, il ^mio sor^riso 
+^ chi mi vive ac^canto è un altro ^me. ^
 \endverse
 
+
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
+\[G]È più \[A]bello insieme
+è un \[B-]dono grande l'\[7]altra gente,
+\[G]è più \[A]bello insieme. \[B-7] \rep{2}
+\endchorus
 
 
 
@@ -86,19 +98,17 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 \vspace*{1.3\versesep}
 {
 	\nolyrics
-	\textnote{Intermezzo strumentale}
+	\textnote{Cambio di tonalità}
 	
 	\ifchorded
 
 	%---- Prima riga -----------------------------
 	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	 \rep{2}
+	\[B-7]
 
 	%---- Ogni riga successiva -------------------
 	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	
-
-
+	\[A*] \[G*]  \[B] \[B]
 	\fi
 	%---- Ev Indicazioni -------------------------			
 	%\textnote{\textit{(ripetizione della strofa)}} 
@@ -109,21 +119,43 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 
 
 
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
+\transpose{2}
+^ Fra le case e i ^grattacieli, 
+^ fra le antenne ^lassù in ^alto, 
+^ così traspa^rente il cielo 
+^non l'ho visto ^mai. ^
+^ E la luce ^getta veli 
+^ di colore ^sull'a^sfalto 
+^ ora che can^tate assieme a ^me. ^
+\endverse
+
+
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
+\transpose{2}
+\[G]È più \[A]bello insieme
+è un \[B-]dono grande l'\[7]altra gente,
+\[G]è più \[A]bello insieme. \[B-7] \rep{6} 
+
+\endchorus
 
 
 %%%%%% EV. FINALE
-
+\ifchorded
 \beginchorus %oppure \beginverse*
 \vspace*{1.3\versesep}
-\textnote{Finale \textit{(rallentando)}} %<<< EV. INDICAZIONI
-
-INSERIRE TESTO E ACCORDI FINALE
+\textnote{Finale } %<<< EV. INDICAZIONI
+\transpose{2}
+\[G]è più \[A]bello insieme. \[D]
 
 \endchorus  %oppure \endverse
-
-
-
+\fi
 
 \endsong
 %------------------------------------------------------------
@@ -131,27 +163,3 @@ INSERIRE TESTO E ACCORDI FINALE
 %------------------------------------------------------------
 
 
-
-
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\ifchorded
-%decremento contatore per avere stesso numero
-\addtocounter{songnum}{-1} 
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< COPIA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
-%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
-%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
-\ifchorded
-	%\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
-\fi
-
-
-% <<<< COPIARE TUTTO CONTENUTO (DALL'INTRODUZIONE A \endsong)
-
-
-\fi
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			FINE CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

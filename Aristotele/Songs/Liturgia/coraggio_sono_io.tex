@@ -3,16 +3,16 @@
 %-------------------------------------------------------------
 
 
-%titolo: 	Santo Ricci
-%autore: 	Daniele Ricci
-%tonalita: 	Sol 
+%titolo: 	Coraggio sono io
+%autore: 	E. Bertoglio, A. Testa, C. Pastori
+%tonalita: 	Re 
 
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Coraggio sono io}[by={E. Bertoglio, A. Testa, C. Pastori}] 	
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
-\momenti{}							% <<< INSERISCI MOMENTI	
+\momenti{Comunione; Ringraziamento; Fine}	% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
@@ -32,7 +32,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[G] \[C] \[D]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+ \[D]  \[E-] \[D] \[E-]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 %\vspace*{-\versesep}
@@ -52,9 +52,24 @@
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
+\[D]Strade vuote e silen\[D7+]ziose,
+vie de\[E-]serte e sconosci\[B-]ute
+è una v\[G]ita che ora scorre senza di \[A]te.
+Mi ri\[D]trovo dentro a un \[D7+]mare
+di incer\[E-]tezze e turba\[B-]menti,
+la fa\[G]tica di un cammino senza di \[A]te.
+
+\[D]Ma \[A]tu,
+mano a\[G]mica di ogni u\[D]omo,
+pre\[E-]senza che sosti\[E7]ene an\[A]cora.
+\[D]Ma \[A]tu,
+che ora g\[G]uidi il mio cam\[D]mino,
+il\[G]lumina la via da\[E7]vanti a \[A]me.
 
 \endverse
+
+
+
 
 
 
@@ -63,7 +78,12 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 \beginchorus
 \textnote{\textbf{Rit.}}
 
-INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
+\[D]No, non a\[G]vere pa\[A7]ura,
+se nel \[D]buio il tuo c\[G]uore
+un \[B-]giorno perde\[C]ra\[A]i.
+\[D]Io v\[G]errò da \[A7]te,
+come un \[D]padre \[G]ti di\[A*]rò:
+"coraggio, \[G]sono \[D]io!".
 
 \endchorus
 
@@ -74,42 +94,37 @@ INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
+Il res^piro di una ^vita
+è ^silenzio di de^serto
+fatto ^di parole vuote senza di ^te.
+Dove ^sono le risp^oste
+alle m^ille e più do^mande,
+il mio ^cuore non sa amare senza di ^te.
+
+^Ma ^tu,
+luce ^nella notte ^buia,
+mi ai^uterai a rag^giunger la ^meta.
+^Ma ^tu,
+fonte ^viva della ^fede,
+sa^rai per sempre qui vi^cino a ^me.
 
 \endverse
 
 
 
 
-%%%%%% EV. INTERMEZZO
-\beginverse*
-\vspace*{1.3\versesep}
-{
-	\nolyrics
-	\textnote{Intermezzo strumentale}
-	
-	\ifchorded
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
 
-	%---- Prima riga -----------------------------
-	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	 \rep{2}
+\[D]No, non a\[G]vere pa\[A7]ura,
+se nel \[D]buio il tuo c\[G]uore
+un \[B-]giorno perde\[C]ra\[A]i.
+\[D]Io v\[G]errò da \[A7]te,
+come un \[D]padre \[G]ti di\[A*]rò:
+"coraggio, \[G]sono \[D]io!".
 
-	%---- Ogni riga successiva -------------------
-	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	
-
-
-	\fi
-	%---- Ev Indicazioni -------------------------			
-	%\textnote{\textit{(ripetizione della strofa)}} 
-	 
-}
-\vspace*{\versesep}
-\endverse
-
-
-
-
+\endchorus
 
 
 %%%%%% EV. FINALE
@@ -118,11 +133,10 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 \vspace*{1.3\versesep}
 \textnote{Finale \textit{(rallentando)}} %<<< EV. INDICAZIONI
 
-INSERIRE TESTO E ACCORDI FINALE
+\[(D)]"Coraggio, \[G]sono \[D]io!".
+\[D*]"Coraggio, \[G*]sono \[D]io!".
 
 \endchorus  %oppure \endverse
-
-
 
 
 \endsong
@@ -131,27 +145,3 @@ INSERIRE TESTO E ACCORDI FINALE
 %------------------------------------------------------------
 
 
-
-
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\ifchorded
-%decremento contatore per avere stesso numero
-\addtocounter{songnum}{-1} 
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< COPIA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
-%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
-%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
-\ifchorded
-	%\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
-\fi
-
-
-% <<<< COPIARE TUTTO CONTENUTO (DALL'INTRODUZIONE A \endsong)
-
-
-\fi
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			FINE CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
