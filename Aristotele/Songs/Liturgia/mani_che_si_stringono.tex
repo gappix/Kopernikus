@@ -3,14 +3,14 @@
 %-------------------------------------------------------------
 
 
-%titolo: 	Santo Ricci
-%autore: 	Daniele Ricci
-%tonalita: 	Sol 
+%titolo: 	Mani che si stringono
+%autore: 	M. Gioia
+%tonalita: 	Do 
 
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Mani che si stringono}[by={M. Gioia}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 %\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
 %\prefersharps %SE VOGLIO FORZARE i # come alterazioni
@@ -34,7 +34,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[G] \[C] \[D]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[C] \[F] \[C]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 %\vspace*{-\versesep}
@@ -54,7 +54,11 @@
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
+\[C]Il sole scende \[F] \brk è quasi notte or\[C]mai, \[C7]
+dai re\[F]stiamo ancora insieme un \[G]po',  \brk  meno buio sa\[C]rà. \[C7]
+La pa\[F]rola del Si\[G]gnore  \brk come \[E-]luce in mezzo a \[A-]noi,
+ci ris\[D7]chiara,\[F] e ci unisce a \[G4]Lui. \[G]
+
 
 \endverse
 
@@ -65,7 +69,19 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 \beginchorus
 \textnote{\textbf{Rit.}}
 
-INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
+\[C]Mani \[F]che si stringono \[C]forte,
+\[D-7]in un cerchio di \[C]sguardi 
+\[F]che s'incrocia\[G4]no, \[G]
+come un ab\[A-]braccio stret\[D-]to-o,
+per sen\[G]tire che la \[C7+]chiesa vive,
+che \[F7+]vive dentro \[B&]noi, insieme a \[G4]noi. \[G]
+E so-no \[C]mani \[F4]che si tendono in \[C]alto,
+\[D-7]che si aprono \[C]grandi 
+\[F]per raccoglie\[G4]re \[G]
+quella \[A-]forza immensa-a \[D-7]
+che il Si\[G]gnore mette in \[C7+]fondo al cuore,
+annun\[F7+]ciare a tutti \[B&]che Dio ci \[G4]ama. \[G]
+
 
 \endchorus
 
@@ -76,41 +92,13 @@ INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
+^Noi veglieremo ^con le lampa^de, ^
+aspet^tando nella notte, ^ \brk  finché giorno sa^rà. ^
+E la ^voce del Si^gnore, \brk  all'improv^viso giunge^rà,
+saremo ^pronti,  \brk ^ saremo amici s^uoi. ^
+
 
 \endverse
-
-
-
-
-%%%%%% EV. INTERMEZZO
-\beginverse*
-\vspace*{1.3\versesep}
-{
-	\nolyrics
-	\textnote{Intermezzo strumentale}
-	
-	\ifchorded
-
-	%---- Prima riga -----------------------------
-	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	 \rep{2}
-
-	%---- Ogni riga successiva -------------------
-	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	
-
-
-	\fi
-	%---- Ev Indicazioni -------------------------			
-	%\textnote{\textit{(ripetizione della strofa)}} 
-	 
-}
-\vspace*{\versesep}
-\endverse
-
-
-
 
 
 
@@ -118,11 +106,12 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 
 \beginchorus %oppure \beginverse*
 \vspace*{1.3\versesep}
-\textnote{Finale \textit{(rallentando)}} %<<< EV. INDICAZIONI
+\textnote{Finale } %<<< EV. INDICAZIONI
 
-INSERIRE TESTO E ACCORDI FINALE
+...Dio ci \[F]ama! \[F] \[C]
 
 \endchorus  %oppure \endverse
+
 
 
 
@@ -133,27 +122,3 @@ INSERIRE TESTO E ACCORDI FINALE
 %------------------------------------------------------------
 
 
-
-
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\ifchorded
-%decremento contatore per avere stesso numero
-\addtocounter{songnum}{-1} 
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< COPIA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
-%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
-%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
-\ifchorded
-	%\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
-\fi
-
-
-% <<<< COPIARE TUTTO CONTENUTO (DALL'INTRODUZIONE A \endsong)
-
-
-\fi
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			FINE CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

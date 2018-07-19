@@ -3,14 +3,14 @@
 %-------------------------------------------------------------
 
 
-%titolo: 	Santo Ricci
-%autore: 	Daniele Ricci
-%tonalita: 	Sol 
+%titolo: 	Lode a te o Cristo
+%autore: 	Gen Verde
+%tonalita: 	F#-
 
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Lode a te o Cristo}[by={Gen Verde}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 %\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
 %\prefersharps %SE VOGLIO FORZARE i # come alterazioni
@@ -34,7 +34,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[G] \[C] \[D]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[F#-] \[E] \[D] \[F#-]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 %\vspace*{-\versesep}
@@ -49,37 +49,15 @@
 
 
 
-%%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
-
-\endverse
-
-
-
-
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
 
-INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
+
+\[F#-]Lode a \[E]te, o \[D]Cri\[F#-]sto,
+\[B-]Re di e\[D]ter\[E*]na \[F#-]gloria.  \rep{2}
 
 \endchorus
-
-
-
-%%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
-
-\endverse
-
 
 
 
@@ -88,17 +66,15 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 \vspace*{1.3\versesep}
 {
 	\nolyrics
-	\textnote{Intermezzo strumentale}
+	\textnote{Breve intermezzo strumentale}
 	
 	\ifchorded
 
 	%---- Prima riga -----------------------------
 	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	 \rep{2}
+	\[B-] \[E]  \[F#-]	 \rep{2}
 
-	%---- Ogni riga successiva -------------------
-	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	
+
 
 
 	\fi
@@ -111,49 +87,78 @@ INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
 
 
 
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+
+Si\[F#-]gnore, tu \[E]sei vera\[D]men\[F#-]te 
+\[F#-]il Salva\[E]tore del \[D]mon\[E]do,
+\[F#-]dammi dell’\[E]acqua \[D]vi\[C#-]va 
+per\[D7]ché non \[E]abbia più \[F#-]sete.
+
+\endverse
 
 
 
-%%%%%% EV. FINALE
 
-\beginchorus %oppure \beginverse*
+
+
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+
+Chi ^beve ^di quest’^acq^ua 
+^avrà di ^nuovo ^se^te,
+ma chi ^beve dell’^acqua che ^io gli da^rò
+^non av^rà mai più ^sete.
+
+\endverse
+
+
+
+
+
+
+
+%%%%%% EV. INTERMEZZO
+\beginverse*
 \vspace*{1.3\versesep}
-\textnote{Finale \textit{(rallentando)}} %<<< EV. INDICAZIONI
+{
+	\nolyrics
+	\musicnote{Ev. finale strumentale}
+	
+	\ifchorded
 
-INSERIRE TESTO E ACCORDI FINALE
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[F#-] \[E] \[D] \[F#-]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
-\endchorus  %oppure \endverse
+
+	%---- Ogni riga successiva -------------------
+	\vspace*{-\versesep}
+	\[F#-] \[E] \[D] \[C#-]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+
+	%---- Ogni riga successiva -------------------
+	\vspace*{-\versesep}
+	\[F#-] \[E] \[D] \[C#-]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+
+	%---- Prima riga -----------------------------
+	\vspace*{-\versesep}
+	\[D] \[E] \[F#-*]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 
-
+	\fi
+	%---- Ev Indicazioni -------------------------			
+	%\textnote{\textit{(ripetizione della strofa)}} 
+	 
+}
+\vspace*{\versesep}
+\endverse
 
 \endsong
 %------------------------------------------------------------
 %			FINE CANZONE
 %------------------------------------------------------------
 
-
-
-
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\ifchorded
-%decremento contatore per avere stesso numero
-\addtocounter{songnum}{-1} 
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< COPIA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
-%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
-%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
-\ifchorded
-	%\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
-\fi
-
-
-% <<<< COPIARE TUTTO CONTENUTO (DALL'INTRODUZIONE A \endsong)
-
-
-\fi
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			FINE CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

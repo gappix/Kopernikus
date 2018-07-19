@@ -3,17 +3,15 @@
 %-------------------------------------------------------------
 
 
-%titolo: 	Santo Ricci
-%autore: 	Daniele Ricci
+%titolo: 	Magnificat (Dio ha fatto)
+%autore: 	Gragnani, Casini, Ciardella
 %tonalita: 	Sol 
 
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Magnificat (Dio ha fatto)}[by={Gragnani, Casini, Ciardella}]	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
-%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
-%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
 \momenti{}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
@@ -34,7 +32,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[G] \[C] \[D]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[G] \[C] \[G]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 %\vspace*{-\versesep}
@@ -53,20 +51,22 @@
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
-
+\[G]Dio \[C7+] ha fatto in \[B-7]me cose \[E-7]grandi.
+\[C7+]Lui \[A-7] che guarda l'\[D]umile \[G7+]servo
+e di\[C7+]sperde i su\[A-6]perbi
+nell'or\[B7]goglio del \[E-]cuore-\[E]e.
 \endverse
-
 
 
 
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
-
-INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
-
+\[A-]L'a-\[D7]anima \[G7+]mia \[C7+] esulta in \[A-]Dio 
+\[B7] mio salva\[E-]tore-\[E]e.
+\[A-]L'a-\[D7]anima \[G7+]mia \[C7+] esulta in \[A-]Dio 
+\[B7] mio salva\[E-]tore. 
+\[C] La sua sal\[A-]vezza \[D]cante\[G]rò.
 \endchorus
 
 
@@ -75,55 +75,35 @@ INSERIRE IL TESTO E GLI ACCORDI DEL RITORNELLO
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-INSERIRE IL TESTO E GLI ACCORDI DELLA STROFA
-
-\endverse
-
-
-
-
-%%%%%% EV. INTERMEZZO
-\beginverse*
-\vspace*{1.3\versesep}
-{
-	\nolyrics
-	\textnote{Intermezzo strumentale}
-	
-	\ifchorded
-
-	%---- Prima riga -----------------------------
-	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	 \rep{2}
-
-	%---- Ogni riga successiva -------------------
-	\vspace*{-\versesep}
-	\[G] \[C]  \[D]	
-
-
-	\fi
-	%---- Ev Indicazioni -------------------------			
-	%\textnote{\textit{(ripetizione della strofa)}} 
-	 
-}
-\vspace*{\versesep}
+^Lui, ^ Onnipo^tente e ^santo.
+^Lui ^ abbatte i ^grandi dai ^troni 
+e sol^leva dal ^fango il suo ^umile ^servo-^o. 
 \endverse
 
 
 
 
 
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+^Lui ^ miseri^cordia infi^nita,
+^Lui ^ che rende ^povero il ^ricco 
+e ri^colma di ^beni chi si af^fida al suo a^more-^e. 
+\endverse
 
-%%%%%% EV. FINALE
 
-\beginchorus %oppure \beginverse*
-\vspace*{1.3\versesep}
-\textnote{Finale \textit{(rallentando)}} %<<< EV. INDICAZIONI
 
-INSERIRE TESTO E ACCORDI FINALE
 
-\endchorus  %oppure \endverse
-
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+^Lui, ^ Amore ^sempre fe^dele.
+^Lui ^ guida il suo ^servo Isra^ele 
+e ri^corda il suo ^patto stabi^lito per ^sempre-^e. 
+\endverse
 
 
 
@@ -134,26 +114,3 @@ INSERIRE TESTO E ACCORDI FINALE
 
 
 
-
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\ifchorded
-%decremento contatore per avere stesso numero
-\addtocounter{songnum}{-1} 
-\beginsong{TITOLO}[by={AUTORE}] 	% <<< COPIA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
-%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
-%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
-\ifchorded
-	%\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
-\fi
-
-
-% <<<< COPIARE TUTTO CONTENUTO (DALL'INTRODUZIONE A \endsong)
-
-
-\fi
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%			FINE CANZONE TRASPOSTA
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
