@@ -5,13 +5,13 @@
 
 %titolo: 	Mani
 %autore: 	Colombo
-%tonalita: 	Re 
+%tonalita: 	Do 
 
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Mani}[by={Colombo}] 	% <<< MODIFICA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
+\beginsong{Mani}[by={F. Colombo}] 	% <<< MODIFICA TITOLO E AUTORE
+\transpose{-2} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Comunione; Fine}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
@@ -52,6 +52,7 @@ Vor\[D]rei che le pa\[G]role mu\[A]tassero in pre\[D]ghiera
 e \[G]rivederti o \[B-]Padre che \[G]dipingevi il \[A]cielo.
 Sa\[D]pessi quante \[G]volte guar\[A]dando questo \[D]mondo
 vor\[G]rei che tu tor\[B-]nassi a \[G]ritoc\[A]carne il \[D]cuore.
+\vspace{\versesep}
 Vor\[B-]rei che le mie \[F#-]mani a\[G]vessero la \[D]forza
 per \[G]sostenere chi \[E]non può cammi\[A]nare.
 Vor\[B-]rei che questo \[F#-]cuore che e\[G]splode in senti\[D]menti
@@ -69,7 +70,7 @@ braccia aperte per ri\[B-]ceve\[A]re chi è solo.
 \[D]Cuore, prendi questo mio \[A]cuore,
 fa' che si spalanchi al \[G]mondo
 germogliando per quegli \[B-]occhi
-che non \[A]sanno pianger \[G]\[(A)]più.
+che non \[A]sanno pianger \[G]più. \[A]
 
 \endchorus
 
@@ -82,6 +83,7 @@ Sei ^tu lo spazio ^che de^sidero da ^sempre,
 so ^che mi stringe^rai e ^mi terrai la ^mano.
 ^Fa' che le mie ^strade si ^perdano nel ^buio
 ed ^io cammini ^dove cam^mine^resti ^Tu.
+\vspace{\versesep}
 Tu ^soffio della ^vita ^prendi la mia giovi^nezza
 con ^le contraddi^zioni e le falsi^tà.
 Stru^mento fa' che ^sia per an^nunciare il ^Regno
@@ -96,119 +98,192 @@ a ^chi per queste ^vie Tu ^chiami Be^ati.
 
 Noi ^giovani di un ^mondo che can^cella i senti^menti
 e in^scatola le ^forze nell'a^sfalto di cit^tà.
-Siamo ^stanchi di guar^dare 
-siamo s^tanchi di gri^dare
-ci hai chia^mati siamo ^Tuoi cam^mineremo in\[A]sieme.
+\vspace{\versesep}
+Siamo \[B-]stanchi di guar\[F#-]dare 
+siamo s\[G]tanchi di gri\[D]dare
+ci hai chia\[G]mati siamo \[B-]Tuoi cam\[G]mineremo in\[A]sieme.
 
 \endverse
 
+
+
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
+
+\[D]Mani, prendi queste mie \[A]mani,
+fanne vita, fanne a\[G]more
+braccia aperte per ri\[B-]ceve\[A]re chi è solo.
+\[D]Cuore, prendi questo mio \[A]cuore,
+fa' che si spalanchi al \[G]mondo
+germogliando per quegli \[B-]occhi
+che non \[A]sanno pianger\dots
+
+\vspace{\versesep}
+
+\[D]Mani, prendi queste nostre \[A]mani,
+fanne vita, fanne a\[G]more
+braccia aperte per ri\[B-]ceve\[A]re chi è solo.
+\[D]Cuori, prendi questi nostri \[A]cuori,
+ a che siano testi\[G]moni
+che tu chiami ogni \[B-]uomo 
+a far \[A]festa con \[G]Dio. \[A]  \[D*]
+
+\endchorus
 \endsong
 %------------------------------------------------------------
 %			FINE CANZONE
 %------------------------------------------------------------
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %			CANZONE TRASPOSTA
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\ifchorded
-%decremento contatore per avere stesso numero
-\addtocounter{songnum}{-1} 
-\beginsong{Mani}[by={Colombo}] 	% <<< COPIA TITOLO E AUTORE
-\transpose{-2} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
-%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
-%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
-\ifchorded
-	%\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
-\fi
+% \ifchorded
+% %decremento contatore per avere stesso numero
+% \addtocounter{songnum}{-1} 
+% \beginsong{Mani}[by={Colombo}] 	% <<< COPIA TITOLO E AUTORE
+% 					% <<< TRASPOSIZIONE #TONI + - (0 nullo)
+% %\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
+% %\prefersharps %SE VOGLIO FORZARE i # come alterazioni
+% \ifchorded
+% 	%\textnote{Tonalità originale}	% <<< EV COMMENTI (tonalità originale/migliore)
+% \fi
 
 
-%%%%%% INTRODUZIONE
-\ifchorded
-\vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
-% Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
-\vspace*{-\versesep}
-\beginverse*
+% %%%%%% INTRODUZIONE
+% \ifchorded
+% \vspace*{\versesep}
+% \textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+% % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+% \vspace*{-\versesep}
+% \beginverse*
 
-\nolyrics
+% \nolyrics
 
-%---- Prima riga -----------------------------
-\vspace*{-\versesep}
-\[D] \[G] \[A] \[D]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+% %---- Prima riga -----------------------------
+% \vspace*{-\versesep}
+% \[D] \[G] \[A] \[D]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
-%---- Ogni riga successiva -------------------
-%\vspace*{-\versesep}
-%\[G] \[C]  \[D]	
+% %---- Ogni riga successiva -------------------
+% %\vspace*{-\versesep}
+% %\[G] \[C]  \[D]	
 
-%---- Ev Indicazioni -------------------------			
-%\textnote{\textit{(Oppure tutta la strofa)} }	
+% %---- Ev Indicazioni -------------------------			
+% %\textnote{\textit{(Oppure tutta la strofa)} }	
 
-\endverse
-\fi
+% \endverse
+% \fi
 
-%%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+% %%%%% STROFA
+% \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+% \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+% %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-Vor\[D]rei che le pa\[G]role mu\[A]tassero in pre\[D]ghiera
-e \[G]rivederti o \[B-]Padre che \[G]dipingevi il \[A]cielo.
-Sa\[D]pessi quante \[G]volte guar\[A]dando questo \[D]mondo
-vor\[G]rei che tu tor\[B-]nassi a \[G]ritoc\[A]carne il \[D]cuore.
-Vor\[B-]rei che le mie \[F#-]mani a\[G]vessero la \[D]forza
-per \[G]sostenere chi \[E]non può cammi\[A]nare.
-Vor\[B-]rei che questo \[F#-]cuore che e\[G]splode in senti\[D]menti
-\[G]diventasse \[B-]culla per \[G]chi non ha più \[A]madre.
+% Vor\[D]rei che le pa\[G]role mu\[A]tassero in pre\[D]ghiera
+% e \[G]rivederti o \[B-]Padre che \[G]dipingevi il \[A]cielo.
+% Sa\[D]pessi quante \[G]volte guar\[A]dando questo \[D]mondo
+% vor\[G]rei che tu tor\[B-]nassi a \[G]ritoc\[A]carne il \[D]cuore.
+% \vspace{\versesep}
+% Vor\[B-]rei che le mie \[F#-]mani a\[G]vessero la \[D]forza
+% per \[G]sostenere chi \[E]non può cammi\[A]nare.
+% Vor\[B-]rei che questo \[F#-]cuore che e\[G]splode in senti\[D]menti
+% \[G]diventasse \[B-]culla per \[G]chi non ha più \[A]madre.
 
-\endverse
+% \endverse
 
-%%%%% RITORNELLO
-\beginchorus
-\textnote{\textbf{Rit.}}
+% %%%%% RITORNELLO
+% \beginchorus
+% \textnote{\textbf{Rit.}}
 
-\[D]Mani, prendi queste mie \[A]mani,
-fanne vita, fanne a\[G]more
-braccia aperte per ri\[B-]ceve\[A]re chi è solo.
-\[D]Cuore, prendi questo mio \[A]cuore,
-fa' che si spalanchi al \[G]mondo
-germogliando per quegli \[B-]occhi
-che non \[A]sanno pianger \[G]\[(A)]più.
+% \[D]Mani, prendi queste mie \[A]mani,
+% fanne vita, fanne a\[G]more
+% braccia aperte per ri\[B-]ceve\[A]re chi è solo.
+% \[D]Cuore, prendi questo mio \[A]cuore,
+% fa' che si spalanchi al \[G]mondo
+% germogliando per quegli \[B-]occhi
+% che non \[A]sanno pianger \[G]più. \[A]
 
-\endchorus
+% \endchorus
 
-%%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+% %%%%% STROFA
+% \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+% %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+% %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-Sei ^tu lo spazio ^che de^sidero da ^sempre,
-so ^che mi stringe^rai e ^mi terrai la ^mano.
-^Fa' che le mie ^strade si ^perdano nel ^buio
-ed ^io cammini ^dove cam^mine^resti ^Tu.
-Tu ^soffio della ^vita ^prendi la mia giovi^nezza
-con ^le contraddi^zioni e le falsi^tà.
-Stru^mento fa' che ^sia per an^nunciare il ^Regno
-a ^chi per queste ^vie Tu ^chiami Be^ati.
+% Sei ^tu lo spazio ^che de^sidero da ^sempre,
+% so ^che mi stringe^rai e ^mi terrai la ^mano.
+% ^Fa' che le mie ^strade si ^perdano nel ^buio
+% ed ^io cammini ^dove cam^mine^resti ^Tu.
+% \vspace{\versesep}
+% Tu ^soffio della ^vita ^prendi la mia giovi^nezza
+% con ^le contraddi^zioni e le falsi^tà.
+% Stru^mento fa' che ^sia per an^nunciare il ^Regno
+% a ^chi per queste ^vie Tu ^chiami Be^ati.
 
-\endverse
+% \endverse
 
-%%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+% %%%%% STROFA
+% \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+% %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+% %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-Noi ^giovani di un ^mondo che can^cella i senti^menti
-e in^scatola le ^forze nell'a^sfalto di cit^tà.
-Siamo ^stanchi di guar^dare 
-siamo s^tanchi di gri^dare
-ci hai chia^mati siamo ^Tuoi cam^mineremo in\[A]sieme.
+% Noi ^giovani di un ^mondo che can^cella i senti^menti
+% e in^scatola le ^forze nell'a^sfalto di cit^tà.
+% \vspace{\versesep}
+% Siamo \[B-]stanchi di guar\[F#-]dare 
+% siamo s\[G]tanchi di gri\[D]dare
+% ci hai chia\[G]mati siamo \[B-]Tuoi cam\[G]mineremo in\[A]sieme.
 
-\endverse
-
-\endsong
+% \endverse
 
 
-\fi
+
+
+% %%%%% RITORNELLO
+% \beginchorus
+% \textnote{\textbf{Rit.}}
+
+% \[D]Mani, prendi queste mie \[A]mani,
+% fanne vita, fanne a\[G]more
+% braccia aperte per ri\[B-]ceve\[A]re chi è solo.
+% \[D]Cuore, prendi questo mio \[A]cuore,
+% fa' che si spalanchi al \[G]mondo
+% germogliando per quegli \[B-]occhi
+% che non \[A]sanno pianger\dots
+
+% \vspace{\versesep}
+
+% \[D]Mani, prendi queste nostre \[A]mani,
+% fanne vita, fanne a\[G]more
+% braccia aperte per ri\[B-]ceve\[A]re chi è solo.
+% \[D]Cuori, prendi questi nostri \[A]cuori,
+%  a che siano testi\[G]moni
+% che tu chiami ogni \[B-]uomo 
+% a far \[A]festa con \[G]Dio. \[A]  \[D*]
+
+% \endchorus
+
+% \endsong
+
+% \fi
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %			FINE CANZONE TRASPOSTA
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
