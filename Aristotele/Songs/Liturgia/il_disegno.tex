@@ -10,7 +10,7 @@
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Il disegno}[by={}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Il disegno}[by={A. Marani}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Comunione}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
@@ -31,7 +31,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[A-] \[F] \[G] \[C] \[E7]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[A-] \[F] \[G] \[C] \[E7] \rep{2}	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 %\vspace*{-\versesep}
@@ -43,35 +43,48 @@
 \endverse
 \fi
 
+
+
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-Nel \[A-]mare del si\[F]lenzio una \[G]voce si al\[C]zò; \[E7]
-da una \[A-]notte senza con\[F]fini una \[G]luce bril\[C]lò \[E7]
+Nel \[A-]mare del si\[F]lenzio \brk una \[G]voce si al\[C]zò, \[E7]
+da una \[A-]notte senza con\[F]fini \brk  una \[G]luce bril\[C]lò \[E7]
 dove non \[A-]c'era niente quel \[E7]giorno.
-
 \endverse
+
+
 
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
-
-A\[A-]vevi scritto \[D-]già il mio \[G]nome lassù nel \[C]cielo; \[E7]
-a\[A-]vevi scritto \[D-]già la mia \[G]vita insieme a \[C]Te; \[E7]
+A\[A-]vevi scritto \[D-]già  \brk il mio \[G]nome lassù nel \[C]cie\[E7]lo, 
+a\[A-]vevi scritto \[D-]già \brk  la mia \[G]vita insieme a \[C]Te, \[E7]
 avevi s\[A-]critto già di \[E7]me.
-
 \endchorus
 
+
+
+
+
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+E ^quando la tua ^mente \brk  fece ^splendere le ^stel^le,
+e ^quando le tue ^mani  \brk model^larono la ^ter^ra
+dove non ^c'era niente quel ^giorno.
+\endverse
+
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-E quando la tua mente fece splendere le stelle;
-e quando le tue mani modellarono la terra
-dove non c'era niente quel giorno.
+E ^quando hai calco^lato  \brk la ^profondità del ^cie^lo, 
+e ^quando hai colo^rato \brk  ogni ^fiore della ^ter^ra
+dove non ^c'era niente quel ^giorno.
 
 \endverse
 
@@ -80,45 +93,39 @@ dove non c'era niente quel giorno.
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-E quando hai calcolato la profondità del cielo; 
-e quando hai colorato ogni fiore della terra
-dove non c'era niente quel giorno.
+E ^quando hai dise^gnato  \brk le ^nubi e le mon^ta^gne,
+e ^quando hai dise^gnato \brk il ^cammino di ogni ^uo^mo
+l'avevi ^fatto anche per ^me.
 
 \endverse
 
-%%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-E quando hai disegnato le nubi e le montagne;
-e quando hai disegnato
-il cammino di ogni uomo
-l'avevi fatto anche per me.
-
-\endverse
-
-%%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-Se ieri non sapevo oggi ho incontrato Te
-e la mia libertà è il tuo disegno su di me;
-non cercherò più niente perché
-Tu mi salverai.
-
-\endverse
 
 %%%%%% EV. FINALE
 
-\beginverse*
+\beginchorus %oppure \beginverse*
 \vspace*{1.3\versesep}
-\textnote{Finale \textit{}} %<<< EV. INDICAZIONI
+\textnote{Finale } %<<< EV. INDICAZIONI
 
-\[A-] \[D-] \[F] \[G] \[A-]
+Se \[A-]ieri non sa\[D-]pevo  \brk oggi \[G]ho incontrato \[C]Te \[E7]
+e \[A-]la mia liber\[D-]tà \brk  è il tuo di\[G]segno su di \[C]me, \[E7]
+non cerche\[A-]rò più niente per\[E7]ché
+Tu mi salve\[A-]rai.
 
-\endverse
+\endchorus 
+
+
+
+
+%%%%%% EV. CHIUSURA SOLO STRUMENTALE
+\ifchorded
+\beginchorus %oppure \beginverse*
+\vspace*{1.3\versesep}
+\textnote{Chiusura strumentale} %<<< EV. INDICAZIONI
+
+\[D-] \[F] \[G] \[A-]
+
+\endchorus  %oppure \endverse
+\fi
 
 \endsong
 %------------------------------------------------------------

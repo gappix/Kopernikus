@@ -76,7 +76,7 @@ il Si\[Bb]gnore ti \[C]sta amando \[D]già. \[A]
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
 Io ^chiedo il coraggio di ^vivere 
 fra^tello alle voci che at^tendono 
@@ -92,7 +92,7 @@ as^colta il tuo cuore al^lora sapr^ai:
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
 Per ^ogni momento che ^tu mi dai
 do^mando la forza di ^credere 
@@ -104,6 +104,19 @@ se ^cerchi un te^soro per ^vive^re
 as^colta il tuo cuore al^lora sapr^ai:
 
 \endverse
+
+%%%%%% EV. CHIUSURA SOLO STRUMENTALE
+\ifchorded
+\beginchorus %oppure \beginverse*
+\vspace*{1.3\versesep}
+\textnote{Chiusura } %<<< EV. INDICAZIONI
+
+\[D*]
+
+\endchorus  %oppure \endverse
+\fi
+
+
 
 \endsong
 %------------------------------------------------------------
