@@ -2,7 +2,7 @@
 %——————————————————————————————————————————————————————
 % STILE DOCUMENTO
 %-------------------------------------------------------------------------------                                                                             
-\documentclass[a4vert, palatino, titleindex, tematicindex, chorded, cover]{canzoniereonline}
+\documentclass[a5vert, palatino, titleindex, tematicindex, lyric, cover]{canzoniereonline}
 
 %opzioni formato: singoli, standard (A4), a5vert, a5oriz, a6vert;
 %opzioni accordi: lyric, chorded {quelli d Songs}
@@ -65,7 +65,60 @@
 
 
 %  *  *  *  *  *  TEST SONG HERE  *  *  *  *  *  *  * ]
-\input{nella_notte_sboccio}
+%set the default path inside current folder
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{un_solo_spirito}
+
+
+% ----- GLORIA ---------
+\makeatletter \def\input@path{{Songs/Gloria/}} \makeatother
+\input{gloria_gen_verde}
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{del_tuo_spirito_signore}
+
+
+
+
+% ----- ALLELUIA ---------
+\makeatletter \def\input@path{{Songs/Alleluia/}} \makeatother
+\input{alleluia_e_poi}
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{ogni_mia_parola}
+\input{luce_di_verita}
+\input{sei_fuoco_e_vento}
+\input{come_fuoco_vivo}
+\input{lo_spirito_di_cristo}
+\input{oltre_la_memoria}
+\input{benedici_o_signore}
+
+
+
+% ----- ALLELUIA ---------
+\makeatletter \def\input@path{{Songs/Santo/}} \makeatother
+\input{santo_milan}
+
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{pane_di_vita_nuova}
+\input{verbum_panis}
+\input{beato_il_cuore_gmg_2016}
+%missing: come un canto d'amore
+\input{ave_maria_casucci}
+\input{danza_la_vita}
+
+
+
 
 
 
