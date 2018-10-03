@@ -3,21 +3,24 @@
 %-------------------------------------------------------------
 
 
-%titolo: 	Alleluia, festa con Te
-%autore: 	Fabio Avolio
-%tonalita: 	Do 
+%titolo: 	In notte placida
+%autore: 	M. Frisina
+%tonalita: 	Sol 
 
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Alleluia Festa con Te}[by={F. Avolio}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{In notte placida}[by={M. Frisina}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
-\momenti{Acclamazione al Vangelo}							% <<< INSERISCI MOMENTI	
+%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
+%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
+\momenti{Natale}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
-	%\textnote{Tonalità originale }	% <<< EV COMMENTI (tonalità originale/migliore)
+	%\textnote{Tonalità migliore }	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
+
 
 %%%%%% INTRODUZIONE
 \ifchorded
@@ -31,11 +34,11 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[C] \[F] \[G] \[A-] 	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[C] \[G] \[C] \rep{2}	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
-\vspace*{-\versesep}
-\[F] \[C] \[G] \[C] \[C] 
+%\vspace*{-\versesep}
+%\[G] \[C]  \[D]	
 
 %---- Ev Indicazioni -------------------------			
 %\textnote{\textit{(Oppure tutta la strofa)} }	
@@ -43,44 +46,57 @@
 \endverse
 \fi
 
-%%%%% RITORNELLO
-\beginchorus
-\textnote{\textbf{Rit.}}
 
-\[C]Allelu\[F]ia, \[G]allelu\[A-]ia, \[F]oggi è \[C]festa con \[D-]te, Ges\[G]ù.
-\[C]Tu sei con \[F]noi, \[G]gioia ci \[A-]dai, \[F]allelu\[C]ia, alle\[G]lu\[C]ia.
 
-\endchorus
 
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-
-\[C]Nella Tua \[G]casa \[C]siamo ve\[F]nuti \brk \[C]per incon\[D-]trar\[G]ti.
-\[C]A Te can\[G]tiamo \[A-]la nostra \[F]lode,  \brk  \[C]gloria al Tuo \[G]no\[C]me. \[G]
-
+\[C]In \[G]notte \[C]placida, per \[C]mu\[G]to sen\[C]tier,
+dai campi del \[F]ciel è discese l’A\[C]mor,
+all’alme fe\[F]deli il Reden\[G]tor!
 \endverse
+\beginverse*
+^Nell’^aura è il ^palpito d’un ^gran^de mis^ter:
+del nuovo Isra^el è nato il Si^gnor,
+il fiore più ^bello ^dei nostri \[C]fior!
+del nuovo Isra\[F]el è nato il Si\[C]gnor,
+il fiore più \[F]bello \[G]dei nostri \[C]fior!
+\endverse
+
+
+
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
+
+\[C-]Cantate, o \[G]popoli, \[C-]gloria all’Al\[G]tissimo
+\[C-]l’animo ap\[G]rite a spe\[C-]ranza ed a\[G]mor! \rep{2}
+
+\endchorus
+
+
 
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-^Il pane ^vivo ^che ci hai pro^messo  \brk  ^dona la ^vi^ta.
-^A Te can^tiamo ^la nostra ^lode,  \brk  ^gloria al Tuo ^no^me. ^
-
+^Se l’^aura è ^gelida, se ^fos^co è il c^iel,
+oh, vieni al mio ^cuore, vieni a po^sar,
+ti vò col mio a^more riscal^dar.
+\endverse
+\beginverse*
+^Se il ^fieno è ^rigido, se il ^ven^to è cru^del,
+un cuore che t’^ama voglio a Te ^dar,
+un cuor che Te ^brama, ^Gesù cul\[C]lar.
+un cuore che t’\[F]ama voglio a Te \[C]dar,
+un cuor che Te \[F]brama, \[G]Gesù cul\[C]lar.
 \endverse
 
-%%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
-%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-^Tu sei l'^amico ^che ci accom^pagna  \brk  ^lungo il cam^mi^no.
-^A Te can^tiamo ^la nostra ^lode,  \brk  ^gloria al Tuo ^no^me. ^
 
-\endverse
 
 \endsong
 %------------------------------------------------------------
