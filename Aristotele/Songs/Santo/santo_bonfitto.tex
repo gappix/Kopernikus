@@ -10,11 +10,11 @@
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Santo Bonfitto}[by={Michele Bonfitto}] 	% <<< MODIFICA TITOLO E AUTORE
-\transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
+\beginsong{Santo Bonfitto}[by={M. Bonfitto}] 	% <<< MODIFICA TITOLO E AUTORE
+\transpose{-2} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 %\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
 %\prefersharps %SE VOGLIO FORZARE i # come alterazioni
-\momenti{Santi}							% <<< INSERISCI MOMENTI	
+\momenti{}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
@@ -34,7 +34,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[G]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[G] \[G]	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 %\vspace*{-\versesep}
@@ -47,16 +47,17 @@
 \fi
 
 %%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+\beginverse	*	%Oppure \beginverse* se non si vuole il numero di fianco
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-\[G]San\[D]to, \[E-]santo, \[A-]santo il Si\[D]gnore \[G]Dio dell'uni\[D]\[C]ve\[D]rso.
+\[G]San\[D]to, \[E-]santo, \[A-]santo il Si\[D]gnore 
+\[G]Dio dell'uni\[D*]\[C*]ver\[D]so. \[(A-*)] \[(D)]
 
 \endverse
 
 %%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+\beginverse*		%Oppure \beginverse* se non si vuole il numero di fianco
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
@@ -66,14 +67,13 @@ I \[G]cieli e la \[C]terra sono \[A-]pieni della tua \[D]gloria.
 
 %%%%% RITORNELLO
 \beginchorus
-\textnote{\textbf{Rit.}}
 
-O\[G]sanna, o\[E-]sanna, o\[B-]sa\[E-]nna nell'\[A-]alto dei \[D]cieli.
+O\[G]sanna, o\[E-]sanna, \brk  o\[B-]sa\[E-]nna nell'\[A-]alto dei \[D]cieli. \[D]
 
 \endchorus
 
 %%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+\beginverse*		%Oppure \beginverse* se non si vuole il numero di fianco
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
@@ -83,26 +83,27 @@ Bene^detto colui che ^viene nel ^nome del Si^gnore.
 
 %%%%% RITORNELLO
 \beginchorus
-\textnote{\textbf{Rit.}}
 
-O\[G]sanna, o\[E-]sanna, o\[B-]sa\[E-]nna nell'\[A-]alto dei \[D]cieli.
+O\[G]sanna, o\[E-]sanna, \brk o\[B-]sa\[E-]nna nell'\[A-]alto dei \[D]cieli. \[D]
 
 \endchorus
 
 %%%%% STROFA
-\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+\beginverse*		%Oppure \beginverse* se non si vuole il numero di fianco
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
-I ^cieli e la ^terra sono ^pieni della tua ^gloria.
+I ^cieli  \quad \echo{Benedetto!}
+e la ^terra  \quad \echo{colui che viene!}
+sono ^pieni della tua ^gloria. \echo{nel nome del Signore!}
+
 
 \endverse
 
 %%%%% RITORNELLO
 \beginchorus
-\textnote{\textbf{Rit.}}
 
-O\[G]sanna, o\[E-]sanna, o\[B-]sa\[E-]nna nell'\[A-]alto dei \[D]cieli.
+O\[G]sanna, o\[E-]sanna, \brk o\[B-]sa\[E-]nna nell'\[A-]alto dei \[D]cieli. \[D*]
 
 \endchorus
 

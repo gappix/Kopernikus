@@ -134,10 +134,10 @@
 **/*.lol
 
 # makeidx
-**/*.idx
-**/*.ilg
-**/*.ind
-**/*.ist
+#**/*.idx
+#**/*.ilg
+#**/*.ind
+#**/*.ist
 
 # minitoc
 **/*.maf
@@ -205,7 +205,7 @@
 **/*.xmpi
 
 # xindy
-**/*.xdy
+#**/*.xdy
 
 # xypic precompiled matrices
 **/*.xyc
