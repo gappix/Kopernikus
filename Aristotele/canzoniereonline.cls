@@ -134,9 +134,14 @@
 
 %FONT
 \iflibertine
-	\RequirePackage[tt=false]{libertine}
-	%\setmainfont{Arial}
-	%\setmainfont{Lexia Readable}
+
+	\ifxetex
+		\RequirePackage{fontspec}
+		\setmainfont{Lexia Readable}
+	\else
+		\RequirePackage[tt=false]{libertine}
+	\fi
+		
 \else
 	\RequirePackage[]{mathpazo}
 \fi
@@ -207,7 +212,7 @@
 \renewcommand{\flatsymbol}{\raisebox{0.1ex}{$\flat$}}				% bemolle
 \setlength{\cbarwidth}{0pt}						% linea laterale ritornelli
 \setlength{\sbarheight}{0pt}						%linee sopra e sotto
-\renewcommand{\chorusfont}{\bfseries} %chorus BOLD settings
+\renewcommand{\chorusfont}{\bfseries}                   %chorus BOLD settings
 %\renewcommand{\chorusfont}{\itshape}					%font ritornelli
 \renewcommand{\rep}[1]{{\normalfont($\times$#1)}}		% cambia la x nelle ripetizioni
 \setlength{\parindent}{0pt}
