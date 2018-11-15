@@ -103,7 +103,13 @@
 \usepackage{titlesec}% cambio la formattazione dei titolo dei capitoli (mi serve per l'indice tematico)
 
 
+
+
+%%% INDEX COMMANDS
+
 \ifxetex
+
+	% OPTIONS FOR XETEX INDEXES
 	\iftitleindex
 		\makeindex[name=alfabetico,title=Indice alfabetico,program=truexindy,options=-M texindy -C utf8 -L italian -M xindystyle]
 	\else
@@ -116,23 +122,33 @@
 		\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]
 	\else
 	\fi
+
 \else
+
+	% OPTIONS FOR REGULAR INDEXES
 	\iftitleindex
-		\makeindex[title=Indice alfabetico,options=-s canzstyle.ist]
+		\makeindex[title=Indice alfabetico,program=truexindy,options=-M texindy -C utf8 -L italian -M xindystyle]
+		%\makeindex[title=Indice alfabetico,options=-s canzstyle.ist]
 	\else
 	\fi
 	\ifauthorsindex
-		\makeindex[name=autori,title=Indice degli autori,options=-s canzstyle.ist]%***
+		%\makeindex[name=autori,title=Indice degli autori,options=-s canzstyle.ist]%***
+		\makeindex[name=autori,title=Indice degli autori,program=truexindy,options= -M texindy -C utf8 -L italian -M xindystyle]
 	\else
 	\fi
 	\iftematicindex
-		\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
+		%\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
+		\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]
 	\else
 	\fi
+
 \fi
 
 
-%FONT
+
+
+%%% FONT
+
 \iflibertine
 	\RequirePackage[tt=false]{libertine}
 	%\setmainfont{Arial}
@@ -142,7 +158,9 @@
 \fi
 
 
-%GEOMETRIA
+
+%%% GEOMETRY (A4/A5 vert/oriz)
+
 \ifcanzsingole
 	\RequirePackage[top=16mm, left=14mm, right=13mm,  bottom= 20mm, a4paper]{geometry}
 \fi
@@ -163,7 +181,10 @@
 \fi
 
 
+
+
 %TESTATINE
+
 \ifcanzsingole
 	\pagestyle{fancy}%
 	\setlength{\headheight}{0pt}
@@ -198,7 +219,8 @@
 
 
 
-%%%%%%%%%%%%%%   Impostazioni del pacchetto Songs
+%%% SONGS-PACKAGE SETTINGS   
+
 \RequirePackage[nomeasures,noshading,noindexes]{songs}
 \MultiwordChords	
 \notenamesin{A}{B}{C}{D}{E}{F}{G}  			% scriverò gli accordi secondo la notazione anglosassone
@@ -221,7 +243,8 @@
 
 
 
-%ACCORDI
+% ACCORDI
+
 \iflibertine
 	\renewcommand{\printchord}[1]{\normalfont\small\bfseries#1}
 \else
@@ -231,6 +254,8 @@
    		\renewcommand{\printchord}[1]{\normalfont\bfseries\sffamily#1}
   	\fi
 \fi
+
+
 %RIENTRO DELLE STROFE
 \ifcanzsingole
 	\versenumwidth=0pt
@@ -290,6 +315,10 @@
 }
 
 
+
+% TEXTNOTE RENEW
+% Songs command redefined with new custom settings
+
 \renewcommand\textnote[1]{% note in senza grazie e senza sfondo
   \ifhmode\par\fi%
   \ifnum\lastpenalty=12345\else%
@@ -304,7 +333,7 @@
   \begingroup%
     \everypar{}%
     \ifchorded\chordedfalse\SB@setbaselineskip\chordedtrue\fi%
-    \placenote{\normalfont\sffamily{\SB@boxup{#1}}}%
+    \placenote{\normalfont\itshape\sffamily{\SB@boxup{#1}}} % <<< remove itshape to remove italic
   \endgroup%
   \nobreak%
   \ifSB@inverse%
@@ -315,6 +344,9 @@
     \nobreak\vskip\versesep%
   \fi\fi\fi%
 }
+
+
+
 
 %modifico il comando per i titoli secondari, in modo da generare l'indice
 \renewcommand\indextitleentry[1]{%
@@ -346,7 +378,10 @@
 {\chordlocals\global\let/\bassfont
 \global\let-=\canzonline@myminor}
 
-%SONGPOS
+
+
+
+% SONGPOS
 \ifaseivert
 \songpos{0}
 \else
@@ -356,61 +391,78 @@
 	\fi\fi%
 \fi
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 % TITOLI
+
+
 \newcommand{\stampatitolo}{}
+% libertine only
 \iflibertine
- \ifaseivert
-  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}
- \else
-  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}
- \fi
+	 \ifaseivert
+	  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}
+	 \else
+	  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}
+	 \fi
+% every other font
 \else
- \ifaseivert
-  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries\sffamily}
- \else
-  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily}
- \fi
+	 \ifaseivert  % A6vertical
+	  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries\sffamily}
+	 \else        % every other Aformat
+	  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily} %chorded official
+	 \fi
 \fi
+
+
 \newcommand{\stampanumero}{}
+% libertine only
 \iflibertine
- \ifaseivert
-   \renewcommand{\stampanumero}{\bfseries\fontsize{30}{18}\selectfont}
- \else
-   \renewcommand{\stampanumero}{\bfseries\fontsize{36}{28}\selectfont}
+	 \ifaseivert
+	   \renewcommand{\stampanumero}{\bfseries\fontsize{30}{18}\selectfont}
+	 \else        % every other Aformat
+	   \renewcommand{\stampanumero}{\bfseries\fontsize{35}{28}\selectfont} % original 36
  \fi
+ % every other font
 \else
- \ifaseivert
-   \renewcommand{\stampanumero}{\fontsize{30}{18}\selectfont}
- \else
-  \renewcommand{\stampanumero}{\fontsize{36}{28}\selectfont}
+	 \ifaseivert
+	   \renewcommand{\stampanumero}{\fontsize{30}{18}\selectfont}
+	 \else        % every other Aformat
+	  \renewcommand{\stampanumero}{\fontsize{35}{28}\selectfont} %chorded official (original 36)
  \fi
 \fi
+
+
+
+
 \newlength{\titlength}
 \newlength{\numerwidth}
 \newlength{\larcolonna}
+
+
 \ifcanzsingole
 	\renewcommand\makeprelude{%
-	\resettitles%
-	\newcommand{\titolo}{\LARGE\bfseries\sffamily\songtitle}
-	\settowidth{\titlength}{\titolo}
- 	\begin{tabularx}{\hsize}{X}
-	\ifdim\titlength<\hsize \hspace{-0.5em}\titolo
-	\else \hspace{-0.5em}\resizebox{\hsize}{!}{\titolo}
-	\fi\\
-	\hline
-	\hfill\small\itshape\songauthors
- 	\end{tabularx}
-    \nexttitle%
-    \foreachtitle{(\songtitle)\par}%
-}
+		\resettitles%
+		\newcommand{\titolo}{\LARGE\bfseries\sffamily\songtitle}
+		\settowidth{\titlength}{\titolo}
+	 	\begin{tabularx}{\hsize}{X}
+		\ifdim\titlength<\hsize \hspace{-0.5em}\titolo
+		\else \hspace{-0.5em}\resizebox{\hsize}{!}{\titolo}
+		\fi\\
+		\hline
+		\hfill\small\itshape\songauthors
+	 	\end{tabularx}
+	    \nexttitle%
+	    \foreachtitle{(\songtitle)\par}%
+	}
+% non-single song
 \else
 \renewcommand\makeprelude{%
 \resettitles%
 \settowidth{\numerwidth}{\stampanumero\thesongnum}
 \newcommand{\titolo}{\stampatitolo\songtitle}
 \settowidth{\titlength}{\titolo}
-\setlength{\larcolonna}{\hsize-\numerwidth-30pt}
+\setlength{\larcolonna}{\hsize-\numerwidth-10pt} % from 30pt to only 10pt right margin
 \begin{tabularx}{\hsize}{@{}r@{}X}
 \renewcommand{\arraystretch}{0} 
 	& \ifdim\titlength<\larcolonna \titolo \else \resizebox{\larcolonna}{!}{\titolo} \fi\\
@@ -432,7 +484,13 @@
 }
 \fi
 
-%INDICI grazie a Enrico Gregorio
+
+
+
+
+% INDICI 
+%grazie a Enrico Gregorio
+
 \def\accents@list{\do\IeC\do\`\do\'}
 \def\letters@list{\do\i{i}}
 \newcommand{\noaccentindex}[1]{%
