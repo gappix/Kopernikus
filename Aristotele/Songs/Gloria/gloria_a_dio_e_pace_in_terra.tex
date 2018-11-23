@@ -16,15 +16,21 @@
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
-	\textnote{Tonalità migliore }	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{$\bigstar$ Tonalità migliore  }	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro:}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 
@@ -45,6 +51,7 @@
 
 %%%%% RITORNELLO
 \beginchorus
+\textnote{\textbf{Rit.}}
 \[F]Gloria a Dio e \[C]pace in terra
 a \[D-]chi ha riconosc\[A-]iuto
 il \[B&]grande A\[C]more di un \[F]Dio \[D]
@@ -97,9 +104,10 @@ il \[B&]grande A\[C]more di un \[F]Dio \[D]
 \endverse
 
 
-
+\ifchorded
 %%%%% RITORNELLO
 \beginchorus
+\textnote{\textbf{Rit.}}
 \[F]Gloria a Dio e \[C]pace in terra
 a \[D-]chi ha riconosc\[A-]iuto
 il \[B&]grande A\[C]more di un \[F]Dio \[D]
@@ -108,7 +116,7 @@ il \[B&]grande A\[C]more di un \[F]Dio \[D]
 \[G-]e che ch\[C]iede ad \[F]ogni crea\[B&]tura
 \[G-]di farsi n\[C]uova ogni \[F]giorno. \[F*]
 \endchorus
-
+\fi
 \endsong
 %------------------------------------------------------------
 %			FINE CANZONE

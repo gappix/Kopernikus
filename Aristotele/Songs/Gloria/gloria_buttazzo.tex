@@ -19,12 +19,17 @@
 	%\textnote{Tonalità migliore }	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
-
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro:}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 
@@ -48,6 +53,7 @@
 
 %%%%% RITORNELLO
 \beginchorus
+\textnote{\textbf{Rit.}}
 \[G]Gloria a \[D]Dio nell'\[C]alto dei \[G]cieli 
 e \[E-]pace in \[C]terra agli \[D4]uomi\[D]ni.
 \[G]Gloria a \[F]Dio nell'\[C]alto dei \[G]cieli 
@@ -102,7 +108,7 @@ e \[E-]pace in \[C]terra agli \[D4]uomi\[G]ni. \[F] \[C] \[B7]
 \endverse
 
 
-
+\ifchorded
 %%%%% RITORNELLO
 \beginchorus
 \[G]Gloria a \[D]Dio nell'\[C]alto dei \[G]cieli 
@@ -110,7 +116,7 @@ e \[E-]pace in \[C]terra agli \[D4]uomi\[D]ni.
 \[G]Gloria a \[F]Dio nell'\[C]alto dei \[G]cieli 
 e \[E-]pace in \[C]terra agli \[D4]uomi\[G]ni. 
 \endchorus
-
+\fi
 
 
 
