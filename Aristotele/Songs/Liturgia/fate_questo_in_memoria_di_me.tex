@@ -10,7 +10,7 @@
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Fate questo in memoria di me}[by={Burgio}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Fate questo in memoria di me}[by={C. Burgio}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Offertorio}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
@@ -20,11 +20,18 @@
 \fi
 
 
+
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 
@@ -96,7 +103,7 @@ sa^remo la tua ^voce che ^di^ce:^
 %%%%% RITORNELLO
 \beginchorus
 \vspace*{1.3\versesep}
-\textnote{Finale }
+\textnote{\textbf{Finale} }
 Non te\[C]mete \[F*] sarò \[G*]sempre con \[C]voi
 e por\[C]tate \[F] il Vangelo nel \[G]mondo \[E]
 ogni \[A-]uomo \[D-] riconosca il \brk mio a\[C*]m\[E*]o\[A-]re

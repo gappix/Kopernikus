@@ -10,7 +10,7 @@
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Cantate al Signore}[by={Fallormi}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Cantate al Signore}[by={M. Fallormi}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{-3} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Ingresso}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
@@ -20,13 +20,22 @@
 \fi
 
 
+
+
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
+
 
 \nolyrics
 
@@ -39,7 +48,7 @@
 %\[G] \[C]  \[D]	
 
 %---- Ev Indicazioni -------------------------			
-\textnote{\textit{(Oppure tutto il ritornello)} }	
+\textnote{\textit{[oppure tutto il ritornello]} }	
 
 \endverse
 \fi
@@ -113,8 +122,9 @@ nel ^mondo ^porte\[E&]ra-a-\[F]a. \quad  \[F]
 \transpose{3}
 Can\[G]tate al Si\[D]gnore un \[C]canto \[G]nuovo,
 \[C]perché ha com\[G]piuto pro\[A-7]di|\[D4]gi.
-\[(D*)]Ha |\[G]manife\[D]stato la \[C]sua sal\[G]vezza,
-\textnote{\textit{rallentando}}
+\[(D*)]Ha |\[G]manife\[D]stato la \[C]sua sal\[G]vezza, 
+\vspace*{0.5\versesep}
+\textnote{\textit{[rallentando]}}
 \[C]su tutti i |\[B-7/G]popo\[E-7*]li 
 la |\[A-7]sua \[D]bon\[G]tà.
 \endchorus

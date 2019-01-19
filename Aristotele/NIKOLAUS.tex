@@ -2,7 +2,12 @@
 %——————————————————————————————————————————————————————
 % STILE DOCUMENTO
 %-------------------------------------------------------------------------------                                                                             
-\documentclass[a4vert, palatino, titleindex, tematicindex, chorded, cover]{canzoniereonline}
+
+
+%% CHORDED Settings
+% > A4vert + palatino + titleindex + tematicindex + chorded
+
+\documentclass[a5vert, palatino, titleindex, tematicindex, lyric, cover]{canzoniereonline}
 
 %opzioni formato: singoli, standard (A4), a5vert, a5oriz, a6vert;
 %opzioni accordi: lyric, chorded {quelli d Songs}
@@ -12,7 +17,7 @@
 
 %opzioi copertina: cover e nocover
 
-\def\canzsongcolumsnumber{2} %# coolonne lungo cui disporre le canzoni
+\def\canzsongcolumsnumber{1} %# coolonne lungo cui disporre le canzoni
 
 
 
@@ -91,58 +96,73 @@
 
 
 
-% ----- LITURGIA ---------
-\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
-\input{lodate_il_signore}
-\input{luce_del_mondo}
-\input{saldo_e_il_mio_cuore}
-\input{isaia_11}
+%% ----- LITURGIA ---------
+%\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+%\input{lodate_il_signore}
+%\input{luce_del_mondo}
+%\input{saldo_e_il_mio_cuore}
+%\input{isaia_11}
+
+
+
+
+
 
 % ----- NATALE ---------
 \makeatletter \def\input@path{{Songs/Natale/}} \makeatother
-\input{dio_e_qui}
+\input{venite_fedeli}
+
+
+% ----- GLORIA ---------
+\makeatletter \def\input@path{{Songs/Gloria/}} \makeatother
+\input{gloria_gen_verde}
 
 
 
-%
-%
-%% ----- GLORIA ---------
-%\makeatletter \def\input@path{{Songs/Gloria/}} \makeatother
-%\input{gloria_gen_verde}
-%
-%
-%% ----- ALLELUIA ---------
-%\makeatletter \def\input@path{{Songs/Alleluia/}} \makeatother
-%\input{alleluia_festa_con_te}
-%
-%
-%
-%
-%
-%% ----- LITURGIA ---------
-%\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
-%\input{pace_sia_pace_a_voi}
-%
-%
-%
-%% ----- ALLELUIA ---------
-%\makeatletter \def\input@path{{Songs/Santo/}} \makeatother
-%\input{santo_milan}
-%
-%
-%
-%% ----- LITURGIA ---------
-%\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
-%\input{come_un_prodigio}
-%\input{benedetto_il_nome_del_signore}
-%\input{il_canto_dell_amore}
-%\input{le_tue_meraviglie}
-%\input{holy_is_the_lord}
-%
-%
-%
+% ----- ALLELUIA ---------
+\makeatletter \def\input@path{{Songs/Alleluia/}} \makeatother
+\input{alleluia_festa_con_te}
 
 
+% ----- NATALE ---------
+\makeatletter \def\input@path{{Songs/Natale/}} \makeatother
+\input{quando_nacque_gesu}
+\input{gli_angeli_delle_campagne}
+
+
+
+% ----- SANTO ---------
+\makeatletter \def\input@path{{Songs/Santo/}} \makeatother
+\input{santo_daniele_ricci}
+\input{santo_milan}
+
+
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{pane_di_vita_nuova}
+\input{come_te}
+
+
+% ----- NATALE ---------
+\makeatletter \def\input@path{{Songs/Natale/}} \makeatother
+\input{in_questa_notte_splendida}
+\input{gioia_al_mondo}
+
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{holy_is_the_lord}
+
+
+% ----- NATALE ---------
+\makeatletter \def\input@path{{Songs/Natale/}} \makeatother
+\input{senti_l_angelo}
+\input{tu_scendi_dalle_stelle}
+\input{astro_del_ciel}
+\input{in_notte_placida}
 
 
 
