@@ -553,13 +553,15 @@
 %creo l'ordine dei ``momenti''. I momenti della messa sono in un primo gruppo, i tempi liturgici in un secondo (che inizia con il 21), le attribuzioni particolari iniziano col 31  e le canzoni scout col 51. Questo solo per comodità, nel caso in cui si dovesse inserire qualche nuovo momento non servirebbe cambiare i numeri di tutti i momenti successivi, ma solo di alcuni.
 \setposition{Ingresso}{01}
 \setposition{Atto penitenziale}{02}
+\setposition{Gloria}{03}
 \setposition{Salmi}{04}
 \setposition{Acclamazione al Vangelo}{05}
 \setposition{Dopo il Vangelo}{06}
 \setposition{Offertorio}{07}
+\setposition{Santo}{09}
 \setposition{Comunione}{12}
 \setposition{Ringraziamento}{13}
-\setposition{Fine}{14}
+\setposition{Congedo}{14}
 
 \setposition{Avvento}{20}
 \setposition{Natale}{21}

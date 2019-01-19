@@ -15,12 +15,12 @@
 \indexentry{Alleluia Venite a me|hyperindexformat{\indexanchor{13}}}{8}
 \indexentry{Gloria a Dio e pace in terra|hyperindexformat{\indexanchor{14}}}{9}
 \indexentry{Gloria a te Cristo Gesu@Gloria a te Cristo Gesù|hyperindexformat{\indexanchor{15}}}{10}
-\indexentry{Gloria (Buttazzo)|hyperindexformat{\indexanchor{16}}}{11}
+\indexentry{Gloria Buttazzo|hyperindexformat{\indexanchor{16}}}{11}
 \indexentry{Gloria dal basso della terra|hyperindexformat{\indexanchor{17}}}{12}
 \indexentry{Gloria nell'alto dei cieli|hyperindexformat{\indexanchor{18}}}{13}
 \indexentry{Gloria nell'alto dei cieli|hyperindexformat{\indexanchor{18}}}{14}
-\indexentry{Gloria (Giombini)|hyperindexformat{\indexanchor{19}}}{15}
-\indexentry{Gloria (Ricci)|hyperindexformat{\indexanchor{20}}}{16}
+\indexentry{Gloria Giombini|hyperindexformat{\indexanchor{19}}}{15}
+\indexentry{Gloria Ricci|hyperindexformat{\indexanchor{20}}}{16}
 \indexentry{La tua parola \IeC {\`e} vita per noi|hyperindexformat{\indexanchor{21}}}{17}
 \indexentry{A volte le parole|hyperindexformat{\indexanchor{21}}}{17}
 \indexentry{Accendi la vita|hyperindexformat{\indexanchor{22}}}{18}
@@ -166,37 +166,78 @@
 \indexentry{Salve Regina|hyperindexformat{\indexanchor{141}}}{111}
 \indexentry{Scatenate la gioia|hyperindexformat{\indexanchor{142}}}{111}
 \indexentry{Scelti per ri-creare|hyperindexformat{\indexanchor{143}}}{112}
-\indexentry{Se m'accogli|hyperindexformat{\indexanchor{144}}}{112}
-\indexentry{Segni del Tuo amore|hyperindexformat{\indexanchor{145}}}{113}
-\indexentry{Sei fuoco e vento|hyperindexformat{\indexanchor{146}}}{114}
-\indexentry{Servo per amore|hyperindexformat{\indexanchor{147}}}{114}
-\indexentry{Sono qui a lodarti|hyperindexformat{\indexanchor{148}}}{115}
-\indexentry{Sono qui a lodarti|hyperindexformat{\indexanchor{148}}}{115}
-\indexentry{Spirito Santo, discendi tra noi|hyperindexformat{\indexanchor{149}}}{116}
-\indexentry{Su ali d'aquila|hyperindexformat{\indexanchor{150}}}{116}
-\indexentry{Pietro vai|hyperindexformat{\indexanchor{151}}}{117}
+\indexentry{Se m'accogli|hyperindexformat{\indexanchor{144}}}{113}
+\indexentry{Segni del Tuo amore|hyperindexformat{\indexanchor{145}}}{114}
+\indexentry{Sei fuoco e vento|hyperindexformat{\indexanchor{146}}}{115}
+\indexentry{Servo per amore|hyperindexformat{\indexanchor{147}}}{115}
+\indexentry{Sono qui a lodarti|hyperindexformat{\indexanchor{148}}}{116}
+\indexentry{Sono qui a lodarti|hyperindexformat{\indexanchor{148}}}{116}
+\indexentry{Spirito Santo, discendi tra noi|hyperindexformat{\indexanchor{149}}}{117}
 \indexentry{Su ali d'aquila|hyperindexformat{\indexanchor{150}}}{117}
-\indexentry{Sulla tua parola|hyperindexformat{\indexanchor{151}}}{117}
-\indexentry{Sulla tua parola|hyperindexformat{\indexanchor{151}}}{118}
-\indexentry{Terra buona per te|hyperindexformat{\indexanchor{152}}}{119}
-\indexentry{Ti chiedo perdono|hyperindexformat{\indexanchor{153}}}{120}
-\indexentry{Ti seguiro@Ti seguirò|hyperindexformat{\indexanchor{154}}}{120}
-\indexentry{Ti ringrazio mio Signore|hyperindexformat{\indexanchor{155}}}{120}
-\indexentry{Symbolum 77|hyperindexformat{\indexanchor{157}}}{121}
-\indexentry{Tu sarai profeta|hyperindexformat{\indexanchor{156}}}{121}
-\indexentry{Tu sei la mia vita|hyperindexformat{\indexanchor{157}}}{121}
-\indexentry{Un solo spirito|hyperindexformat{\indexanchor{158}}}{122}
-\indexentry{Un solo spirito|hyperindexformat{\indexanchor{158}}}{122}
-\indexentry{Veniamo ad incontrarti|hyperindexformat{\indexanchor{159}}}{123}
-\indexentry{Venimus adorare eum|hyperindexformat{\indexanchor{160}}}{123}
-\indexentry{Verbum panis|hyperindexformat{\indexanchor{161}}}{124}
-\indexentry{Vieni e seguimi|hyperindexformat{\indexanchor{162}}}{125}
-\indexentry{Vieni qui tra noi|hyperindexformat{\indexanchor{163}}}{125}
-\indexentry{Vieni Santo Spirito|hyperindexformat{\indexanchor{164}}}{126}
-\indexentry{Vieni Spirito d'amore|hyperindexformat{\indexanchor{165}}}{126}
-\indexentry{Vivere la vita|hyperindexformat{\indexanchor{166}}}{127}
-\indexentry{Vocazione|hyperindexformat{\indexanchor{167}}}{127}
-\indexentry{Voglio esaltare|hyperindexformat{\indexanchor{168}}}{128}
-\indexentry{Voi siete di Dio|hyperindexformat{\indexanchor{169}}}{128}
-\indexentry{Voi tutte opere del Signore|hyperindexformat{\indexanchor{170}}}{129}
-\indexentry{Volto dell'Uomo|hyperindexformat{\indexanchor{171}}}{129}
+\indexentry{Pietro vai|hyperindexformat{\indexanchor{151}}}{118}
+\indexentry{Su ali d'aquila|hyperindexformat{\indexanchor{150}}}{118}
+\indexentry{Sulla tua parola|hyperindexformat{\indexanchor{151}}}{119}
+\indexentry{Sulla tua parola|hyperindexformat{\indexanchor{151}}}{120}
+\indexentry{Terra buona per te|hyperindexformat{\indexanchor{152}}}{121}
+\indexentry{Ti chiedo perdono|hyperindexformat{\indexanchor{153}}}{122}
+\indexentry{Ti seguiro@Ti seguirò|hyperindexformat{\indexanchor{154}}}{122}
+\indexentry{Ti ringrazio mio Signore|hyperindexformat{\indexanchor{155}}}{122}
+\indexentry{Symbolum 77|hyperindexformat{\indexanchor{157}}}{123}
+\indexentry{Tu sarai profeta|hyperindexformat{\indexanchor{156}}}{123}
+\indexentry{Tu sei la mia vita|hyperindexformat{\indexanchor{157}}}{123}
+\indexentry{Un solo spirito|hyperindexformat{\indexanchor{158}}}{124}
+\indexentry{Un solo spirito|hyperindexformat{\indexanchor{158}}}{124}
+\indexentry{Veniamo ad incontrarti|hyperindexformat{\indexanchor{159}}}{125}
+\indexentry{Venimus adorare eum|hyperindexformat{\indexanchor{160}}}{125}
+\indexentry{Verbum panis|hyperindexformat{\indexanchor{161}}}{126}
+\indexentry{Vieni e seguimi|hyperindexformat{\indexanchor{162}}}{127}
+\indexentry{Vieni qui tra noi|hyperindexformat{\indexanchor{163}}}{127}
+\indexentry{Vieni Santo Spirito|hyperindexformat{\indexanchor{164}}}{128}
+\indexentry{Vieni Spirito d'amore|hyperindexformat{\indexanchor{165}}}{128}
+\indexentry{Vivere la vita|hyperindexformat{\indexanchor{166}}}{129}
+\indexentry{Vocazione|hyperindexformat{\indexanchor{167}}}{129}
+\indexentry{Voglio esaltare|hyperindexformat{\indexanchor{168}}}{130}
+\indexentry{Voi siete di Dio|hyperindexformat{\indexanchor{169}}}{130}
+\indexentry{Voi tutte opere del Signore|hyperindexformat{\indexanchor{170}}}{131}
+\indexentry{Volto dell'Uomo|hyperindexformat{\indexanchor{171}}}{131}
+\indexentry{Benedicimus te Christe|hyperindexformat{\indexanchor{172}}}{133}
+\indexentry{Bless the lord my soul|hyperindexformat{\indexanchor{173}}}{133}
+\indexentry{Bonum est confidere|hyperindexformat{\indexanchor{174}}}{133}
+\indexentry{Christe lux mundi|hyperindexformat{\indexanchor{175}}}{133}
+\indexentry{Dona la pace|hyperindexformat{\indexanchor{176}}}{133}
+\indexentry{Il Signore e la mia forza@Il Signore è la mia forza|hyperindexformat{\indexanchor{177}}}{133}
+\indexentry{In manus tuas Pater|hyperindexformat{\indexanchor{178}}}{134}
+\indexentry{Laudate Dominum|hyperindexformat{\indexanchor{179}}}{134}
+\indexentry{Laudate omnes gentes|hyperindexformat{\indexanchor{180}}}{134}
+\indexentry{Magnificat|hyperindexformat{\indexanchor{181}}}{134}
+\indexentry{Misericordias Domini|hyperindexformat{\indexanchor{182}}}{134}
+\indexentry{Nada te turbe|hyperindexformat{\indexanchor{183}}}{134}
+\indexentry{Questa Notte|hyperindexformat{\indexanchor{184}}}{134}
+\indexentry{Spiritus Jesu Christi|hyperindexformat{\indexanchor{185}}}{135}
+\indexentry{Tui amoris ignem|hyperindexformat{\indexanchor{186}}}{135}
+\indexentry{Ubi caritas|hyperindexformat{\indexanchor{187}}}{135}
+\indexentry{Vieni, spirito creatore|hyperindexformat{\indexanchor{188}}}{135}
+\indexentry{Astro del ciel|hyperindexformat{\indexanchor{189}}}{137}
+\indexentry{Dio e qui@Dio è qui|hyperindexformat{\indexanchor{190}}}{137}
+\indexentry{Gaudete!|hyperindexformat{\indexanchor{191}}}{138}
+\indexentry{Gioia al mondo|hyperindexformat{\indexanchor{192}}}{139}
+\indexentry{Gli angeli delle campagne|hyperindexformat{\indexanchor{193}}}{139}
+\indexentry{Gli angeli delle campagne|hyperindexformat{\indexanchor{193}}}{140}
+\indexentry{In notte placida|hyperindexformat{\indexanchor{194}}}{140}
+\indexentry{In questa notte splendida|hyperindexformat{\indexanchor{195}}}{141}
+\indexentry{In questa notte splendida|hyperindexformat{\indexanchor{195}}}{142}
+\indexentry{La la sulla montagna@Là là sulla montagna|hyperindexformat{\indexanchor{196}}}{142}
+\indexentry{Nella notte sboccio@Nella notte sbocciò|hyperindexformat{\indexanchor{197}}}{143}
+\indexentry{Quando nacque Gesu@Quando nacque Gesù|hyperindexformat{\indexanchor{198}}}{143}
+\indexentry{Senti l'Angelo|hyperindexformat{\indexanchor{199}}}{144}
+\indexentry{Tu scendi dalle stelle|hyperindexformat{\indexanchor{200}}}{144}
+\indexentry{Venite fedeli|hyperindexformat{\indexanchor{201}}}{145}
+\indexentry{Santo Bonfitto|hyperindexformat{\indexanchor{202}}}{147}
+\indexentry{Santo Campagnolo|hyperindexformat{\indexanchor{203}}}{147}
+\indexentry{Santo Campagnolo|hyperindexformat{\indexanchor{203}}}{147}
+\indexentry{Santo Ricci|hyperindexformat{\indexanchor{204}}}{148}
+\indexentry{Santo Gen Verde|hyperindexformat{\indexanchor{205}}}{148}
+\indexentry{Santo Milan|hyperindexformat{\indexanchor{206}}}{149}
+\indexentry{Santo Milan|hyperindexformat{\indexanchor{206}}}{149}
+\indexentry{Santo Caidate|hyperindexformat{\indexanchor{207}}}{150}
+\indexentry{Santo Zaire|hyperindexformat{\indexanchor{208}}}{150}

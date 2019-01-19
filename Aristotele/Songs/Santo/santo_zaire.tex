@@ -12,7 +12,7 @@
 %%%%%% TITOLO E IMPOSTAZONI
 \beginsong{Santo Zaire}[by={Osanna eh! — Autore ignoto}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
-\momenti{}							% <<< INSERISCI MOMENTI	
+\momenti{Santo}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
@@ -23,8 +23,14 @@
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 
@@ -89,6 +95,14 @@ Bene^detto colui che ^viene \brk nel ^nome ^tuo Si^gnor.
 Bene^detto colui che ^viene \brk nel ^nome ^tuo Si^gnor.
 
 \endverse
+
+%%%%% RITORNELLO
+\beginchorus
+
+O\[E]sanna eh! O\[A]sanna \[E]eh!
+O\[A]sanna a \[B]Cristo Si\[E]gnor!  \rep{2} \[E*]
+
+\endchorus
 
 \endsong
 %------------------------------------------------------------

@@ -14,11 +14,11 @@
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 %\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
 %\prefersharps %SE VOGLIO FORZARE i # come alterazioni
-\momenti{Meditazione; Ringraziamento; Comunione; Fine}							% <<< INSERISCI MOMENTI	
+\momenti{Meditazione; Ringraziamento; Comunione; Congedo}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
-	%\textnote{Tonalità migliore }	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{$\triangle$ Tonalità fissa }	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 %%%%%% INTRODUZIONE
@@ -53,11 +53,12 @@
 \fi
 
 
-
+\newchords{strofa}
+\newchords{pennate}
 
 %%%%% STROFA
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
-\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+\memorize[strofa] 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 
 \[E-]Hai solle\[C]vato \brk i nostri \[G]volti dalla \[D]polvere, 
@@ -67,11 +68,12 @@
 
 \endverse
 \beginverse*
+\memorize[pennate] 
 
-^Figlio dell’altissimo, ^povero tra i poveri, 
-^vieni a dimorare tra ^noi. 
-^Dio dell’impossibile, ^Re di tutti i secoli 
-^vieni nella tua mae^stà. 
+\[E-*]Figlio dell’altissimo, \[C*]povero tra i poveri, 
+\[G*]vieni a dimorare tra \[D*]noi. 
+\[E-*]Dio dell’impossibile, \[C*]Re di tutti i secoli 
+\[G*]vieni nella tua mae\[D*]stà. 
 
 \endverse
 
@@ -80,6 +82,7 @@
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
+\replay[strofa]
 
 ^Re \[(D)]dei ^re 
 i ^popoli ti acclamano, \brk i ^cieli ti proclamano 
@@ -120,6 +123,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+\replay[strofa]
 
 ^ Ci hai riscat^tati \brk dalla s^tretta delle ^tenebre, 
 ^ perché po^tessimo glo^rificare ^te. 
@@ -128,6 +132,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 
 \endverse
 \beginverse*
+\replay[pennate]
 
 ^Figlio dell’altissimo, ^povero tra i poveri, 
 ^vieni a dimorare tra ^noi. 
@@ -141,7 +146,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
-
+\replay[strofa]
 ^Re \[(D)]dei ^re 
 i ^popoli ti acclamano, \brk i ^cieli ti proclamano 
 ^Re \[(D)]dei ^re 
@@ -160,17 +165,23 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 \vspace*{1.3\versesep}
-\textnote{Bridge} %<<< EV. INDICAZIONI
+\textnote{\textbf{Bridge}} %<<< EV. INDICAZIONI
+\musicnote{\textit{(piano, arpeggiato)}} 
+\replay[strofa]
 
 ^Tua ^è la ^glo^ria per ^se-^em^pre, ^ 
 ^Tua ^è la ^glo^ria per ^se-^em^pre, ^ 
+
 \endverse
 \beginverse*
 \vspace*{-\versesep}
+\replay[strofa]
+
 ^glo^ria, ^glo^ria, ^glo^ria, ^glo^ria.  
 
 \endverse
 \beginverse*
+\replay[pennate]
 
 ^Figlio dell’altissimo, ^povero tra i poveri, 
 ^vieni a dimorare tra ^noi. 
@@ -185,6 +196,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
+\replay[strofa]
 
 ^Re \[(D)]dei ^re 
 i ^popoli ti acclamano, \brk i ^cieli ti proclamano 
@@ -217,7 +229,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 \preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
 %\prefersharps %SE VOGLIO FORZARE i # come alterazioni
 \ifchorded
-	\textnote{Con aumento di tonalità}	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{$\bigstar$ Con aumento di tonalità}	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 
@@ -269,6 +281,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 
 \endverse
 \beginverse*
+\replay[pennate]
 
 ^Figlio dell’altissimo, ^povero tra i poveri, 
 ^vieni a dimorare tra ^noi. 
@@ -283,6 +296,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
+\replay[strofa]
 
 ^Re \[(D)]dei ^re 
 i ^popoli ti acclamano, \brk i ^cieli ti proclamano 
@@ -301,8 +315,8 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 \vspace*{1.3\versesep}
 {
 	\nolyrics
-	\textnote{Intermezzo con aumento di tonalità}
-	
+	\textnote{Intermezzo musicale}
+	\textnote{(con  aumento di tonalità) }
 	\ifchorded
 
     %---- Prima riga -----------------------------
@@ -323,6 +337,8 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 \beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+\replay[strofa]
+
 
 ^ Ci hai riscat^tati \brk dalla s^tretta delle ^tenebre, 
 ^ perché po^tessimo glo^rificare ^te. 
@@ -331,6 +347,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 
 \endverse
 \beginverse*
+\replay[pennate]
 
 ^Figlio dell’altissimo, ^povero tra i poveri, 
 ^vieni a dimorare tra ^noi. 
@@ -344,6 +361,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
+\replay[strofa]
 
 ^Re \[(D)]dei ^re 
 i ^popoli ti acclamano, \brk i ^cieli ti proclamano 
@@ -363,17 +381,23 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 %\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
 \vspace*{1.3\versesep}
-\textnote{Bridge} %<<< EV. INDICAZIONI
+\textnote{\textbf{Bridge}} %<<< EV. INDICAZIONI
+\musicnote{\textit{(piano, arpeggiato)}} 
+\replay[strofa]
 
 ^Tua ^è la ^glo^ria per ^se-^em^pre, ^ 
 ^Tua ^è la ^glo^ria per ^se-^em^pre, ^ 
 \endverse
 \beginverse*
 \vspace*{-\versesep}
+\replay[strofa]
+
 ^glo^ria, ^glo^ria, ^glo^ria, ^glo^ria.  
 
 \endverse
 \beginverse*
+\replay[pennate]
+
 
 ^Figlio dell’altissimo, ^povero tra i poveri, 
 ^vieni a dimorare tra ^noi. 
@@ -386,6 +410,7 @@ i ^popoli ti acclamano, \brk i ^cieli ti proclamano
 %%%%% RITORNELLO
 \beginchorus
 \textnote{\textbf{Rit.}}
+\replay[strofa]
 
 ^Re \[(D)]dei ^re 
 i ^popoli ti acclamano, \brk i ^cieli ti proclamano 
