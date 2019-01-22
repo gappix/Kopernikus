@@ -1,0 +1,91 @@
+%-------------------------------------------------------------
+%			INIZIO	CANZONE
+%-------------------------------------------------------------
+
+
+%titolo: 	Alla tua presenza
+%autore: 	F. Tiddia
+%tonalita: 	Do
+
+
+
+%%%%%% TITOLO E IMPOSTAZONI
+\beginsong{Alla tua presenza}[by={F. Tiddia}] 	% <<< MODIFICA TITOLO E AUTORE
+\transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
+%\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
+%\prefersharps %SE VOGLIO FORZARE i # come alterazioni
+\momenti{}							% <<< INSERISCI MOMENTI	
+% momenti vanno separati da ; e vanno scelti tra:
+% Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
+\ifchorded
+	%\textnote{$\bigstar$ Tonalità migliore }	% <<< EV COMMENTI (tonalità originale/migliore)
+\fi
+
+
+%%%%%% INTRODUZIONE
+\ifchorded
+\vspace*{\versesep}
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
+% Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
+\vspace*{-\versesep}
+\beginverse*
+
+\nolyrics
+
+%---- Prima riga -----------------------------
+\vspace*{-\versesep}
+\[C] \[A-7] \[D-]\[G4] % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+
+%---- Ogni riga successiva -------------------
+%\vspace*{-\versesep}
+%\[G] \[C]  \[D]	
+
+%---- Ev Indicazioni -------------------------			
+%\textnote{\textit{[oppure tutta la strofa]} }	
+
+\endverse
+\fi
+
+
+
+
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+%\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+
+\[C]Alla tua presenza \[A-7]portaci Signore, 
+nei tuoi \[D-]atri noi vogliamo dimo\[G4]rar. 
+\[C]Nel tuo tempio intoneremo \[A-7]inni a te, 
+\[D-7]canti di lode alla tua \[G4]maestà. 
+
+\endverse
+
+
+
+
+%%%%% RITORNELLO
+\beginchorus
+\textnote{\textbf{Rit.}}
+
+\[F]Il tuo Santo \[G]Spirito \brk ci \[E-]guidi là \[A-]dove sei tu, 
+\[D-7]alla tua pre\[G]senza Si\[C]gnore Ge\[E&7]su-\[C]ù. 
+\[F]In eterno \[G]canteremo \[E-7]gloria a te, Si\[A-7]gnor. 
+\[D-7]Alla tua pre\[G]senza, \[D-7]alla tua pre\[G]senza 
+per \[D-7]sempre insie\[G]me a te Ge\[C]sù.
+
+\endchorus
+
+
+
+\endsong
+%------------------------------------------------------------
+%			FINE CANZONE
+%------------------------------------------------------------
+
