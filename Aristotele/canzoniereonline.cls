@@ -648,7 +648,7 @@ I testi delle canzoni sono proprietà dei rispettivi autori.
 La Legge n.~159 del 22 maggio 1993 ne consente l'uso solo per attività didattica, di studio e di ricerca. \\
 
 \smallskip
-La versione corrente è: BETA 1.0.
+La versione corrente è: BETA 2.0.
 Si prega di comunicare ogni errore individuato a Paolo "The King" Gazzotti.
 
 
