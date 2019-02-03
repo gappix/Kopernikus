@@ -10,7 +10,7 @@
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Dall'aurora al tramonto}[by={Casucci, Balduzzi}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Dall'aurora al tramonto}[by={C. Casucci, M. Balduzzi}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{-2} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Comunione; Meditazione; Ringraziamento}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
@@ -26,8 +26,14 @@
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % << MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 
@@ -42,7 +48,7 @@
 %\[G] \[C]  \[D]	
 
 %---- Ev Indicazioni -------------------------			
-\textnote{\textit{(Oppure tutto il ritornello)} }	
+\textnote{\textit{(oppure tutto il ritornello)} }	
 
 \endverse
 \fi
@@ -98,7 +104,7 @@ come ^terra de^ser^ta.
 
 \beginchorus %oppure \beginverse*
 \vspace*{1.3\versesep}
-\textnote{Finale } %<<< EV. INDICAZIONI
+\textnote{\textbf{Finale} } %<<< EV. INDICAZIONI
 \[C#-]Ha sete \[G#-]solo di \[A]te l'\[B]anima \[E]mia
 come \[A]terra de\[B]se-\[B]e-r\[E]ta.
 \endchorus  %oppure \endverse

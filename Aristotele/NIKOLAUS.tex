@@ -2,7 +2,12 @@
 %——————————————————————————————————————————————————————
 % STILE DOCUMENTO
 %-------------------------------------------------------------------------------                                                                             
-\documentclass[a4vert, palatino, titleindex, tematicindex, chorded, cover]{canzoniereonline}
+
+
+%% CHORDED Settings
+% > A4vert + palatino + titleindex + tematicindex + chorded
+
+\documentclass[a5vert, palatino, titleindex, tematicindex, lyric, cover]{canzoniereonline}
 
 %opzioni formato: singoli, standard (A4), a5vert, a5oriz, a6vert;
 %opzioni accordi: lyric, chorded {quelli d Songs}
@@ -70,50 +75,72 @@
 
 % ----- LITURGIA ---------
 \makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
-\input{popoli_tutti_acclamate}
+\input{nulla_e_impossibile_a_dio}
 
-
-% ----- GLORIA ---------
+%% ----- GLORIA ---------
 \makeatletter \def\input@path{{Songs/Gloria/}} \makeatother
 \input{gloria_gen_verde}
 
 
 % ----- ALLELUIA ---------
 \makeatletter \def\input@path{{Songs/Alleluia/}} \makeatother
-\input{alleluia_festa_con_te}
+\input{alleluia_festa_con_te} 
 
 
-% ----- TAIZE ---------
-\makeatletter \def\input@path{{Songs/Taize/}} \makeatother
-\input{bless_the_lord}
 
 
 % ----- LITURGIA ---------
 \makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
-\input{pace_sia_pace_a_voi}
+\input{antica_eterna_danza}
 
 
 
-% ----- ALLELUIA ---------
+%% ----- SANTO ---------
 \makeatletter \def\input@path{{Songs/Santo/}} \makeatother
 \input{santo_milan}
 
 
 
+
 % ----- LITURGIA ---------
 \makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
-\input{come_un_prodigio}
-\input{benedetto_il_nome_del_signore}
-\input{il_canto_dell_amore}
+\input{beato_il_cuore_gmg_2016}
+\input{re_dei_re} %MI
 \input{le_tue_meraviglie}
-\input{holy_is_the_lord}
+
+
+
+
+
+%% ----- LITURGIA ---------
+%\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+%\input{lodate_il_signore}
+%\input{luce_del_mondo}
+%\input{saldo_e_il_mio_cuore}
+%\input{isaia_11}
 
 
 
 
 
 
-
+%% ----- SANTO ---------
+%\makeatletter \def\input@path{{Songs/Santo/}} \makeatother
+%\input{santo_zappala}
+%
+%
+%
+%
+%
+%% ----- LITURGIA ---------
+%\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+%\input{alla_tua_presenza}
+%\input{come_ti_ama_dio}
+%\input{come_tu_mi_vuoi}
+%\input{dio_in_me}
+%\input{ti_do_la_pace}
+%\input{vieni_o_spirito}
+%\input{io_credo_in_te}
 
 % *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
 

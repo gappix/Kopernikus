@@ -15,7 +15,11 @@
 %% 
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{canzoniereonline}[2017/09/10 v0.5 Una classe per la creazione di canzonieri on line]
-\RequirePackage{ifxetex}
+
+\RequirePackage{ifxetex} %this package gives access to the \ifxetex control 
+
+
+% font general settings
 \ifxetex
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -25,7 +29,11 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[italian]{babel}
 \fi
+
+
+
 \RequirePackage{xkeyval}
+
 \newif\iflibertine
 \newif\ifcanzsingole
 \newif\ifaquattrovert
@@ -37,6 +45,9 @@
 \newif\ifauthorsindex
 \newif\iftematicindex
 \newif\ifcover
+
+
+%  Declare_option_command   {name_of_the_new_option}     {action_executed_when_option_is_selected}
 \DeclareOption{palatino}{\libertinefalse}
 \DeclareOption{libertine}{\libertinetrue}
 \DeclareOption{singoli}{\canzsingoletrue\aquattrovertfalse\acinquevertfalse\acinqueorfalse\aseivertfalse\coverfalse\smartfalse}
@@ -55,10 +66,12 @@
 \DeclareOption{chorded}{\PassOptionsToPackage{chorded}{songs}}
 
 \DeclareOptionX{minorsign}{\def\canzonline@myminor{#1}}
+
 \ExecuteOptions{standard,libertine,cover}
 \ExecuteOptionsX{minorsign=m}
 \ProcessOptions\relax
 \ProcessOptionsX\relax
+
 %corpo del font
 \ifcanzsingole
   \RequirePackage{lastpage}
@@ -88,7 +101,15 @@
 \RequirePackage{ccicons}
 \RequirePackage{imakeidx} 
 \usepackage{titlesec}% cambio la formattazione dei titolo dei capitoli (mi serve per l'indice tematico)
+
+
+
+
+%%% INDEX COMMANDS
+
 \ifxetex
+
+	% OPTIONS FOR XETEX INDEXES
 	\iftitleindex
 		\makeindex[name=alfabetico,title=Indice alfabetico,program=truexindy,options=-M texindy -C utf8 -L italian -M xindystyle]
 	\else
@@ -101,7 +122,10 @@
 		\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]
 	\else
 	\fi
+
 \else
+
+	% OPTIONS FOR REGULAR INDEXES
 	\iftitleindex
 		\makeindex[title=Indice alfabetico,options=-s canzstyle.ist]
 	\else
@@ -114,16 +138,27 @@
 		\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
 	\else
 	\fi
+
 \fi
 
 
-%FONT
+
+
+
+%%% FONT
+
 \iflibertine
 	\RequirePackage[tt=false]{libertine}
+	%\setmainfont{Arial}
+	%\setmainfont{Lexia Readable}
 \else
 	\RequirePackage[]{mathpazo}
 \fi
-%GEOMETRIA
+
+
+
+%%% GEOMETRY (A4/A5 vert/oriz)
+
 \ifcanzsingole
 	\RequirePackage[top=16mm, left=14mm, right=13mm,  bottom= 20mm, a4paper]{geometry}
 \fi
@@ -144,7 +179,10 @@
 \fi
 
 
+
+
 %TESTATINE
+
 \ifcanzsingole
 	\pagestyle{fancy}%
 	\setlength{\headheight}{0pt}
@@ -176,7 +214,11 @@
 	\renewcommand{\headrulewidth}{0pt} % e leva la linea dalle pagine di inizio capitolo
 }
 \fi
-%%%%%%%%%%%%%%Impostazioni del pacchetto Songs
+
+
+
+%%% SONGS-PACKAGE SETTINGS   
+
 \RequirePackage[nomeasures,noshading,noindexes]{songs}
 \MultiwordChords	
 \notenamesin{A}{B}{C}{D}{E}{F}{G}  			% scriverò gli accordi secondo la notazione anglosassone
@@ -185,19 +227,22 @@
 \renewcommand{\flatsymbol}{\raisebox{0.1ex}{$\flat$}}				% bemolle
 \setlength{\cbarwidth}{0pt}						% linea laterale ritornelli
 \setlength{\sbarheight}{0pt}						%linee sopra e sotto
+\renewcommand{\chorusfont}{\bfseries} %chorus BOLD settings
 %\renewcommand{\chorusfont}{\itshape}					%font ritornelli
 \renewcommand{\rep}[1]{{\normalfont($\times$#1)}}		% cambia la x nelle ripetizioni
 \setlength{\parindent}{0pt}
 \setlength\columnsep{5mm}
 
 
-\renewcommand{\chorusfont}{\bfseries} %chorus BOLD settings
+
 % Un altro esempio:
 %\renewcommand{\chorusfont}{\slshape\scshape\mdseries\normalsize\large} 
 %
 
 
-%ACCORDI
+
+% ACCORDI
+
 \iflibertine
 	\renewcommand{\printchord}[1]{\normalfont\small\bfseries#1}
 \else
@@ -207,6 +252,8 @@
    		\renewcommand{\printchord}[1]{\normalfont\bfseries\sffamily#1}
   	\fi
 \fi
+
+
 %RIENTRO DELLE STROFE
 \ifcanzsingole
 	\versenumwidth=0pt
@@ -266,6 +313,10 @@
 }
 
 
+
+% TEXTNOTE RENEW
+% Songs command redefined with new custom settings
+
 \renewcommand\textnote[1]{% note in senza grazie e senza sfondo
   \ifhmode\par\fi%
   \ifnum\lastpenalty=12345\else%
@@ -280,7 +331,7 @@
   \begingroup%
     \everypar{}%
     \ifchorded\chordedfalse\SB@setbaselineskip\chordedtrue\fi%
-    \placenote{\normalfont\sffamily{\SB@boxup{#1}}}%
+    \placenote{\normalfont\itshape\sffamily{\SB@boxup{#1}}} % <<< remove itshape to remove italic
   \endgroup%
   \nobreak%
   \ifSB@inverse%
@@ -291,6 +342,9 @@
     \nobreak\vskip\versesep%
   \fi\fi\fi%
 }
+
+
+
 
 %modifico il comando per i titoli secondari, in modo da generare l'indice
 \renewcommand\indextitleentry[1]{%
@@ -322,7 +376,10 @@
 {\chordlocals\global\let/\bassfont
 \global\let-=\canzonline@myminor}
 
-%SONGPOS
+
+
+
+% SONGPOS
 \ifaseivert
 \songpos{0}
 \else
@@ -332,61 +389,78 @@
 	\fi\fi%
 \fi
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 % TITOLI
+
+
 \newcommand{\stampatitolo}{}
+% libertine only
 \iflibertine
- \ifaseivert
-  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}
- \else
-  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}
- \fi
+	 \ifaseivert
+	  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}
+	 \else
+	  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}
+	 \fi
+% every other font
 \else
- \ifaseivert
-  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries\sffamily}
- \else
-  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily}
- \fi
+	 \ifaseivert  % A6vertical
+	  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries\sffamily}
+	 \else        % every other Aformat
+	  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily} %chorded official
+	 \fi
 \fi
+
+
 \newcommand{\stampanumero}{}
+% libertine only
 \iflibertine
- \ifaseivert
-   \renewcommand{\stampanumero}{\bfseries\fontsize{30}{18}\selectfont}
- \else
-   \renewcommand{\stampanumero}{\bfseries\fontsize{36}{28}\selectfont}
+	 \ifaseivert
+	   \renewcommand{\stampanumero}{\bfseries\fontsize{30}{18}\selectfont}
+	 \else        % every other Aformat
+	   \renewcommand{\stampanumero}{\bfseries\fontsize{35}{28}\selectfont} % original 36
  \fi
+ % every other font
 \else
- \ifaseivert
-   \renewcommand{\stampanumero}{\fontsize{30}{18}\selectfont}
- \else
-  \renewcommand{\stampanumero}{\fontsize{36}{28}\selectfont}
+	 \ifaseivert
+	   \renewcommand{\stampanumero}{\fontsize{30}{18}\selectfont}
+	 \else        % every other Aformat
+	  \renewcommand{\stampanumero}{\fontsize{35}{28}\selectfont} %chorded official (original 36)
  \fi
 \fi
+
+
+
+
 \newlength{\titlength}
 \newlength{\numerwidth}
 \newlength{\larcolonna}
+
+
 \ifcanzsingole
 	\renewcommand\makeprelude{%
-	\resettitles%
-	\newcommand{\titolo}{\LARGE\bfseries\sffamily\songtitle}
-	\settowidth{\titlength}{\titolo}
- 	\begin{tabularx}{\hsize}{X}
-	\ifdim\titlength<\hsize \hspace{-0.5em}\titolo
-	\else \hspace{-0.5em}\resizebox{\hsize}{!}{\titolo}
-	\fi\\
-	\hline
-	\hfill\small\itshape\songauthors
- 	\end{tabularx}
-    \nexttitle%
-    \foreachtitle{(\songtitle)\par}%
-}
+		\resettitles%
+		\newcommand{\titolo}{\LARGE\bfseries\sffamily\songtitle}
+		\settowidth{\titlength}{\titolo}
+	 	\begin{tabularx}{\hsize}{X}
+		\ifdim\titlength<\hsize \hspace{-0.5em}\titolo
+		\else \hspace{-0.5em}\resizebox{\hsize}{!}{\titolo}
+		\fi\\
+		\hline
+		\hfill\small\itshape\songauthors
+	 	\end{tabularx}
+	    \nexttitle%
+	    \foreachtitle{(\songtitle)\par}%
+	}
+% non-single song
 \else
 \renewcommand\makeprelude{%
 \resettitles%
 \settowidth{\numerwidth}{\stampanumero\thesongnum}
 \newcommand{\titolo}{\stampatitolo\songtitle}
 \settowidth{\titlength}{\titolo}
-\setlength{\larcolonna}{\hsize-\numerwidth-30pt}
+\setlength{\larcolonna}{\hsize-\numerwidth-10pt} % from 30pt to only 10pt right margin
 \begin{tabularx}{\hsize}{@{}r@{}X}
 \renewcommand{\arraystretch}{0} 
 	& \ifdim\titlength<\larcolonna \titolo \else \resizebox{\larcolonna}{!}{\titolo} \fi\\
@@ -408,7 +482,13 @@
 }
 \fi
 
-%INDICI grazie a Enrico Gregorio
+
+
+
+
+% INDICI 
+%grazie a Enrico Gregorio
+
 \def\accents@list{\do\IeC\do\`\do\'}
 \def\letters@list{\do\i{i}}
 \newcommand{\noaccentindex}[1]{%
@@ -471,6 +551,7 @@
 %creo l'ordine dei ``momenti''. I momenti della messa sono in un primo gruppo, i tempi liturgici in un secondo (che inizia con il 21), le attribuzioni particolari iniziano col 31  e le canzoni scout col 51. Questo solo per comodità, nel caso in cui si dovesse inserire qualche nuovo momento non servirebbe cambiare i numeri di tutti i momenti successivi, ma solo di alcuni.
 \setposition{Ingresso}{01}
 \setposition{Atto penitenziale}{02}
+\setposition{Salmi}{04}
 \setposition{Acclamazione al Vangelo}{05}
 \setposition{Dopo il Vangelo}{06}
 \setposition{Offertorio}{07}
@@ -552,21 +633,20 @@
 \begin{minipage}{0.4\textwidth}
 \fi
 \small
-Questo canzoniere è stato  composto il giorno \today{} attraverso un motore tipografico \TeX{}. Per la sua realizzazione in linguaggio \LaTeX{}, è stata utilizzata e adattata la classe \textsf{canzoniereonline}\footnote{\url{https://github.com/franen/canzoniereonline}}, traendo preziosissima ispirazione dal servizio \hbox{\url{www.canzoniereonline.it}}. 
-
-Di fondamentale importanza per la redazione di un sistema preciso e dinamico di accordi, il pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen. 
+Questo canzoniere si basa sul pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen e sulla classe \textsf{canzoniereonline}. 
 È distribuito con licenza Creative Commons.
 \smallskip
 
 Il font utilizzato è il \iflibertine\textsf{Libertine}\footnote{\url{www.linuxlibertine.org}}\else Palatino\fi.
 
-\medskip
+\smallskip
 I testi delle canzoni sono proprietà dei rispettivi autori.
 La Legge n.~159 del 22 maggio 1993 ne consente l'uso solo per attività didattica, di studio e di ricerca. \\
-Gli autori potranno richiederne la rimozione dal servizio online in qualsiasi momento scrivendo  a \url{canzoniereonline@gmail.com}.
 
-\medskip
-Qualora doveste trovare errori vi preghiamo di segnalarli scrivendo a:\\ \url{paolo.gazzotti@gmail.com}
+\smallskip
+La versione corrente è: BETA 1.0.
+Si prega di comunicare ogni errore individuato a Paolo "The King" Gazzotti.
+
 
 \smallskip
 {\hspace*{3.3em}\Large\ccbyncsaeu}

@@ -9,23 +9,28 @@
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Gli angeli delle campagne}[by={Les anges dans nos campagnes — autore ignoto}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Gli angeli delle campagne}[by={Les anges dans nos campagnes — Autore ignoto}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Natale}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
-	%\textnote{Tonalità originale }	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{$\bigstar$ Tonalità singola }	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
-
 \nolyrics
 
 %---- Prima riga -----------------------------
@@ -70,7 +75,7 @@
 
 ^O pastori ^che can^tate
 ^dite il perché di ^tanto o^nor.
-^Quale Signor, qua^le pro^feta
+^Qual Signor, qua^le pro^feta
 ^merita questo ^gran splen^dor.
 
 \endverse
@@ -103,21 +108,26 @@
 \ifchorded
 %decremento contatore per avere stesso numero
 \addtocounter{songnum}{-1} 
-\beginsong{Gli angeli delle campagne}[by={Les anges dans nos campagnes — autore ignoto}] 	% <<< \transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
+\beginsong{Gli angeli delle campagne}[by={Les anges dans nos campagnes — Autore ignoto}] 	% <<< \transpose{0} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
 %\preferflats  %SE VOGLIO FORZARE i bemolle come alterazioni
 %\prefersharps %SE VOGLIO FORZARE i # come alterazioni
 \ifchorded
-	\textnote{Tonalità crescente}	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{$\triangle$ Tonalità crescente}	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
-
 \nolyrics
 
 %---- Prima riga -----------------------------
@@ -189,7 +199,7 @@
 
 ^O pastori ^che can^tate
 ^dite il perché di ^tanto o^nor.
-^Quale Signor, qua^le pro^feta
+^Qual Signor, qua^le pro^feta
 ^merita questo ^gran splen^dor.
 
 \endverse

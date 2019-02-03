@@ -10,7 +10,7 @@
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{Il Signore è la luce}[by={Giombini}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{Il Signore è la luce}[by={M. Giombini}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
 \momenti{Acclamazione al Vangelo; Quaresima}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
@@ -19,12 +19,17 @@
 	%\textnote{Tonalità migliore }	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
-
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 
@@ -114,9 +119,19 @@ Il Signore è la pace che arde nei cuori.
 Il Signore è il sereno che vince la pioggia.
 \endverse
 
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+Il Signore è l'amore che vince il peccato.
+\endverse
 
-
-
+%%%%% STROFA
+\beginverse		%Oppure \beginverse* se non si vuole il numero di fianco
+%\memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
+\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
+Il Signore è speranza di un nuovo futuro.
+\endverse
 
 
 

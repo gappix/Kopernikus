@@ -10,9 +10,9 @@
 
 
 %%%%%% TITOLO E IMPOSTAZONI
-\beginsong{È più bello insieme}[by={Gen Verde}] 	% <<< MODIFICA TITOLO E AUTORE
+\beginsong{E' più bello insieme}[by={Gen Verde}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
-\momenti{Fine}							% <<< INSERISCI MOMENTI	
+\momenti{Congedo}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione; Spezzare del pane;
 \ifchorded
@@ -23,10 +23,17 @@
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
+
 
 \nolyrics
 
@@ -98,7 +105,7 @@ della ^gente attorno a ^me. ^
 \vspace*{1.3\versesep}
 {
 	\nolyrics
-	\textnote{Cambio di tonalità}
+	\textnote{(cambio di tonalità)}
 	
 	\ifchorded
 
@@ -150,7 +157,7 @@ della ^gente attorno a ^me. ^
 \ifchorded
 \beginchorus %oppure \beginverse*
 \vspace*{1.3\versesep}
-\textnote{Finale } %<<< EV. INDICAZIONI
+\textnote{\textbf{Finale} } %<<< EV. INDICAZIONI
 \transpose{2}
 \[G]è più \[A]bello insieme. \[D]
 

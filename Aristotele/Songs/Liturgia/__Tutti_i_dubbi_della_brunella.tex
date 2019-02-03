@@ -49,6 +49,25 @@
 \addtocounter{GlobalSongCounter}{1} %set starting song counter to 1 (0 otherwise)
 
 
+% RIGHE PER LA COPERTINA
+%————————————————————————————————————————————————————————————————————————
+
+
+%titoletto
+\renewcommand{\titolettocop}{Tutti i dubbi della Brunella — BETA 1.X1} 	
+
+
+%TITOLO					
+\renewcommand{\titolocop}{KOPERNIKUS}  			
+
+
+%Sottotitolo
+\renewcommand{\sottotitolocop}{La rivoluzione dei canzonieri} 	
+
+
+%fondo pagina
+\renewcommand{\piede}{\today}							
+
 %------------
 \makeatletter
 \newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}\m@th$}
@@ -58,6 +77,15 @@
 %Starting Document
 \begin{document}
 
+% COLOPHON
+%-------------------------------------------------------------------------------
+\ifcover
+	\firstpage
+	%\colophon
+\else
+	\relax
+\fi
+
 
 \begin{songs}{}
 \songcolumns{\canzsongcolumsnumber}
@@ -66,19 +94,23 @@
 
 %  *  *  *  *  *  TEST SONG HERE  *  *  *  *  *  *  * ]
 %*****************************************************
-%\input{apri_le_tue_braccia}
-%\input{custodiscimi}
-%\input{e_camminava_con_loro}
-%\input{e_sei_rimasto_qui}
-%\input{ecco_l_uomo}
-%\input{francesco_vai}
-%\input{il_cuore_nuovo}
-%\input{il_signore_ci_ha_salvato}
-%\input{invochiamo_la_tua_presenza}
-%\input{ora_e_tempo_di_gioia}
-\input{re_di_gloria}
-%\input{tu_sarai_profeta}
+\input{angelo_di_dio}
+\input{apri_le_tue_braccia}
+\input{cantico_delle_creature}
+\input{canto_degli_umili}
+\input{custodiscimi}
+\input{e_camminava_con_loro}
+\input{e_sei_rimasto_qui}
+\input{ecco_l_uomo}
+\input{francesco_vai}
 
+\input{il_cuore_nuovo}
+\input{il_signore_ci_ha_salvato}
+\input{ora_e_tempo_di_gioia}
+\input{re_di_gloria}
+\input{ti_seguiro}
+\input{tu_sarai_profeta}
+\input{volto_dell_uomo}
 
 %*****************************************************
 % *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *

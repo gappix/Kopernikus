@@ -12,19 +12,24 @@
 %%%%%% TITOLO E IMPOSTAZONI
 \beginsong{Santo Campagnolo}[by={}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
-\momenti{}							% <<< INSERISCI MOMENTI	
+\momenti{Santo}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione;
 \ifchorded
-	%\textnote{Tonalità originale }	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{$\bigstar$ Tonalità originale }	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
-
 
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % << MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 
@@ -89,15 +94,21 @@ osanna nell’alto dei cieli.
 \beginsong{Santo Campagnolo}[by={}] 	% <<< COPIA TITOLO E AUTORE
 \transpose{2} 						% <<< TRASPOSIZIONE #TONI + - (0 nullo)
 \ifchorded
-	\textnote{Tonalità alternativa}	% <<< EV COMMENTI (tonalità originale/migliore)
+	\textnote{$\triangle$ Tonalità alternativa}	% <<< EV COMMENTI (tonalità originale/migliore)
 \fi
 
 
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % << MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 

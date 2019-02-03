@@ -12,7 +12,7 @@
 %%%%%% TITOLO E IMPOSTAZONI
 \beginsong{Santo Gen Verde}[by={Gen Verde}] 	% <<< MODIFICA TITOLO E AUTORE
 \transpose{0} 						% <<< TRASPOSIZIONE #TONI (0 nullo)
-\momenti{}							% <<< INSERISCI MOMENTI	
+\momenti{Santo}							% <<< INSERISCI MOMENTI	
 % momenti vanno separati da ; e vanno scelti tra:
 % Ingresso; Atto penitenziale; Acclamazione al Vangelo; Dopo il Vangelo; Offertorio; Comunione; Ringraziamento; Fine; Santi; Pasqua; Avvento; Natale; Quaresima; Canti Mariani; Battesimo; Prima Comunione; Cresima; Matrimonio; Meditazione;
 \ifchorded
@@ -23,8 +23,14 @@
 %%%%%% INTRODUZIONE
 \ifchorded
 \vspace*{\versesep}
-\textnote{Intro: \qquad \qquad  }%(\eighthnote 116) % <<  MODIFICA IL TEMPO
+\musicnote{
+\begin{minipage}{0.48\textwidth}
+\textbf{Intro}
+\hfill 
+%( \eighthnote \, 80)   % <<  MODIFICA IL TEMPO
 % Metronomo: \eighthnote (ottavo) \quarternote (quarto) \halfnote (due quarti)
+\end{minipage}
+} 	
 \vspace*{-\versesep}
 \beginverse*
 
@@ -32,7 +38,7 @@
 
 %---- Prima riga -----------------------------
 \vspace*{-\versesep}
-\[E] \[*A] \[E] \[*A] 	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
+\[E] \[A*] \[E] \[A*] 	 % \[*D] per indicare le pennate, \rep{2} le ripetizioni
 
 %---- Ogni riga successiva -------------------
 \vspace*{-\versesep}
@@ -48,8 +54,8 @@
 \beginverse*		%Oppure \beginverse* se non si vuole il numero di fianco
 \memorize 		% <<< DECOMMENTA se si vuole utilizzarne la funzione
 %\chordsoff		% <<< DECOMMENTA se vuoi una strofa senza accordi
-\[E]San\[*A]to, \[E]san\[*A]to, \[E]\[B]san\[E]to,
-\[E]san\[*A]to, \[E]san\[*A]to, \[E]\[B]san\[E]to.
+\[E]San\[A*]to, \[E]san\[A*]to, \[E]\[B]san\[E]to,
+\[E]san\[A*]to, \[E]san\[A*]to, \[E]\[B]san\[E]to.
 Il Si\[A]gnore Dio dell'uni\[E]verso,
 il Si\[A]gnore Dio dell'uni\[E]verso,
 i \[A]cieli e la \[E]terra \brk sono \[B]pieni della tua \[E]gloria.
