@@ -127,15 +127,18 @@
 
 	% OPTIONS FOR REGULAR INDEXES
 	\iftitleindex
-		\makeindex[title=Indice alfabetico,options=-s canzstyle.ist]
+		\makeindex[title=Indice alfabetico,program=truexindy,options=-M texindy -C utf8 -L italian -M xindystyle]
+		%\makeindex[title=Indice alfabetico,options=-s canzstyle.ist]
 	\else
 	\fi
 	\ifauthorsindex
-		\makeindex[name=autori,title=Indice degli autori,options=-s canzstyle.ist]%***
+		%\makeindex[name=autori,title=Indice degli autori,options=-s canzstyle.ist]%***
+		\makeindex[name=autori,title=Indice degli autori,program=truexindy,options= -M texindy -C utf8 -L italian -M xindystyle]
 	\else
 	\fi
 	\iftematicindex
-		\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
+		%\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
+		\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]
 	\else
 	\fi
 
@@ -144,13 +147,19 @@
 
 
 
-
 %%% FONT
 
 \iflibertine
-	\RequirePackage[tt=false]{libertine}
+
+	\ifxetex
+		\RequirePackage{fontspec}
+		\setmainfont{Lexia Readable}
+	\else
+		\RequirePackage[tt=false]{libertine}
 	%\setmainfont{Arial}
 	%\setmainfont{Lexia Readable}
+	\fi
+	
 \else
 	\RequirePackage[]{mathpazo}
 \fi
@@ -551,13 +560,15 @@
 %creo l'ordine dei ``momenti''. I momenti della messa sono in un primo gruppo, i tempi liturgici in un secondo (che inizia con il 21), le attribuzioni particolari iniziano col 31  e le canzoni scout col 51. Questo solo per comodità, nel caso in cui si dovesse inserire qualche nuovo momento non servirebbe cambiare i numeri di tutti i momenti successivi, ma solo di alcuni.
 \setposition{Ingresso}{01}
 \setposition{Atto penitenziale}{02}
+\setposition{Gloria}{03}
 \setposition{Salmi}{04}
 \setposition{Acclamazione al Vangelo}{05}
 \setposition{Dopo il Vangelo}{06}
 \setposition{Offertorio}{07}
+\setposition{Santo}{09}
 \setposition{Comunione}{12}
 \setposition{Ringraziamento}{13}
-\setposition{Fine}{14}
+\setposition{Congedo}{14}
 
 \setposition{Avvento}{20}
 \setposition{Natale}{21}
@@ -644,7 +655,7 @@ I testi delle canzoni sono proprietà dei rispettivi autori.
 La Legge n.~159 del 22 maggio 1993 ne consente l'uso solo per attività didattica, di studio e di ricerca. \\
 
 \smallskip
-La versione corrente è: BETA 1.0.
+La versione corrente è: BETA 2.0.
 Si prega di comunicare ogni errore individuato a Paolo "The King" Gazzotti.
 
 

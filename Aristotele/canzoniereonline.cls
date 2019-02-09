@@ -137,8 +137,11 @@
 	\else
 	\fi
 	\iftematicindex
-		%\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
-		\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]
+		\ifxetex
+			\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]
+		\else 
+			\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
+		\fi
 	\else
 	\fi
 
@@ -150,9 +153,16 @@
 %%% FONT
 
 \iflibertine
-	\RequirePackage[tt=false]{libertine}
+
+	\ifxetex
+		\RequirePackage{fontspec}
+		\setmainfont{Lexia Readable}
+	\else
+		\RequirePackage[tt=false]{libertine}
 	%\setmainfont{Arial}
 	%\setmainfont{Lexia Readable}
+	\fi
+
 \else
 	\RequirePackage[]{mathpazo}
 \fi
@@ -559,6 +569,7 @@
 \setposition{Dopo il Vangelo}{06}
 \setposition{Offertorio}{07}
 \setposition{Santo}{09}
+\setposition{Spezzare del Pane}{10}
 \setposition{Comunione}{12}
 \setposition{Ringraziamento}{13}
 \setposition{Congedo}{14}
