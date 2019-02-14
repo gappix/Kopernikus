@@ -137,11 +137,11 @@
 	\else
 	\fi
 	\iftematicindex
-		\ifxetex
-			\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]
-		\else 
+		
+			%\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]
+		
 			\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
-		\fi
+		
 	\else
 	\fi
 
@@ -413,7 +413,11 @@
 	 \ifaseivert
 	  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}
 	 \else
-	  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}
+	 	\ifacinquevert
+	 		\renewcommand{\stampatitolo}{\fontsize{12}{12}\selectfont\bfseries}
+	 	\else
+	  		\renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}
+	  	\fi
 	 \fi
 % every other font
 \else
@@ -431,15 +435,19 @@
 	 \ifaseivert
 	   \renewcommand{\stampanumero}{\bfseries\fontsize{30}{18}\selectfont}
 	 \else        % every other Aformat
-	   \renewcommand{\stampanumero}{\bfseries\fontsize{35}{28}\selectfont} % original 36
- \fi
+	 	\ifacinquevert
+	 		\renewcommand{\stampanumero}{\bfseries\fontsize{20}{1}\selectfont}
+	 	\else
+	   		\renewcommand{\stampanumero}{\bfseries\fontsize{35}{28}\selectfont} % original 36
+	   	\fi
+   	\fi
  % every other font
 \else
 	 \ifaseivert
-	   \renewcommand{\stampanumero}{\fontsize{30}{18}\selectfont}
+	   \renewcommand{\stampanumero}{\fontsize{30}{1}\selectfont}
 	 \else        % every other Aformat
 	  \renewcommand{\stampanumero}{\fontsize{35}{28}\selectfont} %chorded official (original 36)
- \fi
+ 	 \fi
 \fi
 
 
