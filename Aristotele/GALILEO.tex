@@ -14,7 +14,7 @@
 %% CHORDED Settings
 % > A4vert + palatino + titleindex + tematicindex + chorded
 % > a5vert,twocolumns, titleindex,tematicindex,lyric, palatino
-\documentclass[b5vert,twocolumns, titleindex,tematicindex,lyric, libertine]{canzoniereonline}%
+\documentclass[a5vert,twocolumns, titleindex,tematicindex,lyric,libertine]{canzoniereonline}%
 %opzioni formato: singoli, standard (A4), a5vert, b5vert, a5oriz, a6vert;
 %opzioni accordi: lyric, chorded {quelli d Songs}
 %opzioni font: palatino, libertine
@@ -26,10 +26,18 @@
 
 
 
+
+%New command to make colophon appear on even (closing) page
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+
+
+
 \usepackage[italian]{babel}
 \usepackage{hyperref}
 \usepackage{wasysym} %per \eightnote e \quarternote
-
 
 
 
@@ -65,7 +73,6 @@
 \begin{document}
 \ifcover
 	\firstpage
-	\colophon
 \else
 	\relax
 \fi
@@ -133,14 +140,14 @@
 	\printindex[tematico]
 	\else
 	\fi
-	\ifcover
-		\relax
-	\else
-		\colophon
-	\fi
+
+	
+	
 \fi
 
+\cleartoleftpage
 
+\colophon
 
 
 

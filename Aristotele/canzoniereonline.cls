@@ -759,6 +759,7 @@
 \newcommand{\firstpage}{%
 \begin{titlepage}
 \begin{center}
+
 \null
 \vspace*{\stretch{1}}
 \printtitoletto
@@ -782,12 +783,13 @@
 \ifaseivert
 \begin{minipage}{\textwidth}
 \else
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.41\textwidth}
 \fi
 \small
-Questo canzoniere è stato composto il giorno \today{} utilizzando il servizio \hbox{\url{www.canzoniereonline.it}} 
-che si basa sul pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen. 
-È distribuito con licenza Creative Commons.
+Questo canzoniere è stato composto il giorno \today{} 
+basandosi sul pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen e 
+sulla classe \textsf{canzoniereonline}\footnote{\url{www.canzoniereonline.it}}.  
+Il codice sorgente è distribuito con licenza Creative Commons.
 \smallskip
 
 Il font utilizzato è il \iflibertine\textsf{Libertine}\footnote{\url{www.linuxlibertine.org}}\else Palatino\fi.
@@ -797,10 +799,17 @@ I testi delle canzoni sono proprietà dei rispettivi autori.
 La Legge n.~159 del 22 maggio 1993 ne consente l'uso solo per attività didattica, di studio e di ricerca. \\
 
 \smallskip
-La versione corrente è: BETA 3.2
-Si prega di comunicare ogni errore individuato a Paolo "The King" Gazzotti.
+Ideato e realizzato da Paolo Gazzotti, con l'inestimabile contributo di tante persone della comunità 
+pastorale S.~Antonio~Abate di Varese, in particolar modo Nicolò Venditti e Elena Anselmi.\\
 
 \smallskip
+
+Si prega di comunicare ogni errore individuato a paolo.gazzotti@gmail.com per poter migliorare e 
+perfezionare il canzoniere nelle edizioni successive.
+
+\smallskip
+\smallskip
+
 {\hspace*{3.3em}\Large\ccbyncsaeu}
 \end{minipage}
 \clearpage}

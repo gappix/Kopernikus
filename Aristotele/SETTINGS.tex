@@ -38,5 +38,11 @@
 
 
 
+%New command to make colophon appear on even (closing) page
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+
 
 
