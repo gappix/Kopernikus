@@ -786,8 +786,8 @@
 \begin{minipage}{0.41\textwidth}
 \fi
 \small
-Questo canzoniere è stato composto il giorno \today{} 
-basandosi sul pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen e 
+Questo canzoniere è stato composto  il giorno \textbf{\today{} }
+utilizzando \LaTeX \qquad e basandosi sul pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen e 
 sulla classe \textsf{canzoniereonline}\footnote{\url{www.canzoniereonline.it}}.  
 Il codice sorgente è distribuito con licenza Creative Commons.
 \smallskip
@@ -799,12 +799,12 @@ I testi delle canzoni sono proprietà dei rispettivi autori.
 La Legge n.~159 del 22 maggio 1993 ne consente l'uso solo per attività didattica, di studio e di ricerca. \\
 
 \smallskip
-Ideato e realizzato da Paolo Gazzotti, con l'inestimabile contributo di tante persone della comunità 
-pastorale S.~Antonio~Abate di Varese, in particolar modo Nicolò Venditti e Elena Anselmi.\\
+Ideato e realizzato da \textsf{Paolo Gazzotti}, con l'inestimabile contributo di tante persone della comunità 
+pastorale S.~Antonio~Abate di Varese, tra cui, in particolar modo, \textsf{Nicolò Venditti} e \textsf{Elena Anselmi}.\\
 
 \smallskip
 
-Si prega di comunicare ogni errore individuato a paolo.gazzotti@gmail.com per poter migliorare e 
+Si prega di comunicare ogni errore individuato a \textsf{paolo.gazzotti@gmail.com} per  migliorare e 
 perfezionare il canzoniere nelle edizioni successive.
 
 \smallskip
