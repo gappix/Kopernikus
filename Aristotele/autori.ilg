@@ -1,0 +1,49 @@
+This is makeindex, version 2.15 [TeX Live 2018/W32TeX] (kpathsea + Thai support).
+Scanning style file ./canzstyle.ist......done (6 attributes redefined, 0 ignored).
+Scanning input file autori.idx....done (34 entries accepted, 0 rejected).
+Sorting entries....done (166 comparisons).
+Generating output file autori.ind....
+## Warning (input = autori.idx, line = 19; output = autori.ind, line = 58):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 20; output = autori.ind, line = 59):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 21; output = autori.ind, line = 60):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 22; output = autori.ind, line = 61):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 23; output = autori.ind, line = 62):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 25; output = autori.ind, line = 64):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 26; output = autori.ind, line = 65):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 27; output = autori.ind, line = 66):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 28; output = autori.ind, line = 67):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 29; output = autori.ind, line = 68):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 30; output = autori.ind, line = 69):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 31; output = autori.ind, line = 70):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 33; output = autori.ind, line = 72):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = autori.idx, line = 34; output = autori.ind, line = 73):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+done (76 lines written, 14 warnings).
+Output written in autori.ind.
+Transcript written in autori.ilg.
