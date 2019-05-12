@@ -1,0 +1,197 @@
+% !TEX encoding = UTF-8 Unicode
+%....................................................................................
+%     
+% ███╗   ██╗██╗██╗  ██╗ ██████╗ ██╗      █████╗ ██╗   ██╗███████╗
+% ████╗  ██║██║██║ ██╔╝██╔═══██╗██║     ██╔══██╗██║   ██║██╔════╝
+% ██╔██╗ ██║██║█████╔╝ ██║   ██║██║     ███████║██║   ██║███████╗
+% ██║╚██╗██║██║██╔═██╗ ██║   ██║██║     ██╔══██║██║   ██║╚════██║
+% ██║ ╚████║██║██║  ██╗╚██████╔╝███████╗██║  ██║╚██████╔╝███████║
+% ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+% Font: Ansi Shadow
+%....................................................................................
+
+
+%% CHORDED Settings
+%>>>> A4vert + palatino + titleindex + tematicindex + chorded
+\documentclass[a4vert,twocolumns, titleindex,tematicindex,chorded,palatino]{canzoniereonline}
+%>>>> a5vert,twocolumns, titleindex,tematicindex,lyric, palatino
+%\documentclass[a5vert,twocolumns, titleindex,tematicindex,lyric,libertine]{canzoniereonline}%
+
+%opzioni formato: singoli, standard (A4), a5vert, b5vert, a5oriz, a6vert;
+%opzioni accordi: lyric, chorded {quelli d Songs}
+%opzioni font: palatino, libertine
+%opzioni segno minore: "minorsign=quel che vuoi"
+%opzioni indici: authorsindex, titleindex, tematicindex
+%opzioi copertina: cover e nocover
+%opzioni colonne: twocolumns, onecolumn;
+\def\canzsongcolumsnumber{2}
+
+
+
+
+
+
+% PACCHETTI DA IMPORTARE
+%-------------------------------------------------------------------------------                   
+\usepackage[italian]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage{wasysym} %per \eightnote e \quarternote
+
+
+
+
+
+% NUOVI COMANDI E VARIABILI GLOBALI
+%--------------------------------------------------------------------------------
+%Command to chapter subsectioning
+\renewcommand{\songchapter}{\chapter*}
+
+%------------
+\makeatletter
+\newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}\m@th$}
+\makeatother
+%-----------
+
+
+
+
+
+
+%Counter globale per tenere traccia di una numerazione progressiva
+%Si affianca a un altro counter già utilizzato nella classe CanzoniereOnLine "songnum" 
+%che, tuttavia, si riazzera ognivolta viene definito un nuovo ambiente \beginsongs{}
+\newcounter{GlobalSongCounter} 
+
+%Ciascun capitolo contiene già tutta la logica di gestione della 
+%numerazione progressiva, del DB locale da cui attingere le canzoni
+%e la creazione/chiusura dell'ambiente in cui vengono importate 
+%tutte le canzoni relative
+\addtocounter{GlobalSongCounter}{1} %set starting song counter to 1 (0 otherwise)
+
+
+
+
+%Starting Document
+\begin{document}
+
+
+\begin{songs}{}
+\songcolumns{\canzsongcolumsnumber}
+\setcounter{songnum}{\theGlobalSongCounter} %set songnum counter, otherwise would be reset
+
+
+%  *  *  *  *  *  TEST SONG HERE  *  *  *  *  *  *  * ]
+%set the default path inside current folder
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{nulla_e_impossibile_a_dio}
+
+%% ----- GLORIA ---------
+\makeatletter \def\input@path{{Songs/Gloria/}} \makeatother
+\input{gloria_gen_verde}
+
+
+% ----- ALLELUIA ---------
+\makeatletter \def\input@path{{Songs/Alleluia/}} \makeatother
+\input{alleluia_festa_con_te} 
+
+
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{antica_eterna_danza}
+
+
+
+%% ----- SANTO ---------
+\makeatletter \def\input@path{{Songs/Santo/}} \makeatother
+\input{santo_milan}
+
+
+
+
+% ----- LITURGIA ---------
+\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+\input{beato_il_cuore_gmg_2016}
+\input{re_dei_re} %MI
+\input{le_tue_meraviglie}
+
+
+
+
+
+%% ----- LITURGIA ---------
+%\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+%\input{lodate_il_signore}
+%\input{luce_del_mondo}
+%\input{saldo_e_il_mio_cuore}
+%\input{isaia_11}
+
+
+
+
+
+
+%% ----- SANTO ---------
+%\makeatletter \def\input@path{{Songs/Santo/}} \makeatother
+%\input{santo_zappala}
+%
+%
+%
+%
+%
+%% ----- LITURGIA ---------
+%\makeatletter \def\input@path{{Songs/Liturgia/}} \makeatother
+%\input{alla_tua_presenza}
+%\input{come_ti_ama_dio}
+%\input{come_tu_mi_vuoi}
+%\input{dio_in_me}
+%\input{ti_do_la_pace}
+%\input{vieni_o_spirito}
+%\input{io_credo_in_te}
+
+% *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+
+
+
+
+
+
+\end{songs}
+
+
+
+
+% INDEXES AND CLOSURE
+%-------------------------------------------------------------------------------
+
+% \ifcanzsingole
+% 	\relax
+% \else
+% 	\iftitleindex
+% 		\ifxetex
+% 		\printindex[alfabetico]
+% 		\else
+% 		\printindex
+% 		\fi
+% 	\else
+% 	\fi
+% 	\ifauthorsindex
+% 	\printindex[autori]
+% 	\else
+% 	\fi
+% 	\iftematicindex
+% 	\printindex[tematico]
+% 	\else
+% 	\fi	
+% \fi
+
+% \cleartoleftpage
+
+% \colophon
+
+ 
+\end{document}

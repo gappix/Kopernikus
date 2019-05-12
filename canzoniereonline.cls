@@ -14,7 +14,12 @@
 %%  This work has the LPPL maintenance status "author-maintained".
 %% 
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
-\ProvidesClass{canzoniereonline}[2017/09/10 v0.5 Una classe per la creazione di canzonieri on line]
+\ProvidesClass{canzoniereonline}[2017/12/17 v0.6 Una classe per la creazione di canzonieri on line]
+
+
+% PACKAGING (1)
+%-----------------------------------------------------
+
 \RequirePackage{ifxetex}
 \ifxetex
 \RequirePackage{fontspec}
@@ -26,10 +31,17 @@
 \RequirePackage[italian]{babel}
 \fi
 \RequirePackage{xkeyval}
+
+
+
+% Conditionals
+%-----------------------------------------------------
+
 \newif\iflibertine
 \newif\ifcanzsingole
 \newif\ifaquattrovert
 \newif\ifacinquevert
+\newif\ifbcinquevert%<P>
 \newif\ifacinqueor
 \newif\ifaseivert
 \newif\ifsmart
@@ -37,14 +49,21 @@
 \newif\ifauthorsindex
 \newif\iftematicindex
 \newif\ifcover
+
+\newif\iftwocolumns%<P>
+
+% Class options declaration
+%-----------------------------------------------------
+
 \DeclareOption{palatino}{\libertinefalse}
 \DeclareOption{libertine}{\libertinetrue}
-\DeclareOption{singoli}{\canzsingoletrue\aquattrovertfalse\acinquevertfalse\acinqueorfalse\aseivertfalse\coverfalse\smartfalse}
-\DeclareOption{standard}{\aquattroverttrue\canzsingolefalse\acinquevertfalse\acinqueorfalse\aseivertfalse\smartfalse}
-\DeclareOption{a5vert}{\acinqueverttrue\canzsingolefalse\aquattrovertfalse\acinqueorfalse\aseivertfalse\smartfalse}
-\DeclareOption{a5oriz}{\acinqueortrue\canzsingolefalse\aquattrovertfalse\acinquevertfalse\aseivertfalse\smartfalse}
-\DeclareOption{a6vert}{\aseiverttrue\canzsingolefalse\aquattrovertfalse\acinquevertfalse\acinqueorfalse\smartfalse}
-\DeclareOption{smart}{\smarttrue\aseivertfalse\canzsingolefalse\aquattrovertfalse\acinquevertfalse\acinqueorfalse}
+\DeclareOption{singoli}{\canzsingoletrue\aquattrovertfalse\acinquevertfalse\bcinquevertfalse\acinqueorfalse\aseivertfalse\coverfalse\smartfalse}
+\DeclareOption{standard}{\aquattroverttrue\canzsingolefalse\acinquevertfalse\bcinquevertfalse\acinqueorfalse\aseivertfalse\smartfalse}
+\DeclareOption{a5vert}{\acinqueverttrue\bcinquevertfalse\canzsingolefalse\aquattrovertfalse\acinqueorfalse\aseivertfalse\smartfalse}
+\DeclareOption{b5vert}{\bcinqueverttrue\acinquevertfalse\canzsingolefalse\aquattrovertfalse\acinqueorfalse\aseivertfalse\smartfalse}
+\DeclareOption{a5oriz}{\acinqueortrue\canzsingolefalse\aquattrovertfalse\acinquevertfalse\bcinquevertfalse\aseivertfalse\smartfalse}
+\DeclareOption{a6vert}{\aseiverttrue\canzsingolefalse\aquattrovertfalse\acinquevertfalse\bcinquevertfalse\acinqueorfalse\smartfalse}
+\DeclareOption{smart}{\smarttrue\aseivertfalse\canzsingolefalse\aquattrovertfalse\acinquevertfalse\bcinquevertfalse\acinqueorfalse}
 \DeclareOption{titleindex}{\titleindextrue}
 \DeclareOption{authorsindex}{\authorsindextrue}
 \DeclareOption{tematicindex}{\tematicindextrue}
@@ -55,6 +74,12 @@
 \DeclareOption{chorded}{\PassOptionsToPackage{chorded}{songs}}
 
 \DeclareOptionX{minorsign}{\def\canzonline@myminor{#1}}
+
+\DeclareOption{twocolumns}{\twocolumnstrue}%<P>
+\DeclareOption{onecolumn}{\twocolumnsfalse}%<P>
+
+% Get execution option from master doc
+
 \ExecuteOptions{standard,libertine,cover}
 \ExecuteOptionsX{minorsign=m}
 \ProcessOptions\relax
@@ -73,6 +98,12 @@
 %preambolo
 \LoadClass[\FontSize]{book}
 
+
+
+
+% PACKAGING (2)
+%-----------------------------------------------------
+
 \RequirePackage{graphicx}
 \RequirePackage{amssymb}
 \RequirePackage{fancyhdr} 
@@ -87,7 +118,14 @@
 \RequirePackage{etoolbox,xstring}
 \RequirePackage{ccicons}
 \RequirePackage{imakeidx} 
-\usepackage{titlesec}% cambio la formattazione dei titolo dei capitoli (mi serve per l'indice tematico)
+\usepackage{titlesec}% cambio la formattazione dei titolo dei capitoli 
+										 % (mi serve per l'indice tematico)
+
+
+
+% INDEX
+%-----------------------------------------------------
+
 \ifxetex
 	\iftitleindex
 		\makeindex[name=alfabetico,title=Indice alfabetico,program=truexindy,options=-M texindy -C utf8 -L italian -M xindystyle]
@@ -103,27 +141,42 @@
 	\fi
 \else
 	\iftitleindex
-		\makeindex[title=Indice alfabetico,options=-s canzstyle.ist]
+		\makeindex[title=Indice alfabetico,options=-s canzstyle.ist]%***
+		%\makeindex[title=Indice alfabetico,program=truexindy,options=-M texindy -C utf8 -L italian -M xindystyle]%**kop**
 	\else
 	\fi
 	\ifauthorsindex
 		\makeindex[name=autori,title=Indice degli autori,options=-s canzstyle.ist]%***
+		%\makeindex[name=autori,title=Indice degli autori,program=truexindy,options= -M texindy -C utf8 -L italian -M xindystyle]%**kop**
 	\else
 	\fi
 	\iftematicindex
+		%\makeindex[name=tematico,title=Indice tematico,program=truexindy,options= -M texindy -C utf8 -L italian -M xindytematic]%**kop**
 		\makeindex[name=tematico,title=Indice tematico,options=-s tematicstyle.ist]%***
 	\else
 	\fi
 \fi
 
 
-%FONT
+
+
+% FONT
+%-----------------------------------------------------
+
 \iflibertine
-	\RequirePackage[tt=false]{libertine}
+	\ifxetex
+		\setmainfont{Lexia Readable}
+	\else
+		\RequirePackage[tt=false]{libertine}
+	\fi
 \else
 	\RequirePackage[]{mathpazo}
 \fi
-%GEOMETRIA
+
+
+% GEOMETRIA
+%-----------------------------------------------------
+
 \ifcanzsingole
 	\RequirePackage[top=16mm, left=14mm, right=13mm,  bottom= 20mm, a4paper]{geometry}
 \fi
@@ -133,6 +186,9 @@
 \ifacinquevert
 	\RequirePackage[paperheight=210mm, paperwidth=148mm, inner=8mm, outer=10mm, top=10mm, bottom=10mm]{geometry}
 \fi
+\ifbcinquevert%<P>
+	\RequirePackage[paperheight=250mm, paperwidth=176mm, inner=10mm, outer=10mm, top=10mm, bottom=10mm]{geometry}
+\fi%<P>
 \ifacinqueor
 	\RequirePackage[paperheight=148mm, paperwidth=210mm, inner=8mm, outer=10mm, top=10mm, bottom=10mm]{geometry}
 \fi
@@ -144,7 +200,11 @@
 \fi
 
 
-%TESTATINE
+
+
+% TESTATINE
+%-----------------------------------------------------
+
 \ifcanzsingole
 	\pagestyle{fancy}%
 	\setlength{\headheight}{0pt}
@@ -176,7 +236,14 @@
 	\renewcommand{\headrulewidth}{0pt} % e leva la linea dalle pagine di inizio capitolo
 }
 \fi
-%%%%%%%%%%%%%%Impostazioni del pacchetto Songs
+
+
+
+
+% IMPOSTAZIONI PACCHETTO SONGS
+%-----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \RequirePackage[nomeasures,noshading,noindexes]{songs}
 \MultiwordChords	
 \notenamesin{A}{B}{C}{D}{E}{F}{G}  			% scriverò gli accordi secondo la notazione anglosassone
@@ -185,19 +252,18 @@
 \renewcommand{\flatsymbol}{\raisebox{0.1ex}{$\flat$}}				% bemolle
 \setlength{\cbarwidth}{0pt}						% linea laterale ritornelli
 \setlength{\sbarheight}{0pt}						%linee sopra e sotto
-%\renewcommand{\chorusfont}{\itshape}					%font ritornelli
+\renewcommand{\chorusfont}{\bfseries}  %chorus BOLD per i ritornelli
 \renewcommand{\rep}[1]{{\normalfont($\times$#1)}}		% cambia la x nelle ripetizioni
 \setlength{\parindent}{0pt}
 \setlength\columnsep{5mm}
 
 
-\renewcommand{\chorusfont}{\bfseries} %chorus BOLD settings
-% Un altro esempio:
+% Un altro esempio utilizzabile
 %\renewcommand{\chorusfont}{\slshape\scshape\mdseries\normalsize\large} 
-%
 
 
-%ACCORDI
+%% ACCORDI
+
 \iflibertine
 	\renewcommand{\printchord}[1]{\normalfont\small\bfseries#1}
 \else
@@ -207,7 +273,11 @@
    		\renewcommand{\printchord}[1]{\normalfont\bfseries\sffamily#1}
   	\fi
 \fi
-%RIENTRO DELLE STROFE
+
+
+
+%% RIENTRO DELLE STROFE
+
 \ifcanzsingole
 	\versenumwidth=0pt
 	\renewcommand\placeversenum[1]{%      modifichiamo il posizionamento dei numeri di strofa
@@ -219,11 +289,12 @@
 	\renewcommand{\everychorus}{\setlength{\leftskip}{\versenumwidth}}
 \fi
 
-%Per modificare il font delle seconde voci-risposte
+%% Per modificare il font delle seconde voci-risposte
 \renewcommand\SB@echo[1]{%
 	\endgroup% 
 	\begingroup%
 		\ifdim\fontdimen\@ne\font>\z@\upshape\else\itshape\fi% 
+		% \ifxetex imporre un cambio font per LEXIA %
 		\endlinechar\m@ne% 
 		\scantokens{(#1)}%
 	\endgroup% 
@@ -242,8 +313,15 @@
 	\fi
 \fi
 \renewcommand{\makepostlude}{\vskip10pt plus 10pt minus 3pt}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 % Modificare l'interlinea
+%-----------------------------------------------------
+
 \iflyric
 	\renewcommand{\colbotglue}{0pt plus .5\textheight minus 0pt}
 	\baselineadj=2pt plus 0pt minus 0pt  % nel canzoniere senza accordi regolo l'interline di TUTTE le strofe
@@ -266,6 +344,10 @@
 }
 
 
+% TEXTNOTE RENEW
+% Songs command redefined with new custom settings
+%-----------------------------------------------------
+
 \renewcommand\textnote[1]{% note in senza grazie e senza sfondo
   \ifhmode\par\fi%
   \ifnum\lastpenalty=12345\else%
@@ -280,7 +362,7 @@
   \begingroup%
     \everypar{}%
     \ifchorded\chordedfalse\SB@setbaselineskip\chordedtrue\fi%
-    \placenote{\normalfont\sffamily{\SB@boxup{#1}}}%
+    \placenote{\normalfont\itshape\sffamily{\SB@boxup{#1}}}% <<< remove itshape to remove italic
   \endgroup%
   \nobreak%
   \ifSB@inverse%
@@ -333,38 +415,148 @@
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 % TITOLI
+%---------------------------------------------------
+
+
+
+%% TITOLI
+
 \newcommand{\stampatitolo}{}
-\iflibertine
- \ifaseivert
-  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}
- \else
-  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}
- \fi
-\else
- \ifaseivert
-  \renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries\sffamily}
- \else
-  \renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily}
- \fi
+\iflibertine % libertine only
+	%%%%\renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}
+	\ifaseivert
+	 	%>> A6
+		\renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}	
+ 	\else
+		\ifacinquevert
+			\iftwocolumns
+				%>> A5 - 2 columns
+				\renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}
+			\else
+				%>> A5 - 1 column
+				\renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries}
+			\fi
+		\else
+			\ifbcinquevert
+				%>> B5 
+				%\renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}%V1
+				\renewcommand{\stampatitolo}{\fontsize{13}{18}\selectfont\bfseries}%V2
+			\else
+				%>> DEFAULT
+				\renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries}		
+			\fi
+		\fi
+	\fi	
+\else % every other font
+	%%%%\renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily}	
+	% %<P>	
+	% % please note: 
+	% % \fontsize{size}{baselineskip}
+	% % baselie skip should be 1.2x/1.3x of size
+	\ifaseivert
+		%>> A6
+		\renewcommand{\stampatitolo}{\fontsize{12}{15}\selectfont\bfseries\sffamily}	
+	\else
+		\ifacinquevert
+			\iftwocolumns
+				%>> A5 - 2 columns
+				\renewcommand{\stampatitolo}{\fontsize{12}{14}\selectfont\bfseries\sffamily}
+			\else
+				%>> A5 - 1 column
+				\renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily}
+			\fi
+		\else
+			\ifbcinquevert
+				%>> B5 
+				%\renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily}%V1
+				\renewcommand{\stampatitolo}{\fontsize{13}{18}\selectfont\bfseries\sffamily}%V2
+			\else
+				%>> DEFAULT
+				\renewcommand{\stampatitolo}{\fontsize{14}{18}\selectfont\bfseries\sffamily}	
+			\fi
+		\fi
+	\fi	
 \fi
+
+
+
+%% NUMERI
+
 \newcommand{\stampanumero}{}
-\iflibertine
- \ifaseivert
-   \renewcommand{\stampanumero}{\bfseries\fontsize{30}{18}\selectfont}
- \else
-   \renewcommand{\stampanumero}{\bfseries\fontsize{36}{28}\selectfont}
- \fi
-\else
- \ifaseivert
-   \renewcommand{\stampanumero}{\fontsize{30}{18}\selectfont}
- \else
-  \renewcommand{\stampanumero}{\fontsize{36}{28}\selectfont}
- \fi
+%<P>	
+% please note: 
+% \fontsize{size}{baselineskip}
+% baselie skip should be 1.2x/1.3x of size
+\iflibertine % libertine only
+	%%%%\renewcommand{\stampanumero}{\bfseries\fontsize{36}{28}\selectfont}
+	\ifaseivert
+	 	%>> A6 - libertine
+		 \renewcommand{\stampanumero}{\bfseries\fontsize{30}{18}\selectfont}
+ 	\else
+		\ifacinquevert
+			\iftwocolumns
+				%>> A5 - 2 columns - libertine
+				\renewcommand{\stampanumero}{\bfseries\fontsize{18}{21}\selectfont}%22
+			\else
+				%>> A5 - 1 column - libertine
+				\renewcommand{\stampanumero}{\bfseries\fontsize{36}{28}\selectfont} 
+			\fi
+		\else
+			\ifbcinquevert
+				%>> B5  - libertine
+				%\renewcommand{\stampanumero}{\bfseries\fontsize{24}{28}\selectfont} %V1
+				\renewcommand{\stampanumero}{\bfseries\fontsize{35}{28}\selectfont}%V2
+			\else
+				%>> DEFAULT - libertine
+				\renewcommand{\stampanumero}{\bfseries\fontsize{35}{28}\selectfont}		
+			\fi
+		\fi
+	\fi	
+\else % every other font
+	%%%%\renewcommand{\stampanumero}{\fontsize{36}{28}\selectfont}
+	\ifaseivert
+		%>> A6
+		\renewcommand{\stampanumero}{\fontsize{30}{18}\selectfont}	
+	\else
+		\ifacinquevert
+			\iftwocolumns
+				%>> A5 - 2 columns
+				\renewcommand{\stampanumero}{\fontsize{19}{26}\selectfont}%22
+			\else
+				%>> A5 - 1 column
+				\renewcommand{\stampanumero}{\fontsize{36}{28}\selectfont}
+			\fi
+		\else
+			\ifbcinquevert
+				%>> B5 
+				%\renewcommand{\stampanumero}{\fontsize{24}{28}\selectfont}%V1
+				\renewcommand{\stampanumero}{\fontsize{33}{28}\selectfont}%V2
+			\else
+				%>> DEFAULT
+				\renewcommand{\stampanumero}{\fontsize{35}{28}\selectfont}	
+			\fi
+		\fi
+	\fi	
 \fi
+
+
+
+
+
+
+
+
+%% TITLE GEOMETRY
+
 \newlength{\titlength}
 \newlength{\numerwidth}
 \newlength{\larcolonna}
+
+
 \ifcanzsingole
 	\renewcommand\makeprelude{%
 	\resettitles%
@@ -379,36 +571,69 @@
  	\end{tabularx}
     \nexttitle%
     \foreachtitle{(\songtitle)\par}%
-}
+	}
 \else
-\renewcommand\makeprelude{%
-\resettitles%
-\settowidth{\numerwidth}{\stampanumero\thesongnum}
-\newcommand{\titolo}{\stampatitolo\songtitle}
-\settowidth{\titlength}{\titolo}
-\setlength{\larcolonna}{\hsize-\numerwidth-30pt}
-\begin{tabularx}{\hsize}{@{}r@{}X}
-\renewcommand{\arraystretch}{0} 
-	& \ifdim\titlength<\larcolonna \titolo \else \resizebox{\larcolonna}{!}{\titolo} \fi\\
-\cline{2-2}  
-\multirow{-2}{*}{\raisebox{-3pt}{\stampanumero\textcolor{gray}{\thesongnum}\hspace{3pt}}} & \ifthenelse{\equal{\songauthors}{}}{}{\hfill\footnotesize{\itshape\songauthors}%
-	\ifauthorsindex\expandafter\authindex\expandafter{\songauthors}\else\fi}%
-	\end{tabularx}
-%
-\hypertarget{canto-\thesongnum}{}% and I put an anchor in my song.
-\iftitleindex\StrSubstitute{\songtitle}{!}{"!}[\indexsongtitle]
-	\ifxetex
-		\index[alfabetico]{\indexsongtitle|indexanchor{\thesongnum}}
-	\else%
-		\expandafter\noaccentindex\expandafter{\songtitle}%
-	\fi%
-\else\fi
-       \nexttitle%
-       %\foreachtitle{(\songtitle)\par}%
-}
+	\renewcommand\makeprelude{%
+		\resettitles%
+		\settowidth{\numerwidth}{\stampanumero\thesongnum}
+		\newcommand{\titolo}{\stampatitolo\songtitle}
+		\settowidth{\titlength}{\titolo}
+		%<P>
+		%%%%\setlength{\larcolonna}{\hsize-\numerwidth-30pt}
+		\ifaseivert
+			%>> A6
+			\setlength{\larcolonna}{\hsize-\numerwidth-1pt}	
+		\else
+			\ifacinquevert
+				\iftwocolumns
+					%>> A5 - 2 columns
+					\setlength{\larcolonna}{\hsize-\numerwidth}
+				\else
+					%>> A5 - 1 column
+					\setlength{\larcolonna}{\hsize-\numerwidth-10pt}
+				\fi
+			\else
+				\ifbcinquevert
+					%>> B5 
+					\setlength{\larcolonna}{\hsize-\numerwidth}
+				\else
+					%>> DEFAULT
+					\setlength{\larcolonna}{\hsize-\numerwidth-10pt}	
+				\fi
+			\fi
+		\fi	
+		\begin{tabularx}{\hsize}{@{}r@{}X}
+		\renewcommand{\arraystretch}{0} 
+			& \ifdim\titlength<\larcolonna \titolo \else \resizebox{\larcolonna+4pt}{!}{\titolo} \fi\\
+		\cline{2-2}  
+		\multirow{-2}{*}{\raisebox{-3pt}{\stampanumero\textcolor{gray}{\thesongnum}\hspace{3pt}}} & \ifthenelse{\equal{\songauthors}{}}{}{\hfill\footnotesize{\itshape\songauthors}%
+			\ifauthorsindex\expandafter\authindex\expandafter{\songauthors}\else\fi}%
+			\end{tabularx}
+		%
+		\hypertarget{canto-\thesongnum}{}% and I put an anchor in my song.
+		\iftitleindex\StrSubstitute{\songtitle}{!}{"!}[\indexsongtitle]
+			\ifxetex
+				\index[alfabetico]{\indexsongtitle|indexanchor{\thesongnum}}
+			\else%
+				\expandafter\noaccentindex\expandafter{\songtitle}%
+			\fi%
+		\else\fi
+					\nexttitle%
+					%\foreachtitle{(\songtitle)\par}%
+	}	
 \fi
 
+
+
+
+
+
+
+
 %INDICI grazie a Enrico Gregorio
+%------------------------------------------------
+
+
 \def\accents@list{\do\IeC\do\`\do\'}
 \def\letters@list{\do\i{i}}
 \newcommand{\noaccentindex}[1]{%
@@ -471,12 +696,16 @@
 %creo l'ordine dei ``momenti''. I momenti della messa sono in un primo gruppo, i tempi liturgici in un secondo (che inizia con il 21), le attribuzioni particolari iniziano col 31  e le canzoni scout col 51. Questo solo per comodità, nel caso in cui si dovesse inserire qualche nuovo momento non servirebbe cambiare i numeri di tutti i momenti successivi, ma solo di alcuni.
 \setposition{Ingresso}{01}
 \setposition{Atto penitenziale}{02}
+\setposition{Gloria}{03}
+\setposition{Salmi}{04}
 \setposition{Acclamazione al Vangelo}{05}
 \setposition{Dopo il Vangelo}{06}
 \setposition{Offertorio}{07}
+\setposition{Santo}{09}
+\setposition{Spezzare del Pane}{10}
 \setposition{Comunione}{12}
 \setposition{Ringraziamento}{13}
-\setposition{Fine}{14}
+\setposition{Congedo}{14}
 
 \setposition{Avvento}{20}
 \setposition{Natale}{21}
@@ -514,7 +743,11 @@
 \fi
 
 
-%righe per la copertina
+% COPERTINA
+%--------------------------------------- 
+
+
+
 \newcommand{\titolettocop}{}
 \newcommand{\titolocop}{}
 \newcommand{\sottotitolocop}{}
@@ -526,6 +759,7 @@
 \newcommand{\firstpage}{%
 \begin{titlepage}
 \begin{center}
+
 \null
 \vspace*{\stretch{1}}
 \printtitoletto
@@ -549,26 +783,33 @@
 \ifaseivert
 \begin{minipage}{\textwidth}
 \else
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.41\textwidth}
 \fi
 \small
-Questo canzoniere è stato  composto il giorno \today{} attraverso un motore tipografico \TeX{}. Per la sua realizzazione in linguaggio \LaTeX{}, è stata utilizzata e adattata la classe \textsf{canzoniereonline}\footnote{\url{https://github.com/franen/canzoniereonline}}, traendo preziosissima ispirazione dal servizio \hbox{\url{www.canzoniereonline.it}}. 
-
-Di fondamentale importanza per la redazione di un sistema preciso e dinamico di accordi, il pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen. 
-È distribuito con licenza Creative Commons.
+Questo canzoniere è stato composto  il giorno \textbf{\today{} }
+utilizzando \LaTeX \qquad e basandosi sul pacchetto \textsf{songs}\footnote{\url{http://songs.sourceforge.net}} di Kevin W. Hamlen e 
+sulla classe \textsf{canzoniereonline}\footnote{\url{www.canzoniereonline.it}}.  
+Il codice sorgente è distribuito con licenza Creative Commons.
 \smallskip
 
 Il font utilizzato è il \iflibertine\textsf{Libertine}\footnote{\url{www.linuxlibertine.org}}\else Palatino\fi.
 
-\medskip
+\smallskip
 I testi delle canzoni sono proprietà dei rispettivi autori.
 La Legge n.~159 del 22 maggio 1993 ne consente l'uso solo per attività didattica, di studio e di ricerca. \\
-Gli autori potranno richiederne la rimozione dal servizio online in qualsiasi momento scrivendo  a \url{canzoniereonline@gmail.com}.
-
-\medskip
-Qualora doveste trovare errori vi preghiamo di segnalarli scrivendo a:\\ \url{paolo.gazzotti@gmail.com}
 
 \smallskip
+Ideato e realizzato da \textsf{Paolo Gazzotti}, con l'inestimabile contributo di tante persone della comunità 
+pastorale S.~Antonio~Abate di Varese, tra cui, in particolar modo, \textsf{Nicolò Venditti}, \textsf{Elena Anselmi} e \textsf{don Stefano Silipigni}.\\
+
+\smallskip
+
+Si prega di comunicare ogni errore individuato a \textsf{paolo.gazzotti@gmail.com} per  migliorare e 
+perfezionare il canzoniere nelle edizioni successive.
+
+\smallskip
+\smallskip
+
 {\hspace*{3.3em}\Large\ccbyncsaeu}
 \end{minipage}
 \clearpage}

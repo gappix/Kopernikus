@@ -1,4 +1,0 @@
-\contentsline {section}{\numberline {1}Worship Songs}{2}{section.1}
-\contentsline {subsection}{\hbox to\@tempdima {1\hfil }A Betlemme di Giudea}{2}{section*.2}
-\contentsline {section}{\numberline {2}Index of Authors and Composers}{3}{section.2}
-\contentsline {section}{\numberline {3}Index of Scripture}{4}{section.3}
