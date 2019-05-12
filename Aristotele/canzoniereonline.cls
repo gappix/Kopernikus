@@ -800,7 +800,7 @@ La Legge n.~159 del 22 maggio 1993 ne consente l'uso solo per attività didattic
 
 \smallskip
 Ideato e realizzato da \textsf{Paolo Gazzotti}, con l'inestimabile contributo di tante persone della comunità 
-pastorale S.~Antonio~Abate di Varese, tra cui, in particolar modo, \textsf{Nicolò Venditti} e \textsf{Elena Anselmi}.\\
+pastorale S.~Antonio~Abate di Varese, tra cui, in particolar modo, \textsf{Nicolò Venditti}, \textsf{Elena Anselmi} e \textsf{don Stefano Silipigni}.\\
 
 \smallskip
 
