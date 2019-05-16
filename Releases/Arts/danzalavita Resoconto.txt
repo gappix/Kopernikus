@@ -1,0 +1,36 @@
+Resoconto pacchetto
+
+-----------------------------------------------------------------------------
+Documento: 
+Nome: danzalavita.ai
+Metodo colore: Colore CMYK
+Profilo colore:  Coated FOGRA39 (ISO 12647-2:2004)
+Unitˆ righelli: millimetri
+Dimensioni tavola disegno: 420 mm x 297 mm
+Mostra immagini con metodo contorno: NO
+Evidenzia font sostituiti: NO
+Evidenzia glifi sostituiti: NO
+Mantieni testo modificabile
+Simula carta colorata: NO
+
+-----------------------------------------------------------------------------
+Oggetti in tinta piatta: 
+
+-----------------------------------------------------------------------------
+Font mancanti:NESSUNO
+
+-----------------------------------------------------------------------------
+Font: 
+NESSUNO
+
+-----------------------------------------------------------------------------
+Font incorporati:
+NESSUNO
+
+-----------------------------------------------------------------------------
+Collegamenti mancanti:
+NESSUNO
+
+-----------------------------------------------------------------------------
+Immagini collegate: 
+NESSUNO
